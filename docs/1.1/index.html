@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.1 Introduction</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>1.1 Introduction</h1>
+
+        <h2>Introduction to Dosato</h2> 
+
+        <p>
+            After you successfully installed Dosato, you can start writing your first Dosato program. <br>
+        </p>
+
+        <h2>Writing your first Dosato program</h2>
+
+        <p>
+            Open your favourite text editor and create a new file. <br>
+            Save the file with the extension <code>.to</code>. <br>
+            Dosato script files are called <code>.to</code> files. <br>
+        </p>
+
+        <p>
+            Now, let's write our first Dosato program. <br>
+            Type the following code into your text editor:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ("Hello world");</code></pre>
+    
+        <p>
+            Save the file and run it with the Dosato interpreter. <br>
+            You can run the interpreter by typing <code>dosato</code> and the path to your Dosato script file. <br>
+            Example: <code>dosato hello.to</code>. <br>
+            You should see the following output:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">Hello world</code></pre>
+
+        <p>
+            Congratulations! You just wrote your first Dosato program. <br>
+            Let's take a closer look at the code. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO // the master keyword DO is used to call a function
+SAY // the function SAY is called 
+("Hello world") // the function SAY takes a string as an argument
+; // all lines end with a semilcolon</code></pre>
+
+        <p>
+            The master keyword <code>DO</code> is used to call a function. <br>
+            The function <code>SAY</code> is called. <br>
+            The function <code>SAY</code> takes a string as an argument. <br>
+            The string is <code>"Hello world"</code>. <br>
+            All lines end with a semilcolon. <br>
+        </p>
+
+        <div class="info">
+            <p>
+                <strong>Info!</strong> <br>
+                A comment is a line that is ignored by the interpreter. <br>
+                A comment starts with <code>//</code> and ends with a new line. <br>
+            </p>
+        </div>
+
+        <p>
+            Let's take a look at another example.
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAY ("Hello ");
+    DO SAY ("world");
+};</code></pre>
+
+        <p>
+            DO can also be used to call a block. <br>
+            A block is a group of lines. <br>
+        </p>
+
+        <div class="info">
+            <p>
+                <strong>Info!</strong> <br>
+                A block starts with <code>{</code> and ends with <code>}</code>. <br>
+                A block can contain any number of lines. <br>
+                You can think of a block as a function without a name. <br>
+            </p>
+        </div>
+
+        <p>
+            In the next section we will take a look at the two other master keywords. <br>
+        </p>
+
+        <div>
+            <a href="/"> << Home</a> || <a href="/docs/1.2"> >> 1.2 MAKE and SET</a>
+        </div>
+
+    </body>
+</html>

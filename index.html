@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dosato Downloadable documentation</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="prism/prism-okaidia.css">
+        <link rel="stylesheet" href="main.css">
+        <script src="prism/prism.js"></script>
+        <script src="prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>DOSATO</h1>
+        <p>This is the homepage of the full Dosato documentation</p>
+
+        <h2>Brief introduction to Dosato</h2> 
+
+        <p>
+            Dosato is a high level, general purpose, interpreted, tree-walker programming language designed to combine the freedom and convinience of languages like Python, with the safety of static type languages. <br> 
+            Dosato is built with user readability in mind, every line must end with a semilcolon and every line must start with one of the three master keywords:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO
+SET
+MAKE</code></pre>
+
+        <p>
+            These 3 keywords represent the 3 core features of the programming language. These make spotting lines and visualising structures way easier.  
+        </p>
+        <p>Let's see an example.</p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ("Hello world!"); // DO 
+MAKE INT number = 5; // MAKE 
+SET number = 10; // SET</code></pre>
+
+        <strong>DO: Calls a function or block</strong>
+        <p>A function must start with the function name, followed by parentheses containing the arguments passed into the function.</p>
+        
+        <strong>MAKE: creates a new variable (or function).</strong>
+        <p>The variable is put on the stack. A type must be given, this is the type of the variable and it won't change.</p>
+        
+        <strong>SET: sets a variable to a new value.</strong>
+        <p>Variables retain their type. </p>
+
+        <h2>Want to learn more?</h2>
+
+        <h2>Start here:</h2>
+
+        <h3>Section 1. Basics</h3>
+        <a href="docs/1.1">1.1 Introduction</a>
+
+        <h3>Section 2. Specifications</h3>
+
+        <h3>Section 3. Standard library</h3>
+
+        <h3>Section 4. Error messages</h3>
+
+    </body>
+</html>

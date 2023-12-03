@@ -1,0 +1,13 @@
+.info {
+    background-color: lightyellow;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid goldenrod;
+}
+
+.warning {
+    background-color: lightsalmon;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid salmon;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.2 MAKE and SET</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>1.2 MAKE and SET</h1>
+
+        <h2>MAKE</h2>
+
+        <p>
+            MAKE is used to create a new variable. Or a new function. <br>
+            MAKE is followed by the type of the variable, the name of the variable and the value of the variable. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT number = 5;</code></pre>
+
+        <p>
+            This creates a new variable called <code>number</code> with the value <code>5</code>. <br>
+            The type of the variable is <code>INT</code>. <br>
+            The type of the variable is set when the variable is created and cannot be changed. <br>
+            The type of the variable is used to determine what operations can be performed on the variable and what data is stored. <br>
+        </p>
+
+        <p>
+            Here are a few examples of valid variable declarations:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT number = 5;
+MAKE FLOAT floatNum = 5.5F;
+MAKE STRING name = "Robotnik";
+MAKE BOOL valid = TRUE;</code></pre>
+
+        <p>
+            You can see theres quite a few types. <br>
+            To get a list of all types, go to <a href="/docs/2.1">2.1 Types</a>. <br>
+        </p>
+
+
+        <p>
+            You can also create a new function with MAKE. <br>
+            We'll learn more about functions in a later chapter <a href="/docs/1.5">1.5 Functions</a>. <br>
+            Heres an example of a function declaration:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE FUNC VOID sayHello() {
+    DO SAY ("Hello world!");
+};</code></pre>
+
+
+        <h2>SET</h2>
+
+        <p>
+            SET is used to set an existing variable to a new value. <br>
+            SET is followed by the name of the variable and the new value of the variable. Seperated by an assigment operator <br>
+            Heres an example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT number = 5;
+SET number = 10; // number is now 10</code></pre>
+
+        <p>
+            You can also use other assigment operators. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT number = 5;
+SET number += 10; // number is now 15
+SET number -= 5; // number is now 10
+SET number *= 2; // number is now 20
+SET number /= 2; // number is now 10</code></pre>
+
+        <p>
+            For a full list of operators, go to <a href="/docs/2.2">2.2 Operators</a>. <br>
+        </p>
+
+
+        <div>
+            <a href="/docs/1.1"> << 1.1 Introduction</a> || <a href="/docs/1.3"> >> 1.3 Variables and expressions</a>
+        </div>
+
+    </body>
+</html>

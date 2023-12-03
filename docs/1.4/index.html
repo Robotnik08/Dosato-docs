@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.4 Conditionals</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>1.4 Conditionals</h1>
+
+        <h2>WHEN</h2>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAY ("Access granted");
+} WHEN (password == "1234");</code></pre>
+
+        <p>
+            WHEN is used to create a conditional statement. <br>
+            WHEN is followed by a boolean expression, a block of code and an optional ELSE block. <br>
+            The boolean expression is evaluated and if it is TRUE, the block of code is executed. <br>
+            If the boolean expression is FALSE, the ELSE block is executed. <br>
+            Example of a WHEN statement with an ELSE extension:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAY ("Access granted");
+} WHEN (password == "1234") ELSE {
+    DO SAY ("Access denied");
+};</code></pre>
+
+        <p>
+            WHEN statements can be nested. <br>
+            Example of a nested WHEN statement:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAY ("Access granted");
+} WHEN (password == "1234") ELSE {
+    DO {
+        DO SAY ("Access granted");
+    } WHEN (password == "4321") ELSE {
+        DO SAY ("Access denied");
+    };
+};</code></pre>
+
+        <p>
+            WHEN statements can not be chained. (planned feature for the future) <br>
+        </p>
+
+        <h2>Boolean operators</h2>
+
+        <p>
+            Boolean operators are used to compare values. <br>
+            Boolean operators return a boolean value. (TRUE or FALSE) <br>
+        </p>
+        <p>
+            Common boolean operators are: <br>
+            <code>==</code> equal to <br>
+            <code>!=</code> not equal to <br>
+            <code>></code> greater than <br>
+            <code><</code> less than <br>
+            <code>>=</code> greater than or equal to <br>
+            <code><=</code> less than or equal to <br>
+            <code>&&</code> and <br>
+            <code>||</code> or <br>
+        </p>
+
+        <p>
+            Example of a boolean expression:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAY ("Access granted");
+} WHEN (password == "1234" && username == "Robotnik");</code></pre>
+
+        <p>
+            Here password must be equal to "1234" and username must be equal to "Robotnik" for the block to be executed. <br>
+            Heres another example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAY ("Access granted");
+} WHEN (password == "1234" || password == "4321");</code></pre>
+
+        <p>
+            Here password must be equal to "1234" or "4321" for the block to be executed. <br>
+            Heres another example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAY ("Access granted");
+} WHEN (age >= 18);</code></pre>
+
+        <p>
+            Here age (variable) must be greater or equal to 18 for the block to be executed. <br>
+            For a full list of operators, go to <a href="/docs/2.2">2.2 Operators</a>. <br>
+        </p>
+
+
+        <h2>DO EXTENSIONS</h2>
+
+        <p>
+            On a more advanced note, WHEN is actually a DO extension. <br>
+            DO extensions are functionality that can be added to the DO keyword. <br>
+            Example of a WHEN extension on the DO keyword:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ("Hello world!") WHEN (TRUE);</code></pre>
+
+        <p>
+            We'll learn more about DO extensions in a later chapter <a href="/docs/1.6">1.6 Extensions and loops</a>. <br>
+        </p>
+
+
+        <div>
+            <a href="/docs/1.3"> << 1.3 Variables and expressions</a> || <a href="/docs/1.5"> >> 1.5 Functions</a>
+        </div>
+
+    </body>
+</html>

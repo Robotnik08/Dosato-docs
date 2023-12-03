@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.3 Variables and expressions</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>1.3 Variables and expressions</h1>
+
+        <h2>Generic Variables</h2>
+
+        <p>
+            Variables are used to store data. <br>
+            Variables can be created with the <code>MAKE</code> keyword. <br>
+            Variables can be set with the <code>SET</code> keyword. <br>
+        </p>
+        
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT number = 5;
+SET number = 10;</code></pre>
+
+        <p>
+            Variables have a type, this type is set when the variable is created and cannot be changed. <br>
+            The type of the variable is used to determine what operations can be performed on the variable and what data is stored. <br>
+        </p>
+
+        <h2>Expressions</h2>
+
+        <p>
+            Expressions are used to perform operations with variables and values. <br>
+            Heres an example of a simple math expression:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT number = 5; // 5
+MAKE INT bigger = number + 5; // 5 + 5
+DO SAY (number + bigger); // 5 + 10 = 15</code></pre>
+
+        <p>
+            This expression adds <code>5</code> to the variable <code>number</code>. <br>
+            The result of the expression is stored in a new variable <code>bigger</code>. <br>
+            The value of <code>bigger</code> is now <code>10</code>, and the value of <code>number</code> has not changed <br>
+
+            The expression <code>number + bigger</code> is then passed into the <code>SAY</code> function. <br>
+            The <code>SAY</code> function prints the value of the expression to the console. <br>
+        </p>
+
+        <p>
+            Expressions can be used in many places, such as function arguments, variable declarations and more. <br>
+            Expressions can be used to perform math operations, string operations, boolean operations and more. <br>
+            Heres a more complex example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT number = 5;
+DO SAY (number + 5 * 2 - 10 / 2); // 10</code></pre>
+
+        <p>
+            You can observe how the order of operations is followed. <br>
+            The expression is evaluated from left to right just like in math. <br>
+            For more information about operators and operator precedence, go to <a href="/docs/2.2">2.2 Operators</a>. <br>
+        </p>
+
+        <h2>Generic types</h2>
+
+        <p>
+            Not all types behave the same when used in expressions, a good example are strings. <br>
+            Strings are blocks of text, So operations like addition and substraction work differently. <br>
+            Heres an example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE STRING name = "Robotnik";
+DO SAY (name + " is the best"); // Robotnik is the best</code></pre>
+
+        <p>
+            Additionally, any type can be concatenated to a string. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT number = 5;
+DO SAY ("The number is " + number); // The number is 5</code></pre>
+
+        <p>
+            You can also use other operators on strings, but the string will be converted to an interger. <br>
+            The string will be converted to an integer by taking the length of the string. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE STRING name = "Robotnik"; // 8 characters long
+DO SAY (name - 4); // 4</code></pre>
+
+        <p>
+            This is a result of Dosato's <a href="/docs/1.6">autocasting feature.</a> <br>
+        </p>
+
+        <h2>Parentheses</h2>
+
+        <p>
+            Parentheses can be used to change the order of operations. <br>
+            Heres an example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT number = 5;
+DO SAY (number + 5 * 2 - 10 / 2); // 10
+DO SAY ((number + 5) * 2 - 10 / 2); // 15</code></pre>
+
+        <p>
+            Parentheses first! <br>
+        </p>
+
+        <div>
+            <a href="/docs/1.2"> << 1.2 MAKE and SET</a> || <a href="/docs/1.4"> >> 1.4 Conditionals</a>
+        </div>
+
+    </body>
+</html>
