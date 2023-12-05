@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.8 Arrays</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>1.8 Arrays</h1>
+
+        <h2>Array declaration</h2>
+
+        <p>
+            Like normal variables, arrays can be declared with the <code>MAKE</code> keyword. <br>
+            To turn a variable into an array, you must add <code>ARRAY</code> in front of the type. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3, 4, 5];</code></pre>
+
+        <p>
+            This creates an array of integers with the values <code>1, 2, 3, 4, 5</code>. <br>
+            An array expression is a comma separated list of values surrounded by square brackets. <br>
+        </p>
+
+        <p>
+            Arrays always keep their type, so you can't mix types in an array. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1.1, 2.2, 3.3, 4.4, 5.5]; // [1,2,3,4,5] The array has been converted</code></pre>
+
+        <p>
+            The array has been converted to an array of integers. <br>
+            This is because the type of the array is <code>INT</code>. <br>
+            The type of the array is set when the array is created and cannot be changed. <br>
+        </p>
+
+        <h2>Accessing values</h2>
+
+        <p>
+            You can access values in an array with the <code>#</code> operator. <br>
+            The <code>#</code> operator is followed by the index of the value you want to access. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3, 4, 5];
+DO SAY (numbers#0); // 1
+DO SAY (numbers#1); // 2
+DO SAY (numbers#2); // 3
+DO SAY (numbers#3); // 4
+DO SAY (numbers#4); // 5</code></pre>
+
+        <p>
+            The index of an array starts at <code>0</code> and ends at <code>length - 1</code>. <br>
+            The length of an array is the number of values in the array. <br>
+            Attempting to access an index outside of the array will result in an error. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3, 4, 5];
+DO SAY (numbers#5); // Error: Index out of bounds</code></pre>
+
+
+        <p>
+            However, you can use negative indexes to access values from the end of the array. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3, 4, 5];
+DO SAY (numbers#-1); // 5
+DO SAY (numbers#-2); // 4
+DO SAY (numbers#-3); // 3
+DO SAY (numbers#-4); // 2
+DO SAY (numbers#-5); // 1</code></pre>
+
+        <p>
+            You can also use the <code>#</code> operator to set values in an array. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3, 4, 5];
+SET numbers#0 = 10;
+DO SAY (numbers#0); // 10</code></pre>
+
+        <h2>Array expressions</h2>
+
+        <p>
+            Array expressions are used to create arrays. <br>
+            Array expressions are comma separated lists of values surrounded by square brackets. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ([1, 2, 3, 4, 5]);</code></pre>
+
+        <p>
+            This will print <code>[1, 2, 3, 4, 5]</code> to the console. <br>
+            Array expression also have a set type, they won't be mixed. <br>
+            An array expression with mixed types will be converted to the type of the first element. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ([1, 2.23, 3.32, 4, 5.5]); // [1, 2, 3, 4, 5], because the type of the first element is an interger
+DO SAY ([1.1, 2.2, 3.3, 4.4, 5.5]); // [1.1, 2.2, 3.3, 4.4, 5.5], because the type of the first element is a float</code></pre>
+
+        <p>
+            You can also use the <code>#</code> operator on array expressions. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ([1, 2, 3, 4, 5]#0); // 1
+DO SAY ([1, 2, 3, 4, 5]#1); // 2
+DO SAY ([1, 2, 3, 4, 5]#2); // 3
+</code></pre>
+
+        <h2>Anonymous arrays</h2>
+
+        <p>
+            Anonymous arrays are arrays without a type. <br>
+            They only exist as array expressions, and appear when an empty array expression is used. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ([]); // [] doesn't have a set type</code></pre>
+
+        <p>
+            Anonymous arrays take the type of the first element that is added to the array. <br>
+            Anonymous arrays also get converted to the type if it's assigned to a variable.
+        </p>
+
+        <h2>Pushing and popping elements</h2>
+
+        <p>
+            You can join two arrays together with the <code>+</code> operator. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3, 4, 5];
+MAKE ARRAY INT numbers2 = [6, 7, 8, 9, 10];
+DO SAY (numbers + numbers2); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</code></pre>
+
+        <p>
+            Using this, we can push elements to the end of an array. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3, 4, 5];
+SET numbers += [6];
+DO SAY (numbers); // [1, 2, 3, 4, 5, 6]</code></pre>
+
+        <p>
+            You can also pop elements from the end of an array. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3, 4, 5];
+SET numbers -= 1;
+DO SAY (numbers); // [1, 2, 3, 4]</code></pre>
+
+        <p>
+            Using the - operator, you pop the last element from an array. <br>
+        </p>
+
+        <h2>Array length</h2>
+
+        <p>
+            Using autocasting, you can get the length of an array by just converting the array to a number. <br>
+            More info on this in <a href="/docs/2.5">2.5 Type casting</a>. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3, 4, 5];
+DO SAY ((INT)numbers); // 5</code></pre>
+
+        <h2>Multidimensional arrays</h2>
+
+        <p>
+            Arrays can also be multidimensional. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY ARRAY INT numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+DO SAY (numbers#0#0); // 1
+DO SAY (numbers#1#1); // 5
+DO SAY (numbers#2); // [7, 8, 9]</code></pre>
+
+        <p>
+            Multidimensional arrays are arrays of arrays. <br>
+            They can be any size, depending on how many times you add ARRAY to the type. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY ARRAY ARRAY ARRAY ARRAY ARRAY INT numbers = [[[[[[1]]]]]];
+DO SAYLN (numbers); // [[[[[[1]]]]]]
+DO SAYLN (numbers#0#0#0#0#0#0); // 1</code></pre>
+
+        
+
+        <div>
+            <a href="../1.7/index.html"> << 1.7 Scopes</a> || <a href="../1.9/index.html"> >> 1.9 Error Handling</a>
+        </div>
+
+    </body>
+</html>

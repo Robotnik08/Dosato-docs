@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.9 Error Handling</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>1.9 Error Handling</h1>
+
+        <h2>CATCH</h2>
+
+        <p>
+            CATCH is a DO extension. <br>
+            CATCH is used to catch errors. <br>
+            CATCH is followed by a block of code. <br>
+            If an error occurs in the block of code, the error is caught and the block of code is executed. It prevents the program from crashing<br>
+            Example of a CATCH statement:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAY (notDefined); // Error is thrown
+} CATCH {
+    DO SAY ("An error occurred"); // Error is caught
+    DO SAY ("The code: " + _); // The code is stored in the _ variable
+};</code></pre>
+
+        <div class="info">
+            <strong>Info!</strong><br>
+            The _ variable is a special variable that stores the error message. (and much more) <br>
+            More info about the _ variable can be found in the <a href="../2.4/index.html">2.4 The _ variable</a>
+        </div>
+
+
+        <div>
+            <a href="../1.8/index.html"> << 1.8 Arrays</a> || <a href="../2.0/index.html"> >> 2.0 Specifications</a>
+        </div>
+
+    </body>
+</html>

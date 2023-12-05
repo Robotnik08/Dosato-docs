@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.7 Scopes</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>1.7 Scopes</h1>
+        
+        <h2>DO scopes</h2>
+
+        <p>
+            A scope is a block of code that can be used to limit the visibility of variables. <br>
+            Scopes are created when a function or block is called.
+        </p>
+
+        <p>
+            Example of a scope:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT a = 1;    
+DO {
+    MAKE INT b = 2;
+    DO SAY (a + b); // 3
+};
+DO SAY (a + b); // Error: b is not defined</code></pre>
+
+        <p>
+            You can see how the variable <code>b</code> is not defined outside of the scope of the block. <br>
+            This is because the variable <code>b</code> is only visible inside the block. <br>
+            Similarly, the variable <code>a</code> is visible inside and outside of the block, because it is defined outside of the block. <br>
+        </p>
+
+        <h2>Function scopes</h2>
+
+        <p>
+            Functions have their own scope. <br>
+            Variables defined inside of a function are only visible inside of the function. <br>
+            Example of a function scope:
+        </p>
+
+        <!-- Code block -->
+
+        <pre>
+<code class="language-dosato">MAKE FUNC VOID sayAAA() {
+    MAKE INT a = 1;
+    DO SAY (a); // 1
+};
+DO SAY (a); // Error: a is not defined</code></pre>
+
+        <p>
+            However, just like blocks, variables defined outside of a function are visible inside of the function. <br>
+            Example of a function scope with a variable defined outside of the function:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT a = 1;
+MAKE FUNC VOID sayAAA() {
+    DO SAY (a); // 1
+};
+DO SAY (a); // 1</code></pre>
+
+        <p>
+            You can see how the variable <code>a</code> is visible inside and outside of the function. <br>
+            This is because the variable <code>a</code> is defined outside of the function. <br>
+        </p>
+
+        <h2>Global precedence</h2>
+
+        <p>
+            Only 1 variable can be defined with the same name in the same scope. <br>
+            If a variable is defined with the same name as a variable outside of the scope, the variable at the lowest scope will be used. <br>
+        </p>
+
+        <p>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT a = 1;
+MAKE FUNC VOID sayAAA() {
+    MAKE INT a = 2;
+    DO SAY (a); // 2
+};
+DO SAY (a); // 1</code></pre>
+
+        <p>
+            You can see how the variable <code>a</code> is defined twice. <br>
+            The variable <code>a</code> is defined outside of the function and inside of the function. <br>
+            The variable <code>a</code> inside of the function is used instead of the variable <code>a</code> outside of the function. <br>
+        </p>
+
+        <h2>Garbage collection</h2>
+
+        <p>
+            Variables are automatically deleted when they are no longer in use. <br>
+            Even complex types like arrays are automatically deleted when they are no longer in use. <br>
+            Dosato is a memory safe language, so you don't have to worry about memory leaks. <br>
+        </p>
+
+
+        <div>
+            <a href="../1.6/index.html"> << 1.6 Extensions and Loops</a> || <a href="../1.8/index.html"> >> 1.8 Arrays</a>
+        </div>
+
+    </body>
+</html>

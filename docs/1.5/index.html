@@ -34,6 +34,124 @@
     DO SAY ("Hello world");
 };</code></pre>
 
+        <p>
+            This function can be called with the <code>DO</code> keyword:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO sayHello(); // Hello world</code></pre>
+
+        <p>
+            Let's break down the function declaration:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE // Make is used as a function declaration keyword
+FUNC // Func is used to declare a function
+VOID // Void is the return type of the function (more on this later)
+sayHello // The name of the function
+() // The parameters of the function
+{ // The start of the function block
+    DO SAY ("Hello world"); // The code inside the function
+}; // The end of the function block</code></pre>
+
+
+        <h2>Parameters</h2>
+
+        <p>
+            Functions can have parameters. <br>
+            Parameters are used to pass data into a function. <br>
+            Parameters are declared inside the parenthesis after the function name. <br>
+            Parameters are seperated by commas. <br>
+            Parameters must have a set type. <br>
+            Parameters can be used inside the function. <br>
+            Example of a function with parameters:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE FUNC VOID sayHello(STRING name) {
+    DO SAY ("Hello " + name);
+};</code></pre>
+
+        <p>
+            The function takes 1 parameter, the name of the person to say hello to. <br>
+            The parameter is used inside the function. <br>
+            You can use the function like this:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO sayHello("Robotnik"); // Hello Robotnik</code></pre>
+
+
+
+        <h2>Return types</h2>
+
+        <p>
+            Functions can have return types. <br>
+            Return types are used to determine what type of data the function returns. <br>
+            Return types are declared after the <code>FUNC</code> keyword. <br>
+            Any variable type can be used as a return type. <br>
+            If a function does not return anything, the return type <code>VOID</code> can be used. <br>
+            Example of a function with a return type:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE FUNC INT addNumbers(INT a, INT b) {
+    DO RETURN (a + b);
+};</code></pre>
+
+        <p>
+            The RETURN function is used to return a value from a function. <br>
+            The RETURN function has 1 parameter, the value to return. <br>
+            The RETURN function also stops the execution of the function. <br>
+        </p>
+        
+
+        <div class="info">
+            <p>
+                <strong>Info!</strong> <br>
+                RETURN can also be used to end a VOID function. <br>
+                RETURN can be used anywhere in a function. <br>
+            </p>
+        </div>
+
+        <p>
+            The function returns the value of <code>a + b</code>. <br>
+            You can use the function like this:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT sum = addNumbers(5, 10); // sum is 15</code></pre>
+
+        <p>
+            The parameters will be copied into the function. <br>
+            So the original variables will not be changed. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE FUNC VOID addOne(INT a) {
+    SET a += 1;
+    DO SAY (a); // a is 6, number is still 5
+};
+
+MAKE INT number = 5;
+DO addOne(number); // number is still 5, nothing happened
+DO SAY (number);</code></pre>
+
+        <div class="info">
+            <p>
+                <strong>Info!</strong> <br>
+                We will learn more about scopes in a later chapter <a href="../docs/1.7">1.7 Scopes</a>. <br>
+            </p>
+        </div>
 
 
         <div>

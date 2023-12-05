@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>2.2 Operators</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>2.2 Operators</h1>
+        
+        <h2>Binary operators</h2>
+
+        <p>Binary operators are operators that take two operands. They are used in the following way:</p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY (1 + 2); // 1 on the left, 2 on the right</code></pre>
+
+        <p>Here is a list of all binary operators:</p>
+
+        <!-- Table -->
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>Addition</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Subtraction</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Multiplication</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Division</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Modulo</td>
+            </tr>
+            <tr>
+                <td>^</td>
+                <td>Bitwise XOR</td>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td>Bitwise AND</td>
+            </tr>
+            <tr>
+                <td>|</td>
+                <td>Bitwise OR</td>
+            </tr>
+            <tr>
+                <td>&lt;&lt;</td>
+                <td>Bitwise left shift</td>
+            </tr>
+            <tr>
+                <td>&gt;&gt;</td>
+                <td>Bitwise right shift</td>
+            </tr>
+            <tr>
+                <td>**</td>
+                <td>power</td>
+            </tr>
+            <tr>
+                <td>^/</td>
+                <td>Root of</td>
+            </tr>
+            <tr>
+                <td>|&gt;</td>
+                <td>max</td>
+            </tr>
+            <tr>
+                <td>&lt;|</td>
+                <td>min</td>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>Equality</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>Inequality</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>Less than</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>Greater than</td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>Less than or equal to</td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>Greater than or equal to</td>
+            </tr>
+            <tr>
+                <td>&amp;&amp;</td>
+                <td>Logical AND</td>
+            </tr>
+            <tr>
+                <td>||</td>
+                <td>Logical OR</td>
+            </tr>
+            <tr>
+                <td>#</td>
+                <td>Hashing</td>
+            </tr>
+        </table>
+
+        <h2>Unary operators</h2>
+
+        <p>Unary operators are operators that take one operand (to the right). They are used in the following way:</p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY (-1); // 1 on the right</code></pre>
+
+        <p>Here is a list of all unary operators:</p>
+        
+        <!-- Table -->
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Negation</td>
+            </tr>
+            <tr>
+                <td>!</td>
+                <td>Logical NOT</td>
+            </tr>
+            <tr>
+                <td>~</td>
+                <td>Bitwise NOT</td>
+            </tr>
+            <tr>
+                <td>^/</td>
+                <td>Square root</td>
+            </tr>
+            <tr>
+                <td>!-</td>
+                <td>absolute</td>
+            </tr>
+        </table>
+
+        <h2>assigment operators</h2>
+
+        <p>Assigment operators are operators that take two operands the left is always an expression from a SET keyword. They are used in the following way:</p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">SET number += 1; // 1 on the right</code></pre>
+
+        <p>Here is a list of all assigment operators:</p>
+
+        <!-- Table -->
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td>=</td>
+                <td>Assigment</td>
+            </tr>
+            <tr>
+                <td>+=</td>
+                <td>Addition</td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>Subtraction</td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>Multiplication</td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>Division</td>
+            </tr>
+            <tr>
+                <td>%=</td>
+                <td>Modulo</td>
+            </tr>
+            <tr>
+                <td>^=</td>
+                <td>Bitwise XOR</td>
+            </tr>
+            <tr>
+                <td>&amp;=</td>
+                <td>Bitwise AND</td>
+            </tr>
+            <tr>
+                <td>|=</td>
+                <td>Bitwise OR</td>
+            </tr>
+        </table>
+
+        <h2>Operator precedence</h2>
+
+        <p>
+            Operator precedence is the order in which operators are evaluated. <br>
+            Operators with higher precedence are evaluated first. <br>
+            Operators with the same precedence are evaluated from left to right. <br>
+            Here is an example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY (1 + 2 * 3); // 7</code></pre>
+
+        <p>
+            Heres a full table of operator precedence:
+        </p>
+
+        <!-- Table -->
+        <table>
+            <tr>
+                <th>Level</th>
+                <th>Operators</th>
+                <th>Meaning</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>()</td>
+                <td>Grouping, this is always evaluated first</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>#</td>
+                <td>Hashing arrays</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>!, ~, ^/, !-, **, |>, <|</td>
+                <td>Unary operators, and POW, MAX, MIN</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>*, /, %</td>
+                <td>Multiplication, division and modulo</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>+, -</td>
+                <td>Addition and subtraction</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>&lt;&lt;, &gt;&gt;</td>
+                <td>Bitwise shift</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>&lt;, &gt;, &lt;=, &gt;=</td>
+                <td>Comparison</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>==, !=</td>
+                <td>Equality</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>&amp;</td>
+                <td>Bitwise AND</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>^</td>
+                <td>Bitwise XOR</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>|</td>
+                <td>Bitwise OR</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>&amp;&amp;</td>
+                <td>Logical AND</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>||</td>
+                <td>Logical OR</td>
+            </tr>
+        </table>
+
+
+        <h2>Addition operator</h2>
+
+        <p>
+            The addition operator (+) is used to add two numbers together. <br>
+            It can also be used to concatenate two strings. <br>
+            Or to join two arrays together. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY (1 + 2); // 3
+DO SAY ("Hello " + "world!"); // Hello world!
+DO SAY ([1, 2, 3] + [4, 5, 6]); // [1, 2, 3, 4, 5, 6]</code></pre>
+
+        <h2>Subtraction oparator</h2>
+
+        <p>
+            The subtraction operator (-) is used to subtract two numbers. <br>
+            But it can also be used to remove elements from an array. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY (1 - 2); // -1
+DO SAY ([1, 2, 3] - 1); // [1, 2]</code></pre>
+
+        <h2>Hashing operator</h2>
+
+        <p>
+            The hashing operator (#) is used to get an element from an array. <br>
+            Example:
+        </p>
+        
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ([1, 2, 3]#0); // 1</code></pre>
+
+        <h2>Power and root</h2>
+
+        <p>
+            The power operator (**) is used to raise a number to a power. <br>
+            The root operator (^/) is used to get the root of a number. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAYLN (2 ** 3); // 8
+DO SAYLN (3 ^/ 8); // 2</code></pre>
+
+        <p>
+            The root operator can take a second argument to specify the root. (left one) <br>
+            However, to just get the square root, you can use the root operator as a unary operator. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAYLN (^/81); // 9</code></pre>
+
+        <h2>Max and min</h2>
+
+        <p>
+            The max operator (|>) is used to get the largest number. <br>
+            The min operator (&lt;|) is used to get the smallest number. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAYLN (5 |> 1); // 5
+DO SAYLN (5 &lt;| 1); // 1</code></pre>
+
+        <h2>Abs</h2>
+        
+        <p>
+            The abs operator (!-) is used to get the absolute value of a number. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAYLN (!- -5); // 5</code></pre>
+
+        <div class="info">
+            <p>
+                <strong>Info!</strong> <br>
+                Theres alternative functions for the above mentioned operators. <br>
+                POW, SQRT, MAX, MIN, ABS. <br>
+            </p>
+        </div>
+
+
+        <p>
+            The rest of the operators are pretty self explanatory. and behave the same as in other languages. <br>
+        </p>
+
+        <div>
+            <a href="../2.1/index.html"> << 2.1 Types</a> || <a href="../2.3/index.html"> >> 2.3 DO extensions</a>
+        </div>
+
+    </body>
+</html>
