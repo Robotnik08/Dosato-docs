@@ -1,8 +1,8 @@
 Prism.languages['dosato'] = {
     'comment': /\/\/.*/,
     'string': /(["'])(?:(?!\1)[^\\]|\\.)*\1/,
-    'keyword': /\b(?:DO|SET|MAKE|WHEN|ELSE|WHILE|CATCH|THEN|INTO)\b/,
-    'type_identifier': /\b(?:INT|SHORT|BYTE|LONG|UINT|USHORT|UBYTE|ULONG|DOUBLE|FLOAT|STRING|CHAR|BOOL|ARRAY|FUNC|VOID)\b/,
+    'keyword': /\b(?:DO|SET|MAKE|WHEN|ELSE|WHILE|FOR|IF|CATCH|THEN|INTO)\b/,
+    'type_identifier': /\b(?:INT|SHORT|BYTE|LONG|UINT|USHORT|UBYTE|ULONG|DOUBLE|FLOAT|STRING|CHAR|BOOL|ARRAY|FUNC|VOID|ANY)\b/,
     'variable': /\b(?:[a-zA-Z_]\w*)\b/,
     'number': /\b(?:\d+(?:\.\d*)?|\.\d+)(?:F)?\b/,
     'operator': /[-+*\/=<>!%?^|&]+/,

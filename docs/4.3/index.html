@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>4.3 Errors 31-40</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>4.3 Errors 31-40</h1>
+
+        <h2>E31: ERROR_FUNCTION_NOT_FOUND</h2>
+
+        <p>
+            If you try to call a function that does not exist, this error will be thrown.<br>
+        </p>
+
+        <h2>E32: ERROR_FUNCTION_ARG_NOT_CORRECT_AMOUNT</h2>
+
+        <p>
+            If you call a function with the wrong amount of arguments, this error will be thrown.<br>
+        </p>
+
+        <h2>E33: ERROR_INVALID_LITERAL</h2>
+
+        <p>
+            If you try to use a literal that is not valid, this error will be thrown.<br>
+        </p>
+
+        <h2>E34: ERROR_INVALID_OPERATOR</h2>
+
+        <p>
+            If you try to use an operator that is not valid, this error will be thrown.<br>
+        </p>
+
+        <h2>E35: ERROR_CANT_USE_TYPE_IN_ADDITION</h2>
+
+        <p>
+            If you try to add with something you can't add with, this error will be thrown.<br>
+            (currently theres no type that can't be used in addition, so this error will never be thrown)<br>
+        </p>
+
+        <h2>E36: ERROR_CANT_CONVERT_TO_STRING</h2>
+
+        <p>
+            If something can not be converted into a string, this error will be thrown.<br>
+            In practice everything can be converted into a string, so this error will never be thrown.<br>
+        </p>
+
+        <h2>E37: ERROR_FLOATING_CANT_BE_UNSIGNED</h2>
+
+        <p>
+            Unused<br>
+        </p>
+
+        <h2>E38: ERROR_TYPE_NOT_SUBTRACTABLE</h2>
+        <h2>E39: ERROR_CANT_USE_TYPE_IN_MULTIPLICATION</h2>
+        <h2>E40: ERROR_CANT_USE_TYPE_IN_DIVISION</h2>
+
+        <p>
+            Because Dosato automatically converts types, these errors will never be thrown.<br>
+        </p>
+
+        <div>
+            <a href="../4.2/index.html"> << 4.2 Errors 21-30 </a> || <a href="../4.4/index.html"> >> 4.4 Errors 41-50</a>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>3.5 Time</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>3.5 Time</h1>
+
+        <h2>Functions</h2>
+
+        <p><code class="language-dosato">INT TIME ()</code></p>
+
+        <p>
+            Returns the current time in seconds.
+        </p>
+
+        <p><code class="language-dosato">STRING DATE (LONG timestamp = now)</code></p>
+
+        <p>
+            Returns a string representation of the given timestamp.<br>
+            The format is: <code>DD-MM-YYYY</code>
+        </p>
+
+        <p><code class="language-dosato">STRING DATETIME (LONG timestamp = now)</code></p>
+
+        <p>
+            Returns a string representation of the given timestamp.<br>
+            The format is: <code>DD-MM-YYYY hh:mm:ss</code>
+        </p>
+
+        <p><code class="language-dosato">LONG TIMESTAMP (LONG timestamp = now)</code></p>
+        
+        <p>
+            Returns a string representation of the given timestamp.<br>
+            The format is: <code>hh:mm:ss</code>
+        </p>
+
+        <p><code class="language-dosato">LONG CLOCK ()</code></p>
+
+        <p>
+            Returns the current time in milliseconds.
+        </p>
+
+        <p><code class="language-dosato">VOID SLEEP (DOUBLE seconds)</code></p>
+
+        <p>
+            Waits excecution for the given amount of seconds (can be decimal).
+        </p>
+
+
+        
+
+
+        <div>
+            <a href="../3.4/index.html"> << 3.4 IO </a> || <a href="../3.6/index.html"> >> 3.6 Random</a>
+        </div>
+
+    </body>
+</html>

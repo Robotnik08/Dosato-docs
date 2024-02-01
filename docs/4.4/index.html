@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>4.4 Errors 41-50</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>4.4 Errors 41-50</h1>
+
+        <h2>E41: ERROR_CANT_USE_TYPE_IN_MODULO</h2>
+        <h2>E42: ERROR_CANT_USE_TYPE_IN_BITWISE_EXPRESSION</h2>
+
+        <p>
+            When trying to use a floating pointer number in any of these, this error will be thrown.<br>
+        </p>
+
+        <h2>E43: ERROR_CANT_USE_TYPE_IN_NEGATION</h2>
+        <h2>E44: ERROR_CANT_USE_TYPE_IN_LOGICAL_EXPRESSION</h2>
+        <h2>E45: ERROR_IDENTIFIER_NOT_FOUND</h2>
+
+        <p>
+            Unused.<br>
+        </p>
+
+        <h2>E46: ERROR_IDENTIFIER_INVALID</h2>
+
+        <p>
+            When the identifier in a DO call chain is invalid, this error will be thrown.<br>
+        </p>
+
+        <h2>E47: ERROR_UNDEFINED_VARIABLE</h2>
+
+        <p>
+            When a variable is used before it is defined, this error will be thrown.<br>
+        </p>
+
+        <h2>E48: ERROR_TOO_MANY_ARGUMENTS</h2>
+
+        <p>
+            When a standard library function is called with too many arguments, this error will be thrown.<br>
+            Check chapter 3 for a list of standard library functions.<br>
+        </p>
+
+        <h2>E49: ERROR_INVALID_CHAR</h2>
+
+        <p>
+            When writing a char literal, if the char is not valid, this error will be thrown.<br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ('Hello!'); // Invalid, a char literal must be one character long</code></pre>
+
+        <h2>E50: ERROR_INVALID_NUMBER</h2>
+
+        <p>
+            When writing a number literal, if the number is not valid, this error will be thrown.<br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY (1F); // Invalid, a float literal must have a decimal point</code></pre>
+
+        <p>RANGE and RANGEF functions also throw this error if you give 0 as a step, to prevent infinite loops<br></p>
+
+
+
+        
+        <div>
+            <a href="../4.3/index.html"> << 4.3 Errors 31-40 </a> || <a href="../4.5/index.html"> >> 4.5 Errors 51-60</a>
+        </div>
+
+    </body>
+</html>

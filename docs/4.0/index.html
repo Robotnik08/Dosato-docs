@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>4.0 Errors 1-10</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>4.0 Errors 1-10</h1>
+
+        <p>
+            An error is a problem that occurs when the program is running.<br>
+            There are two types of errors: syntax errors and runtime errors.<br>
+            Syntax errors are caught before the code is ran, these can not be catched by the user.<br>
+            Runtime errors are caught while the code is running, these can be catched by the user.<br>
+
+            And uncaught error will cause the program to safely exit.<br>
+            The exit code then is set to the error code.<br>
+            In most cases a helpful error message is printed to the console, also showing where the error occured.<br>
+
+            When no error occured, the program will always exit with exit code 0.<br><br>
+
+            If the program crashes without printing an error message, it is most likely a bug and should be reported.<br>
+            If the error location is wrong or the error message is not correct, it is most likely a bug and should be reported.<br>
+        </p>
+
+        <h2>E1: ERROR_SYNTAX</h2>
+
+        <p>
+            This is a general error, this is currently not used, in favour of more detailed errors.<br>
+        </p>
+
+        <h2>E2: ERROR_TYPE_MISMATCH</h2>
+
+        <p>
+            This error occurs when a variable is used in an expression or system function with a type that is not compatible with the variable.<br>
+            A common example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3];
+SET numbers = 1; // Error, numbers can not be converted to array.</code></pre>
+
+        <h2>E3: ERROR_UNDEFINED</h2>
+        <h2>E4: ERROR_RECURSION</h2>
+        <h2>E5: ERROR_MEMORY</h2>
+        <h2>E6: ERROR_FILE</h2>
+        <h2>E7: ERROR_RUNTIME</h2>
+        <h2>E8: ERROR_PARSER</h2>
+
+        <p>
+            These are currently not used.<br>
+            These can be freely used by the user.<br>
+        </p>
+
+        <h2>E9: ERROR_EXPECTED_MASTER</h2>
+
+        <p>
+            This is a parser error, if the first token of a line is not a master token (DO|SET|MAKE), throw this error.<br>
+            A common example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ("Hello world!"); // Correct
+SAY ("Hello world!"); // Error, expected master token (DO).</code></pre>
+
+        <h2>E10: ERROR_EXPECTED_IDENTIFIER</h2>
+
+        <p>
+            This can be a parser error and a runtime error, if the token is not an identifier while it's expected to be, throw this error.<br>
+            A common example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE INT num1 = 321; // Correct
+MAKE INT = 123; // Error, expected identifier.</code></pre>
+
+
+
+        <div>
+            <a href="../3.7/index.html"> << 3.7 System </a> || <a href="../4.1/index.html"> >> 4.1 Errors 10-20</a>
+        </div>
+
+    </body>
+</html>

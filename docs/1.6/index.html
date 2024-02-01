@@ -22,7 +22,7 @@
 
         <p>
             Extensions or DO extensions are used to extend the functionality of the DO keyword. <br>
-            There are 6 extensions:
+            There are 8 extensions:
         </p>
 
         <!-- Code Block -->
@@ -30,7 +30,9 @@
 <code class="language-dosato">WHEN
 ELSE
 WHILE
+FOR
 THEN
+IF
 INTO
 CATCH</code></pre>
 
@@ -82,6 +84,17 @@ DO {
             The loop will stop when <code>i</code> is equal to 10. <br>
         </p>
 
+        <h2>FOR</h2>
+
+        <!-- Code block -->
+        <pre><code class="language-dosato">DO SAYLN (i) FOR (RANGE(100) => i);</code></pre>
+
+        <p>
+            FOR loops are used to iterate over an array, in this example, the RANGE(100) function returns an array of numbers from 0 to 99. <br>
+            The FOR loop will iterate over the array and assign the current value to the variable <code>i</code>. <br>
+            The variable <code>i</code> is then printed to the console. <br>
+        </p>
+
         <h2>THEN</h2>
 
         <p>
@@ -98,6 +111,21 @@ DO {
             This will print <code>Hello world!</code> and then <code>Hello again!</code> to the console. <br>
             The second <code>SAY</code> function is executed after the first <code>SAY</code> function has finished. <br>
         </p>
+        
+
+        <h2>IF</h2>
+
+        <pre>
+<code class="language-dosato">DO IF (condition) THEN SAYLN ("Access granted") ELSE SAYLN ("Access denied");</code></pre>
+        
+
+        <p>
+            IF is used to create a conditional statement. <br>
+            IF is followed by a boolean expression, a THEN extension and an optional ELSE extension. <br>
+            The boolean expression is evaluated and if it is TRUE, the block of code is executed. <br>
+            If the boolean expression is FALSE, the ELSE block is executed.
+        </p>
+
 
         <h2>INTO</h2>
 
@@ -158,17 +186,19 @@ DO sum(10,5) INTO number;</code></pre>
             This only happens when WHEN is true, the WHEN statement includes the entire block<br>
             If the password is not <code>1234</code>, <code>Access denied</code> will be printed to the console. <br>
         </p>
-        
+
         <div class="info">
             <p>
                 <strong>Info!</strong> <br>
-                More in depth information about extensions can be found in <a href="/docs/2.3">2.3 Extensions</a>. <br>
+                You can learn more about extensions in <a href="../2.3/index.html">2.3 DO extensions</a> <br>
             </p>
         </div>
 
         <div>
             <a href="../1.5/index.html"> << 1.5 Functions</a> || <a href="../1.7/index.html"> >> 1.7 Scopes</a>
         </div>
+
+
 
     </body>
 </html>

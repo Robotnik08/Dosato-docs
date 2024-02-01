@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>3.7 System</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>3.7 System</h1>
+
+        <h2>Functions</h2>
+
+        <p><code class="language-dosato">VOID CLEAR ()</code></p>
+
+        <p>
+            Clears the console.<br>
+
+            Same as <code>cls</code> on windows or <code>clear</code> on unix.
+        </p>
+
+        <p><code class="language-dosato">VOID END (INT code = 0)</code></p>
+
+        <p>
+            Exits the program with the given exit code.<br>
+        </p>
+
+        <p><code class="language-dosato">VOID PAUSE ()</code></p>
+
+        <p>
+            Waits for the user to press enter.<br>
+
+            It simulates the <code>pause</code> command on windows. On unix it acts the same.
+        </p>
+
+        <p><code class="language-dosato">INT SYSTEM (STRING command)</code></p>
+
+        <p>
+            Executes the given command on the system.<br>
+            It returns the exit code of the command.
+        </p>
+
+
+        <div>
+            <a href="../3.6/index.html"> << 3.6 Random </a> || <a href="../4.0/index.html"> >> 4.0 Errors 1-10</a>
+        </div>
+
+    </body>
+</html>

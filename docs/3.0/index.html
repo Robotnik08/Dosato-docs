@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>3.0 Standard library</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>3.0 Standard library</h1>
+        
+        <h2>Dosato by default has a selection of build in functions and variables, to help you build efficient code.</h2>
+
+        <p>
+            In this chapter, we will list and explore all the functions and variables Dosato has to offer!
+        </p>
+
+        <h2>General Constants</h2>
+
+        <h3>TRUE</h3>
+
+        <p>
+            TRUE is a constant defined in the standard library, it is the value of TRUE. <br>
+            It's value internally is <code>TRUE</code>
+        </p>
+
+        <h3>FALSE</h3>
+
+        <p>
+            FALSE is a constant defined in the standard library, it is the value of FALSE. <br>
+            It's value internally is <code>FALSE</code>
+        </p>
+
+        
+        <h3>MAXINT</h3>
+
+        <p>
+            MAXINT is a constant defined in the standard library, it is the maximum value of an integer. <br>
+            It's value internally is <code>2147483647</code>
+        </p>
+
+        <h3>MININT</h3>
+
+        <p>
+            MININT is a constant defined in the standard library, it is the minimum value of an integer. <br>
+            It's value internally is <code>-2147483648</code>
+        </p>
+
+        <h3>MAXLONG</h3>
+
+        <p>
+            MAXLONG is a constant defined in the standard library, it is the maximum value of a long. <br>
+            It's value internally is <code>9223372036854775807</code>
+        </p>
+
+        <h3>MINLONG</h3>
+
+        <p>
+            MINLONG is a constant defined in the standard library, it is the minimum value of a long. <br>
+            It's value internally is <code>-9223372036854775808</code>
+        </p>
+
+
+        <h2>General functions</h2>
+
+        <p><code class="language-dosato">VOID BREAK (LONG break_amount = 1)</code></p>
+
+        <p>
+            BREAK is a function defined in the standard library, it is used to break out of a loop. <br>
+            BREAK takes max 1 argument, the number of loops to break out of. <br>
+        </p>
+
+        <p><code class="language-dosato">VOID CONTINUE ()</code></p>
+
+        <p>
+            CONTINUE is a function defined in the standard library, it is used to skip the current iteration of a loop. <br>
+            CONTINUE takes no arguments. <br>
+        </p>
+
+        <p><code class="language-dosato">ANY RETURN (ANY value = ?)</code></p>
+
+        <p>
+            RETURN is a function defined in the standard library, it is used to return a value from a function. <br>
+            RETURN takes max 1 argument, the value to return. <br>
+        </p>
+
+
+        <div>
+            <a href="../2.5/index.html"> << 2.5 TypeCasting </a> || <a href="../3.1/index.html"> >> 3.1 Math</a>
+        </div>
+
+    </body>
+</html>

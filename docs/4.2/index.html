@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>4.2 Errors 21-30</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>4.2 Errors 21-30</h1>
+
+        <h2>E21: ERROR_EXPECTED_EXTENSION</h2>
+
+        <p>
+            The compiler expected an extension, but none was found. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY ("Hello!") // if theres no semicolon, it expects an extension
+MAKE INT x = 123; // this line is not an extension, so an error is thrown</code></pre>
+
+        <h2>E22: ERROR_EXPECTED_BLOCK</h2>
+
+        <p>
+            The compiler expected a block, but none was found. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE FUNC VOID myFunc (); // Error: A function must have a block.</code></pre>
+
+        <h2>E23: ERROR_EXPECTED_EXPRESSION</h2>
+
+        <p>
+            The compiler expected an expression, but none was found. <br>
+            Things like WHILE, WHEN, IF, FOR, etc. expect an expression. right after <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAYLN ("loop") WHILE; // WHILE expects an expression, an error is thrown</code></pre>
+
+        <h2>E24: ERROR_INVALID_EXPRESSION</h2>
+
+        <p>
+            The compiler found an invalid expression. <br>
+            This is trown rarely, but it can happen. <br>
+            It's usually pretty self-explanatory whats wrong if it happens. <br>
+        </p>
+
+        <h2>E25: ERROR_OPERATOR_NOT_UNARY</h2>
+
+        <p>
+            The compiler expected a unary operator (-, !, ~, ^/ or !-), but found a binary operator. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAYLN (+2); // + is a binary operator, so it can't be used like a unary operator</code></pre>
+
+        <h2>E26: ERROR_INVALID_FUNCTION_DECLARATION_ARGUMENT</h2>
+
+        <p>
+            The compiler found an invalid function declaration argument. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE FUNC VOID myFunc (STRING name, age) {DO SAY ("func!");}; // Error: age doesn't have it's type set</code></pre>
+
+        <h2>E27: ERROR_UNEXPECTED_TOKEN</h2>
+
+        <p>
+            Unused <br>
+        </p>
+
+        <h2>E28: ERROR_PROCESS_NOT_RUNNING</h2>
+
+        <p>
+            If this error is thrown, report it to the developer. <br>
+            This error is thrown when the compiler tries to access the process, but it's not running. <br>
+            The process should always be running when the compiler tries to access it. <br>
+        </p>
+
+        <h2>E29: ERROR_INTERPRETER_INVALID_COMMAND</h2>
+
+        <p>
+            If this error is thrown, report it to the developer. <br>
+            This error is thrown when the interpreter tries to execute an invalid command. <br>
+            The interpreter should never try to execute an invalid command. <br>
+        </p>
+
+        <h2>E30: ERROR_SAY_ERROR</h2>
+
+        <p>
+            This error is thrown if the SAY function fails to print the message. <br>
+        </p>
+        
+
+        <div>
+            <a href="../4.1/index.html"> << 4.1 Errors 11-20 </a> || <a href="../4.3/index.html"> >> 4.3 Errors 31-40</a>
+        </div>
+
+    </body>
+</html>

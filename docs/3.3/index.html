@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>3.3 Arrays</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>3.3 Arrays</h1>
+
+        <h2>Functions</h2>
+
+        <p><code class="language-dosato">ARRAY ANY ARRAYSHIFT (ARRAY ANY arr)</code></p>
+
+        <p>
+            Shifts the given array, removing the first element and returning a copy.
+        </p>
+
+        <p><code class="language-dosato">ARRAY ANY ARRAYREMOVE (ARRAY ANY arr, INT start, INT amount)</code></p>
+
+        <p>
+            Removes the given amount of elements from the given array, starting at the given index, and returns a copy.
+        </p>
+
+        <p><code class="language-dosato">ARRAY ANY ARRAYINSERT (ARRAY ANY arr, INT start, ANY insert)</code></p>
+
+        <p>
+            Inserts the given element into the given array, starting at the given index, and returns a copy.
+        </p>
+
+        <p><code class="language-dosato">ARRAY ANY ARRAYSLICE (ARRAY ANY arr, INT start, INT amount)</code></p>
+
+        <p>
+            Returns a slice of the given array, starting at the given index and ending at the given index + amount.
+        </p>
+
+        <p><code class="language-dosato">INT ARRAYFINDINDEX (ARRAY ANY arr, ANY element)</code></p>
+
+        <p>
+            Returns the index of the first occurence of the given element in the given array.<br>
+            Returns -1 if the element is not found.
+        </p>
+
+        <p><code class="language-dosato">INT ARRAYLASTINDEX (ARRAY ANY arr, ANY element)</code></p>
+
+        <p>
+            Returns the index of the last occurence of the given element in the given array.<br>
+            Returns -1 if the element is not found.
+        </p>
+
+        <p><code class="language-dosato">BOOL ARRAYCONTAINS (ARRAY ANY arr, ANY element)</code></p>
+
+        <p>
+            Returns true if the given element is found in the given array, false otherwise.
+        </p>
+
+        <p><code class="language-dosato">ARRAY ANY ARRAYREVERSE (ARRAY ANY arr)</code></p>
+
+        <p>
+            Returns a copy of the given array, with the elements in reverse order.
+        </p>
+
+        <p><code class="language-dosato">ARRAY ANY ARRAYSORT (ARRAY ANY arr)</code></p>
+
+        <p>
+            Returns a copy of the given array, with the elements sorted in ascending order.<br>
+            Sorting is based of the numerical value of the elements.
+        </p>
+
+        <p><code class="language-dosato">ARRAY ANY ARRAYSORTFUNC (ARRAY ANY arr, STRING callback_name)</code></p>
+
+        <p>
+            Returns a copy of the given array, with the elements sorted in ascending order.<br>
+            Sorting is based of the return value of the given callback function.<br>
+            Since Dosato can't pass functions as parameters, the name of the callback in string form must be passed instead.
+        </p>
+
+        <p>
+            <code class="language-dosato">ARRAY INT RANGE (INT end)</code><br>
+            <code class="language-dosato">ARRAY INT RANGE (INT start, INT end, INT step = 1)</code><br>
+        </p>
+
+        <p>
+            Returns an array of integers, starting at the given start index, ending at the given end index, and incrementing by the given step.<br>
+            If no step is given, the default value of 1 is used.<br>
+            If only 1 parameter is given, the default start value of 0 is used. and the given parameter is used as the end value.
+        </p>
+
+        <p>
+            <code class="language-dosato">ARRAY DOUBLE RANGEF (DOUBLE end)</code><br>
+            <code class="language-dosato">ARRAY DOUBLE RANGEF (DOUBLE start, DOUBLE end, DOUBLE step = 1.0)</code><br>
+        </p>
+
+        <p>
+            Returns an array of doubles, starting at the given start index, ending at the given end index, and incrementing by the given step.<br>
+            If no step is given, the default value of 1.0 is used.<br>
+            If only 1 parameter is given, the default start value of 0.0 is used. and the given parameter is used as the end value.
+        </p>
+
+        <p><code class="language-dosato">ARRAY ANY FILL (ANY element, INT amount)</code></p>
+
+        <p>
+            Returns an array of the given amount, filled with copies of the given element.
+        </p>
+
+
+        <div>
+            <a href="../3.2/index.html"> << 3.2 Strings </a> || <a href="../3.4/index.html"> >> 3.4 IO</a>
+        </div>
+
+    </body>
+</html>

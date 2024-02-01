@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>3.4 IO</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>3.4 Input and output</h1>
+
+        <h2>Functions</h2>
+
+        <p><code class="language-dosato">VOID SAY (ANY val, ANY other ...)</code></p>
+
+        <p>
+            Prints the given values to the console. <br>
+            The value is converted to a string before being printed.
+        </p>
+
+        <p><code class="language-dosato">VOID SAYLN (ANY val, ANY other ...)</code></p>
+
+        <p>
+            Prints the given values to the console, followed by a newline. <br>
+            The value is converted to a string before being printed.
+        </p>
+
+        <p><code class="language-dosato">STRING LISTEN (STRING prompt = ?)</code></p>
+
+        <p>
+            Prints the given prompt (optional) to the console, then waits for the user to input a string. <br>
+            When the user presses enter, the input is returned as a string.<br>
+            The program will wait for the user to input a string, so the program will not continue until the user has input a string.
+        </p>
+
+        <h3>File IO</h3>
+
+        <p><code class="language-dosato">STRING READ (STRING path)</code></p>
+
+        <p>
+            Reads the contents of the file at the given path and returns it as a string.<br>
+            If the file does not exist, <code>err72:ERROR_FILE_NOT_FOUND</code> is thrown.<br>
+            If the program does not have permission to read the file, <code>err75:ERROR_PERMISSION_DENIED</code> is thrown.
+        </p>
+
+        <p><code class="language-dosato">VOID WRITE (STRING path, STRING content)</code></p>
+
+        <p>
+            Writes the given content to the file at the given path.<br>
+            If the file does not exist, it is created.<br>
+            If the program does not have permission to write to the file or create it, <code>err75:ERROR_PERMISSION_DENIED</code> is thrown.
+        </p>
+
+        <p><code class="language-dosato">VOID APPEND (STRING path, STRING content)</code></p>
+
+        <p>
+            Appends the given content to the file at the given path.<br>
+            If the file does not exist, it is created.<br>
+            If the program does not have permission to write to the file or create it, <code>err75:ERROR_PERMISSION_DENIED</code> is thrown.
+        </p>
+
+        
+
+
+        <div>
+            <a href="../3.3/index.html"> << 3.3 Arrays </a> || <a href="../3.5/index.html"> >> 3.5 Time</a>
+        </div>
+
+    </body>
+</html>

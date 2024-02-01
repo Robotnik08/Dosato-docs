@@ -57,6 +57,19 @@
     DO SAY ("Access denied");
 };</code></pre>
 
+        <h2>IF</h2>
+
+        <p>
+            IF is also a way to do conditionals, they look and feel like the more familiar way of doing it.
+        </p>
+
+        <pre>
+<code class="language-dosato">DO IF (password == "1234") THEN {
+    DO SAY ("Access granted");    
+} ELSE {
+    DO SAY ("Access denied");
+};</code></pre>
+
         <h2>Boolean operators</h2>
 
         <p>
@@ -81,31 +94,31 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO {
+<code class="language-dosato">DO IF (password == "1234" && username == "Robotnik") THEN {
     DO SAY ("Access granted");
-} WHEN (password == "1234" && username == "Robotnik");</code></pre>
+};</code></pre>
 
         <p>
             Here password must be equal to "1234" and username must be equal to "Robotnik" for the block to be executed. <br>
-            Heres another example:
+            here's another example:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO {
+<code class="language-dosato">DO IF (password == "1234" || password == "4321") THEN{
     DO SAY ("Access granted");
-} WHEN (password == "1234" || password == "4321");</code></pre>
+};</code></pre>
 
         <p>
             Here password must be equal to "1234" or "4321" for the block to be executed. <br>
-            Heres another example:
+            here's another example:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO {
+<code class="language-dosato">DO IF (age >= 18) THEN {
     DO SAY ("Access granted");
-} WHEN (age >= 18);</code></pre>
+};</code></pre>
 
         <p>
             Here age (variable) must be greater or equal to 18 for the block to be executed. <br>

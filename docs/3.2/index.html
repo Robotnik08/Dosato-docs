@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>3.2 Strings</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <link rel="stylesheet" href="../../main.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <h1>3.2 Strings</h1>
+
+        <h2>Functions</h2>
+
+        <p><code class="language-dosato">ARRAY STRING SPLIT (STRING value, STRING delimiter)</code></p>
+
+        <p>
+            Splits a string into an array of strings, using the given delimiter.
+        </p>
+
+        <p><code class="language-dosato">STRING LOWERCASE (STRING value)</code></p>
+
+        <p>
+            Returns the given string in lowercase.
+        </p>
+
+        <p><code class="language-dosato">STRING UPPERCASE (STRING value)</code></p>
+        
+        <p>
+            Returns the given string in uppercase.
+        </p>
+
+        <p><code class="language-dosato">LONG LENGTH (STRING value)</code></p>
+
+        <p>
+            Returns the length of the given string.
+        </p>
+
+        <p><code class="language-dosato">STRING SUBSTRING (STRING value, LONG start, LONG end)</code></p>
+
+        <p>
+            Returns a substring of the given string, starting at the given start index and ending at the given end index.
+        </p>
+
+        <p><code class="language-dosato">LONG INDEXOF (STRING value, STRING search, LONG start = 0)</code></p>
+
+        <p>
+            Returns the index of the first occurence of the given search string in the given string, starting at the given start index.
+        </p>
+
+        <p><code class="language-dosato">LONG LASTINDEXOF (STRING value, STRING search, LONG start = 0)</code></p>
+
+        <p>
+            Returns the index of the last occurence of the given search string in the given string, starting at the given start index.
+        </p>
+
+        <p><code class="language-dosato">BOOL STARTSWITH (STRING value, STRING str, LONG start = 0)</code></p>
+
+        <p>
+            Returns TRUE if the given string starts with the given substring, starting at the given start index.
+        </p>
+
+        <p><code class="language-dosato">BOOL ENDSWITH (STRING value, STRING str, LONG start = 0)</code></p>
+
+        <p>
+            Returns TRUE if the given string ends with the given substring, starting at the given start index.
+        </p>
+
+        <p><code class="language-dosato">STRING TRIM (STRING value)</code></p>
+
+        <p>
+            Returns the given string with all leading and trailing whitespace removed.
+        </p>
+
+        <p><code class="language-dosato">STRING REVERSE (STRING value)</code></p>
+
+        <p>
+            Returns the given string in reverse.
+        </p>
+
+        <p><code class="language-dosato">STRING REPLACE (STRING value, STRING search, STRING replace, LONG start = 0)</code></p>
+
+        <p>
+            Returns the given string with all occurences of the given search string replaced with the given replace string, starting at the given start index.
+        </p>
+
+        <p><code class="language-dosato">BOOL CONTAINS (STRING value, STRING search, LONG start = 0)</code></p>
+
+        <p>
+            Returns TRUE if the given string contains the given search string, starting at the given start index.
+        </p>
+
+        <p><code class="language-dosato">STRING REMOVE (STRING value, LONG start, LONG end)</code></p>
+
+        <p>
+            Returns the given string with the substring starting at the given start index and ending at the given end index removed.
+        </p>
+
+        <p><code class="language-dosato">STRING INSERT (STRING value, STRING insert, LONG index)</code></p>
+
+        <p>
+            Returns the given string with the given insert string inserted at the given index.
+        </p>
+
+        <p><code class="language-dosato">LONG STRINGTOINT (STRING value)</code></p>
+
+        <p>
+            Converts the given ascii string to an integer ("123" becomes 123).<br>
+            If the string cannot be converted to an integer, 0 is returned.
+        </p>
+
+
+        <p><code class="language-dosato">DOUBLE STRINGTODOUBLE (STRING value)</code></p>
+
+        <p>
+            Converts the given ascii string to a double ("123.45" becomes 123.45).<br>
+            If the string cannot be converted to a double, 0 is returned.
+        </p>
+
+        <p><code class="language-dosato">LONG COUNT (STRING value, STRING search, LONG start = 0)</code></p>
+
+        <p>
+            Returns the number of occurences of the given search string in the given string, starting at the given start index.
+        </p>
+
+
+
+
+
+        <div>
+            <a href="../3.1/index.html"> << 3.1 Math </a> || <a href="../3.3/index.html"> >> 3.3 Arrays</a>
+        </div>
+
+    </body>
+</html>
