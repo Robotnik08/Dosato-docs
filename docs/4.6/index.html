@@ -20,6 +20,94 @@
     <body>
         <h1>4.6 Errors 61-70</h1>
 
+        <h2>E61: ERROR_VARIABLE_ALREADY_EXISTS</h2>
+
+        <p>
+            This error occurs when you try to create a variable that already exists. <br>
+            You can only create a variable once. <br>
+            If you want to change the value of a variable, use the <code>SET</code> keyword. <br>
+        </p>
+
+        <h2>E62: ERROR_WHILE_NOT_LAST</h2>
+
+        <p>
+            This error occurs when you use the <code>WHILE</code> keyword in the middle of a DO block. <br>
+            The <code>WHILE</code> keyword can only be used at the start of a DO block. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAYLN ("Hello");
+} WHILE (TRUE) WHEN (TRUE); // Error, WHILE must be at the end.</code></pre>
+
+        <h2>E63: ERROR_EXPECTED_ELSE</h2>
+
+        <p>
+            This error occurs when you use the <code>WHEN</code> keyword without an <code>ELSE</code> keyword. <br>
+            When WHEN is at the end of a DO block, it's fine. <br>
+            But when WHEN is in the middle of a DO block, it needs to be followed by an <code>ELSE</code> keyword. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAYLN ("Hello");
+} WHEN (TRUE) THEN SAYLN ("World"); // Error: Expected Else</code></pre>
+
+        <h2>E64: ERROR_EXTENSION_NOT_FINAL</h2>
+
+        <p>
+            This error occurs when you try to use an extension that is not final but wants to be final. <br>
+            (CATCH|INTO) is an example of a final extension. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAYLN ("Hello");
+} INTO e THEN SAYLN ("World"); // Error: Extension not final</code></pre>
+
+        <h2>E65: ERROR_FUNCTION_ALREADY_EXISTS</h2>
+
+        <p>
+            This error occurs when you try to create a function that already exists. <br>
+            You can only create a function with a certain name once. <br>
+        </p>
+
+        <h2>E66: ERROR_INVALID_TYPE</h2>
+
+        <p>
+            When you use a type that doesn't exist, this error occurs. <br>
+            Examples: (INT INT, VOID INT, etc), just any type combination that doesn't exist. <br>
+        </p>
+        
+        <h2>E67: ERROR_BREAK_OUTSIDE_OF_LOOP</h2>
+        <h2>E68: ERROR_CONTINUE_OUTSIDE_OF_LOOP</h2>
+
+        <p>
+            These errors occur when you use the <code>BREAK</code> or <code>CONTINUE</code> function outside of a <code>WHILE</code> or <code>FOR</code> loop. <br>
+            <code>BREAK</code> and <code>CONTINUE</code> can only be used inside of loops. <br>
+        </p>
+
+        <h2>E69: ERROR_TOO_FEW_ARGUMENTS</h2>
+
+        <p>
+            This error occurs when you call a system function with too few arguments. <br>
+            The function you're calling requires more arguments than you're giving it. <br>
+            Check chapter 3 for a list of standard library functions.<br>
+        </p>
+
+        <h2>E70: ERROR_RETURN_OUTSIDE_OF_FUNCTION</h2>
+
+        <p>
+            This error occurs when you use the <code>RETURN</code> function outside of a user made function. <br>
+            The <code>RETURN</code> function can only be used inside of a user made function. <br>
+        </p>
+
         
         <div>
             <a href="../4.5/index.html"> << 4.5 Errors 51-60 </a> || <a href="../4.7/index.html"> >> 4.7 Errors 71-80</a>
