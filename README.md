@@ -2,6 +2,7 @@
 
 ## General Information
 
+The Dosato Downloadable Documentation is the official documentation for the Dosato programming language, you install it [here](https://github.com/Robotnik08/Dosato/releases/latest).<br>
 The Dosato Downloadable Documentation is a fully offline version of the Dosato documentation, which can be downloaded and used offline.<br>
 You need a modern browser and (optionally) have JavaScript enabled to use it.
 

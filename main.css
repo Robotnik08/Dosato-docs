@@ -11,3 +11,25 @@
     border-radius: 10px;
     border: 1px solid salmon;
 }
+
+:not(code):not(pre):not(span) {
+    font-family: sans-serif;
+}
+
+ol {
+    list-style-type: disc;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
