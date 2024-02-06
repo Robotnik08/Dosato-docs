@@ -33,3 +33,27 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #007BFF;
+}
+
+header a, header p {
+    width: 300px;
+    color:whitesmoke;
+
+    /* Center the text vertically */
+    display: flex;
+    align-items: center;
+}
+
+header p {
+    text-align: right;
+}
+
+header h2 {
+    font-size: xx-large;
+    color: whitesmoke;
+}
