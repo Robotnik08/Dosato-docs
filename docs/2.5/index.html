@@ -24,6 +24,54 @@
         
         <h1>2.5 Type casting</h1>
 
+        <p>
+            Dosato has an autocasting system, which means that you can cast types without using a keyword. <br>
+            If you want to cast a type, you can use the following syntax: <code>(TYPE) VALUE</code>
+            This means that in most cases, any type can be cast to any other type. <br>
+        </p>
+
+        <!--
+            Type table
+        -->
+
+        <table>
+            <tr>
+                <th>Operation</th>
+                <th>Example</th>
+                <th>Explanation</th>
+            </tr>
+            <tr>
+                <td>INT - FLOAT</td>
+                <td>MAKE FLOAT a = (INT) 1.5; // 1</td>
+                <td>Value is interpreted as INT, is floored.</td>
+            </tr>
+            <tr>
+                <td>INT - STRING</td>
+                <td>MAKE STRING a = (INT) 1; // "1"</td>
+                <td>Value is interpreted as STRING.</td>
+            </tr>
+            <tr>
+                <td>FLOAT - STRING</td>
+                <td>MAKE STRING a = 1.5; // "1.5"</td>
+                <td>Value is interpreted as STRING.</td>
+            </tr>
+            <tr>
+                <td>ARRAY - STRING</td>
+                <td>MAKE STRING a = [1,2,3,4,5]; // "[1,2,3,4,5]"</td>
+                <td>Value is interpreted as STRING nicely formatted.</td>
+            </tr>
+            <tr>
+                <td>STRING - INT</td>
+                <td>MAKE INT a = "Hello!"; // 6</td>
+                <td>Value is the length of the string.</td>
+            </tr>
+            <tr>
+                <td>ARRAY - INT</td>
+                <td>MAKE INT a = [1,2,3,4,5]; // 5</td>
+                <td>Value is the length of the array.</td>
+            </tr>
+
+        </table>
 
         <div>
             <a href="../2.4/index.html"> << 2.4 The _ variable</a> || <a href="../3.0/index.html"> >> 3.0 Universal constants</a>

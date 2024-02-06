@@ -24,6 +24,51 @@
         
         <h1>2.4 The _ variable</h1>
 
+        <p>
+            The <code>_</code> variable is a special variable that is used to store the result of the last function call. <br>
+            It's also used to store the error code when an error occurs. <br>
+            The <code>_</code> variable is read-only and cannot be modified. <br>
+            The <code>_</code> variable is a global variable and can be accessed from anywhere in the program. <br>
+        </p>
+
+        <h2>Example</h2>
+
+        <p>
+            In this example, the <code>_</code> variable is used to store the result of the last function call:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">MAKE FUNC INT add(INT a, INT b) {
+    DO RETURN (a + b);
+};
+
+DO add(5, 10);
+DO SAY (_); // 15</code></pre>
+
+        <p>
+            Function calls in expressions are automatically seen as _ variables. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO SAY (add(5, 10)); // 15, the function call is converted to _, so the interpreter sees it as DO SAY (_);</code></pre>
+
+        <p>
+            The <code>_</code> variable is also used to store the error message when an error occurs. <br>
+            It turns into an INT when an error occurs. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">DO {
+    DO SAY (notDefined); // Error is thrown
+} CATCH {
+    DO SAY (_); // The error message is stored in the _ variable
+};</code></pre>
+
+        
 
         <div>
             <a href="../2.3/index.html"> << 2.3 DO extensions</a> || <a href="../2.5/index.html"> >> 2.5 Type casting</a>
