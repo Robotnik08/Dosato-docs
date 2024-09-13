@@ -1,12 +1,12 @@
 Prism.languages['dosato'] = {
     'comment': /\/\/.*/,
     'string': /(["'])(?:(?!\1)[^\\]|\\.)*\1/,
-    'keyword': /\b(?:DO|SET|MAKE|WHEN|ELSE|WHILE|FOR|IF|CATCH|THEN|INTO)\b/,
-    'type_identifier': /\b(?:INT|SHORT|BYTE|LONG|UINT|USHORT|UBYTE|ULONG|DOUBLE|FLOAT|STRING|CHAR|BOOL|ARRAY|FUNC|VOID|ANY)\b/,
+    'keyword': /\b(?:DO|SET|MAKE|WHEN|ELSE|WHILE|FOR|IF|CATCH|THEN|DEFINE|IMPORT|INCLUDE|CONTINUE|BREAK|RETURN)\b/,
+    'type_identifier': /\b(?:INT|SHORT|BYTE|LONG|UINT|USHORT|UBYTE|ULONG|DOUBLE|FLOAT|STRING|CHAR|BOOL|ARRAY|VOID|VAR|OBJECT)\b/,
     'variable': /\b(?:[a-zA-Z_]\w*)\b/,
     'number': /\b(?:\d+(?:\.\d*)?|\.\d+)(?:F)?\b/,
     'operator': /[-+*\/=<>!%?^|&]+/,
-    'punctuation': /[{}[\];(),.:]/
+    'punctuation': /[{}[\];(),]/
 };
 
 Prism.hooks.add('before-highlight', function (env) {
