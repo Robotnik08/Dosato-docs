@@ -4,9 +4,7 @@
         <title>4.0 Errors 1-10</title>
 
         <!-- Dosato prism support -->
-        
-        
-<link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
@@ -42,60 +40,98 @@
             If the error location is wrong or the error message is not correct, it is most likely a bug and should be reported.<br>
         </p>
 
-        <h2>E1: ERROR_SYNTAX</h2>
+        <h2>E1: E_INVALID_NUMBER_LITERAL</h2>
 
         <p>
-            This is a general error, this is currently not used, in favour of more detailed errors.<br>
+            If a number literal is invalid, throw this error.<br>
+            Theres are a few examples of invalid number literals:<br>
+            - 1.<br>
+            - 1.0.0<br>
         </p>
 
-        <h2>E2: ERROR_TYPE_MISMATCH</h2>
+<pre><code class="language-dosato">do say (1.); // 1. is an invalid number literal</code></pre>
+
+        <h2>E2: E_INVALID_CHAR_LITERAL</h2>
 
         <p>
-            This error occurs when a variable is used in an expression or system function with a type that is not compatible with the variable.<br>
-            A common example:
-        </p>
-
-        <!-- Code block -->
-        <pre>
-<code class="language-dosato">MAKE ARRAY INT numbers = [1, 2, 3];
-SET numbers = 1; // Error, numbers can not be converted to array.</code></pre>
-
-        <h2>E3: ERROR_UNDEFINED</h2>
-        <h2>E4: ERROR_RECURSION</h2>
-        <h2>E5: ERROR_MEMORY</h2>
-        <h2>E6: ERROR_FILE</h2>
-        <h2>E7: ERROR_RUNTIME</h2>
-        <h2>E8: ERROR_PARSER</h2>
-
-        <p>
-            These are currently not used.<br>
-            These can be freely used by the user.<br>
-        </p>
-
-        <h2>E9: ERROR_EXPECTED_MASTER</h2>
-
-        <p>
-            This is a parser error, if the first token of a line is not a master token (DO|SET|MAKE), throw this error.<br>
-            A common example:
+            If a char literal is invalid, throw this error.<br>
+            Theres are a few examples of invalid char literals:<br>
+            - 'a<br>
+            - 'ab'<br>
         </p>
 
         <!-- Code block -->
-        <pre>
-<code class="language-dosato">DO SAY ("Hello world!"); // Correct
-SAY ("Hello world!"); // Error, expected master token (DO).</code></pre>
+        <pre><code class="language-dosato">do say ('Hello'); // char literal must only have 1 char</code></pre>
 
-        <h2>E10: ERROR_EXPECTED_IDENTIFIER</h2>
+        <h2>E3: E_UNCLOSED_STRING_LITERAL</h2>
 
         <p>
-            This can be a parser error and a runtime error, if the token is not an identifier while it's expected to be, throw this error.<br>
-            A common example:
+            If a string literal is not closed, throw this error.<br>
+            Theres are a few examples of unclosed string literals:<br>
+            - "Hello<br>
+            - "Hello\"<br>
         </p>
 
         <!-- Code block -->
-        <pre>
-<code class="language-dosato">MAKE INT num1 = 321; // Correct
-MAKE INT = 123; // Error, expected identifier.</code></pre>
+        <pre><code class="language-dosato">do say ("Hello); // string literal must be closed</code></pre>
 
+        <h2>E4: E_EXPECTED_MASTER</h2>
+
+        <p>
+            A master keyword MUST be at the beginning of each line of code.<br>
+            do, set, make, define, import, include, return, continue, break
+        </p>
+
+        <!-- Code block -->
+        <pre><code class="language-dosato">say ("Hello"); // Error, line doesn't start with a master keyword</code></pre>
+
+        <h2>E5: E_MISSING_SEPERATOR</h2>
+
+        <p>
+            The line seperator character ';' is missing.<br>
+        </p>
+
+        <!-- Code block -->
+        <pre><code class="language-dosato">do say ("Hello") // Error, missing seperator</code></pre>
+
+        <h2>E6: E_MISSING_CLOSING_PARENTHESIS</h2>
+
+        <p>
+            A closing parenthesis ')', '}' or ']' is missing.<br>
+        </p>
+
+        <!-- Code block -->
+        <pre><code class="language-dosato">do say ("Hello"; // Error, missing closing parenthesis</code></pre>
+
+        <h2>E7: E_MISSING_OPENING_PARENTHESIS</h2>
+
+        <p>
+            An opening parenthesis '(', '{' or '[' is missing.<br>
+        </p>
+
+        <h2>E8: E_UNEXPECTED_TOKEN</h2>
+
+        <p>
+            An unexpected token was found.<br>
+        </p>
+
+        <h2>E9: E_EXPECTED_IDENTIFIER</h2>
+
+        <p>
+            An identifier was expected.<br>
+        </p>
+
+        <!-- Code block -->
+        <pre><code class="language-dosato">define void () {}; // expected identifier</code></pre>
+
+        <h2>E10: E_EXPECTED_TYPE_INDENTIFIER</h2>
+
+        <p>
+            A type identifier was expected.<br>
+        </p>
+
+        <!-- Code block -->
+        <pre><code class="language-dosato">make a = 0; // expected type identifier</code></pre>
 
 
         <div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>2.3 DO extensions</title>
+        <title>2.3 extensions</title>
 
         <!-- Dosato prism support -->
         <link rel="stylesheet" href="../../main.css">
@@ -22,199 +22,261 @@
             <p>Copyright &copy 2024 Sebastiaan Heins</p>
         </header>
         
-        <h1>2.3 DO extensions</h1>
+        <h1>2.3 extensions</h1>
 
         <p>
-            In this section, we will discuss the extensions to the DO function that are provided by the DOSATO standard library.<br>
+            In this section, we will discuss the extensions to the do function that are provided by the DOSATO standard library.<br>
             We will take a closer look at all the extensions.<br>
         </p>
 
-        <h2>IF</h2>
+        <h2>if</h2>
 
         <p>
-            IF is an extension to the DO function, it is used to create a conditional statement.<br>
-            IF is followed by (), then right after a THEN block and an optional ELSE block after the full THEN.<br>
-            The expression inside the () is evaluated and if it is TRUE, the THEN block is executed.<br>
-            If the expression is FALSE, the ELSE block is executed.<br>
+            if is an extension to the do function, it is used to create a conditional statement.<br>
+            if is followed by (), then right after a then block and an optional else block after the full then.<br>
+            The expression inside the () is evaluated and if it is true, the then block is executed.<br>
+            If the expression is false, the else block is executed.<br>
             Heres some example code:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO IF (password == "1234") THEN SAY ("Access granted") ELSE SAY ("Access denied");</code></pre>
+<code class="language-dosato">do if (password == "1234") then say ("Access granted") else say ("Access denied");</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
             If it is, it will print <code>"Access granted"</code>, otherwise it will print <code>"Access denied"</code>.<br>
-            This is a simple example of an IF statement.<br>
-            IF statements only count for the first THEN in the chain, the rest of the THENs are ignored.<br>
+            This is a simple example of an if statement.<br>
+            if statements only count for the first then in the chain, the rest of the THENs are ignored.<br>
             Example of this:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO IF (password == "1234") THEN SAY ("Access granted") THEN SAY ("Started!");</code></pre>
+<code class="language-dosato">do if (password == "1234") then say ("Access granted") then say ("Started!");</code></pre>
 
         <p>
-            The code above will print <code>"Access granted"</code> when TRUE and then <code>"Started!"</code>.<br>
-            <code>"Started!"</code> will always be printed, even if the expression is FALSE, this is because the second THEN is ignored.<br>
+            The code above will print <code>"Access granted"</code> when true and then <code>"Started!"</code>.<br>
+            <code>"Started!"</code> will always be printed, even if the expression is false, this is because the second then is ignored.<br>
         </p>
 
-        <h2>WHEN</h2>
+        <h2>when</h2>
 
         <p>
-            WHEN is the second way to create a conditional statement.<br>
-            WHEN is followed by (), WHEN is placed at the end of a statement, right after can follow an ELSE.<br>
-            The expression inside the () is evaluated and if it is TRUE, everything before the WHEN will be excecuted.<br>
-            If the expression is FALSE, the ELSE block is executed.<br>
+            when is the second way to create a conditional statement.<br>
+            when is followed by (), when is placed at the end of a statement, right after can follow an else.<br>
+            The expression inside the () is evaluated and if it is true, everything before the when will be excecuted.<br>
+            If the expression is false, the else block is executed.<br>
             Heres some example code:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ("Access granted") WHEN (password == "1234") ELSE SAY ("Access denied");</code></pre>
+<code class="language-dosato">do say ("Access granted") when (password == "1234") else say ("Access denied");</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
             If it is, it will print <code>"Access granted"</code>, otherwise it will print <code>"Access denied"</code>.<br>
-            This is a simple example of a WHEN statement.<br>
-            Unlike the IF statement, WHEN statements contains the entire chain before.<br>
+            This is a simple example of a when statement.<br>
+            Unlike the if statement, when statements contains the entire chain before.<br>
             Example of this:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ("Access granted") THEN SAY ("Started!") WHEN (password == "1234");</code></pre>
+<code class="language-dosato">do say ("Access granted") then say ("Started!") when (password == "1234");</code></pre>
 
         <p>
-            The code above will print <code>"Access granted"</code> when TRUE and then <code>"Started!"</code>.<br>
-            <code>"Started!"</code> will also only be printed when the expression is TRUE, if it is FALSE, nothing will be printed.<br>
-            WHEN works differently than IF, WHEN is used to create a conditional statement at the end of a chai, and contains the entire chain before.<br>
+            The code above will print <code>"Access granted"</code> when true and then <code>"Started!"</code>.<br>
+            <code>"Started!"</code> will also only be printed when the expression is true, if it is false, nothing will be printed.<br>
+            when works differently than if, when is used to create a conditional statement at the end of a chai, and contains the entire chain before.<br>
         </p>
 
-        <h2>ELSE</h2>
+        <h2>else</h2>
 
         <p>
-            ELSE is used to create an alternative block of code that is executed when the expression in the IF or WHEN statement is FALSE.<br>
-            ELSE is always placed after the THEN block or directly after the WHEN extension.<br>
-            ELSE is optional, if it is not present, nothing will be executed when the expression is FALSE.<br>
-            Example of an IF statement with an ELSE block:
+            else is used to create an alternative block of code that is executed when the expression in the if or when statement is false.<br>
+            else is always placed after the then block or directly after the when extension.<br>
+            else is optional, if it is not present, nothing will be executed when the expression is false.<br>
+            Example of an if statement with an else block:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO IF (password == "1234") THEN SAY ("Access granted") ELSE SAY ("Access denied");</code></pre>
+<code class="language-dosato">do if (password == "1234") then say ("Access granted") else say ("Access denied");</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
             If it is, it will print <code>"Access granted"</code>, otherwise it will print <code>"Access denied"</code>.<br>
-            This is a simple example of an IF statement with an ELSE block.<br>
-            Example of a WHEN statement with an ELSE block:
+            This is a simple example of an if statement with an else block.<br>
+            Example of a when statement with an else block:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ("Access granted") WHEN (password == "1234") ELSE SAY ("Access denied");</code></pre>
+<code class="language-dosato">do say ("Access granted") when (password == "1234") else say ("Access denied");</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
             If it is, it will print <code>"Access granted"</code>, otherwise it will print <code>"Access denied"</code>.<br>
-            This is a simple example of a WHEN statement with an ELSE block.<br>
+            This is a simple example of a when statement with an else block.<br>
         </p>
 
-        <h2>FOR</h2>
+        <h2>for</h2>
 
         <p>
-            FOR is used to create an array iteration loop.<br>
-            FOR is placed at the end of a call chain.<br>
-            FOR is followed by (), in the () you put the array you want to iterate over, then the => operator and after that the variable name for the element.<br>
-            Example of a FOR loop:
+            for is used to create an array iteration loop.<br>
+            for is placed at the end of a call chain.<br>
+            for is followed by (), in the () you put the array you want to iterate over, then the => operator and after that the variable name for the element.<br>
+            Example of a for loop:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAYLN (i) FOR (RANGE(100) => i);</code></pre>
+<code class="language-dosato">make var i = 0;
+do sayln (i) for (range(100) => i);</code></pre>
 
         <p>
-            RANGE(100) returns an array of numbers from 0 to 99.<br>
-            The FOR loop will iterate over the array and print each element of the array to the console.<br>
+            <code>range(100)</code> returns an array of numbers from 0 to 99.<br>
+            The for loop will iterate over the array and print each element of the array to the console.<br>
             The variable <code>i</code> is used to store the current element of the array.<br>
-            The FOR loop will stop when there are no more elements in the array, or a BREAK is called.<br>
-        </p>
-
-        <h2>WHILE</h2>
-
-        <p>
-            WHILE is used to create a loop.<br>
-            WHILE is placed at the end of a call chain.<br>
-            WHILE is followed by ()<br>
-            The expression inside the () is evaluated and if it is TRUE, the block of code is executed.<br>
-            The expression is evaluated again and if it is TRUE, the block of code is executed again.<br>
-            This process repeats until the expression is FALSE.<br>
-            Example of a WHILE loop:
+            The for loop will stop when there are no more elements in the array, or a break is called.<br>
+            Make sure the variable exists before the for loop, or it will throw an error.<br>
+            You can also discard the iterator of the array by using the <code>_</code> variable.<br>
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE INT i = 0;
-DO {
-    DO SAYLN (i);
-    SET i += 1;
-} WHILE (i < 100);</code></pre>
+<code class="language-dosato">do sayln ("Hello world!") for (range(10) => _);</code></pre>
+
+        <p>
+            You can iterate over any array, not just the <code>range</code> function.<br>
+            Example of this:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make array names = ["Robotnik", "Alex"];
+make var i = null; // Recommended to use the var type, as a list might differ in types.
+do sayln ("Hi " + i) for (names => i);</code></pre>
+
+        <p>
+            You can break out of a for loop by using the <code>break</code> keyword.<br>
+            Example of this:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make var i = 0;
+do {
+    do sayln (i);
+    break when i == 5;
+} for (range(10) => i);</code></pre>
+
+        <p>
+            Or you can continue to the next iteration of the loop by using the <code>continue</code> keyword.<br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make var i = 0;
+do {
+    do sayln (i);
+    continue when i % 2 == 0;
+} for (range(10) => i);</code></pre>
+
+        <h2>while</h2>
+
+        <p>
+            while is used to create a loop.<br>
+            while is placed at the end of a call chain.<br>
+            while is followed by ()<br>
+            The expression inside the () is evaluated and if it is true, the block of code is executed.<br>
+            The expression is evaluated again and if it is true, the block of code is executed again.<br>
+            This process repeats until the expression is false.<br>
+            Example of a while loop:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make int i = 0;
+do {
+    do sayln (i);
+    set i++;
+} while (i < 100);</code></pre>
 
         <p>
             This loop will print the numbers 0 to 99 to the console.<br>
-            The code inside the block is executed until the expression <code>i < 100</code> is FALSE.<br>
+            The code inside the block is executed until the expression <code>i < 100</code> is false.<br>
             The variable <code>i</code> is incremented by 1 each time the loop is executed.<br>
             So the loop will stop when <code>i</code> is equal to 100.<br>
         </p>
 
-        <h2>THEN</h2>
-
         <p>
-            THEN is used to immediately execute a function after the previous function has finished.<br>
-            THEN is placed after a call or an IF.<br>
-            THEN is followed by a function call.<br>
-            Example of a THEN statement:
+            Just like with for, you can use the <code>break</code> and <code>continue</code> keywords to break out of the loop or continue to the next iteration.<br>
+            Example of this:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ("Hello world!") THEN SAY ("Hello again!");</code></pre>
+<code class="language-dosato">make int i = 0;
+do {
+    do sayln (i);
+    set i++;
+    break when i == 5;
+} while (i < 10);</code></pre>
+
+        <p>
+            This will print the numbers 0 to 4 to the console.<br>
+            The loop will stop when <code>i</code> is equal to 5.<br>
+        </p>
+
+        <h2>then</h2>
+
+        <p>
+            then is used to immediately execute a function after the previous function has finished.<br>
+            then is placed after a call or an if.<br>
+            then is followed by a function call.<br>
+            Example of a then statement:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">do say ("Hello world!") then say ("Hello again!");</code></pre>
 
         <p>
             This will print <code>Hello world!</code> and then <code>Hello again!</code> to the console.<br>
-            The second <code>SAY</code> function is executed after the first <code>SAY</code> function has finished.<br>
+            The second <code>say</code> function is executed after the first <code>say</code> function has finished.<br>
         </p>
 
-        <h2>CATCH</h2>
+        <h2>catch</h2>
 
         <p>
-            CATCH is used to catch errors that are thrown by a function.<br>
-            CATCH is placed after a function call.<br>
-            CATCH is followed by a block of code.<br>
-            Example of a CATCH statement:
+            catch is used to catch errors that are thrown by a function.<br>
+            catch is placed after a function call.<br>
+            catch is followed by a block of code.<br>
+            Example of a catch statement:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY (thisVarDoesNotExist) CATCH {
-    DO SAY ("Error!");
+<code class="language-dosato">do say (thisVarDoesNotExist) catch {
+    do say ("Error!");
 };</code></pre>
 
         <p>
             This will print <code>Error!</code> to the console.<br>
-            The <code>CATCH</code> block is executed when the <code>SAY</code> function throws an error.<br>
-            When it does, it stops the call chain and executes the <code>CATCH</code> block.<br>
-            The program will not crash, it will continue after the <code>CATCH</code> block.<br>
+            The <code>catch</code> block is executed when the <code>say</code> function throws an error.<br>
+            When it does, it stops the call chain and executes the <code>catch</code> block.<br>
+            The program will not crash, it will continue after the <code>catch</code> block.<br>
             The error code will be stored in the <code>_</code> variable.<br>
             Example of this:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY (thisVarDoesNotExist) CATCH {
-    DO SAY ("Error: " + _);
+<code class="language-dosato">do say (thisVarDoesNotExist) catch {
+    do say ("Error: " + _);
 };</code></pre>
 
         <p>
@@ -232,28 +294,8 @@ DO {
             </p>
         </div>
 
-        <h2>INTO</h2>
-
-        <p>
-            INTO is used to assign the result of a function to a variable.<br>
-            INTO is placed after a function call.<br>
-            INTO is followed by a variable name.<br>
-            Example of an INTO statement:
-        </p>
-
-        <!-- Code block -->
-        <pre>
-<code class="language-dosato">MAKE INT number = 0;
-DO sum(10,5) INTO number;</code></pre>
-
-        <p>
-            This will call the <code>sum</code> function and assign the result to the variable <code>number</code>.<br>
-            The variable <code>number</code> will now be equal to <code>15</code>.<br>
-        </p>
-
-
         <div>
-            <a href="../2.2/index.html"> << 2.2 Operators</a> || <a href="../2.4/index.html"> >> 2.4 The _ variable</a>
+            <a href="../2.2/index.html"> << 2.2 Operators</a> || <a href="../2.4/index.html"> >> 2.4 Type casting</a>
         </div>
 
     </body>

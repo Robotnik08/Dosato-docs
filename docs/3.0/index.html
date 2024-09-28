@@ -27,81 +27,96 @@
         <h2>Dosato by default has a selection of build in functions and variables, to help you build efficient code.</h2>
 
         <p>
-            In this chapter, we will list and explore all the functions and variables Dosato has to offer!
+            In this chapter, we will list and explore all the functions and variables Dosato has to offer!<br>
         </p>
+
+        <h3 class="info">
+            Note: <br>
+            Each and every function/constant also has a lowercase version, for example <code>MAXLONG</code> can also be written as <code>maxlong</code>.
+        </h3>
 
         <h2>General Constants</h2>
 
-        <h3>TRUE</h3>
-
-        <p>
-            TRUE is a constant defined in the standard library, it is the value of TRUE. <br>
-            It's value internally is <code>TRUE</code>
-        </p>
-
-        <h3>FALSE</h3>
-
-        <p>
-            FALSE is a constant defined in the standard library, it is the value of FALSE. <br>
-            It's value internally is <code>FALSE</code>
-        </p>
-
         
-        <h3>MAXINT</h3>
-
-        <p>
-            MAXINT is a constant defined in the standard library, it is the maximum value of an integer. <br>
-            It's value internally is <code>2147483647</code>
-        </p>
-
-        <h3>MININT</h3>
-
-        <p>
-            MININT is a constant defined in the standard library, it is the minimum value of an integer. <br>
-            It's value internally is <code>-2147483648</code>
-        </p>
-
-        <h3>MAXLONG</h3>
+        <h3>long: MAXLONG</h3>
 
         <p>
             MAXLONG is a constant defined in the standard library, it is the maximum value of a long. <br>
             It's value internally is <code>9223372036854775807</code>
         </p>
 
-        <h3>MINLONG</h3>
+        <h3>long: MINLONG</h3>
 
         <p>
             MINLONG is a constant defined in the standard library, it is the minimum value of a long. <br>
             It's value internally is <code>-9223372036854775808</code>
         </p>
 
-
-        <h2>General functions</h2>
-
-        <p><code class="language-dosato">VOID BREAK (LONG break_amount = 1)</code></p>
+        <h3>long: MAXINT</h3>
 
         <p>
-            BREAK is a function defined in the standard library, it is used to break out of a loop. <br>
-            BREAK takes max 1 argument, the number of loops to break out of. <br>
+            MAXINT is a constant defined in the standard library, it is the maximum value of an int. <br>
+            It's value internally is <code>2147483647</code>
         </p>
 
-        <p><code class="language-dosato">VOID CONTINUE ()</code></p>
+        <h3>long: MININT</h3>
 
         <p>
-            CONTINUE is a function defined in the standard library, it is used to skip the current iteration of a loop. <br>
-            CONTINUE takes no arguments. <br>
+            MININT is a constant defined in the standard library, it is the minimum value of an int. <br>
+            It's value internally is <code>-2147483648</code>
         </p>
 
-        <p><code class="language-dosato">ANY RETURN (ANY value = ?)</code></p>
+        <h3>long: MAXSHORT</h3>
+        
+        <p>
+            MAXSHORT is a constant defined in the standard library, it is the maximum value of a short. <br>
+            It's value internally is <code>32767</code>
+        </p>
+
+        <h3>long: MINSHORT</h3>
 
         <p>
-            RETURN is a function defined in the standard library, it is used to return a value from a function. <br>
-            RETURN takes max 1 argument, the value to return. <br>
+            MINSHORT is a constant defined in the standard library, it is the minimum value of a short. <br>
+            It's value internally is <code>-32768</code>
         </p>
 
+        <h3>long: MAXBYTE</h3>
+
+        <p>
+            MAXBYTE is a constant defined in the standard library, it is the maximum value of a byte. <br>
+            It's value internally is <code>127</code>
+        </p>
+
+        <h3>long: MINBYTE</h3>
+
+        <p>
+            MINBYTE is a constant defined in the standard library, it is the minimum value of a byte. <br>
+            It's value internally is <code>-128</code>
+        </p>
+
+
+        <h2>General Functions</h2>
+
+        <p><code class="language-dosato">string TYPEOF (var value)</code></p>
+
+        <p>
+            Returns the type of the given value as a string. <br>
+        </p>
+
+        <p><code class="language-dosato">bool ISNULL (var value)</code></p>
+
+        <p>
+            Returns true if the given value is null, false otherwise. <br>
+        </p>
+
+        <p><code class="language-dosato">long TYPEOFINT (var value)</code></p>
+
+        <p>
+            Returns the type of the given value as a long. <br>
+        </p>
 
         <div>
-            <a href="../2.5/index.html"> << 2.5 TypeCasting </a> || <a href="../3.1/index.html"> >> 3.1 Math</a>
+            <a href="../2.5/index.html"> << 2.5 Including and Importing </a> || <a href="../3.1/index.html"> >> 3.1 Math</a>
         </div>
 
     </body>

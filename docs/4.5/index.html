@@ -4,9 +4,7 @@
         <title>4.5 Errors 51-60</title>
 
         <!-- Dosato prism support -->
-        
-        
-<link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
@@ -26,83 +24,68 @@
         
         <h1>4.5 Errors 51-60</h1>
 
-        <h2>E51: ERROR_CAST_ERROR</h2>
+        <h2>E51: E_EXPECTED_STRING_TYPE</h2>
 
         <p>
-            The given value cannot be casted to the given type.<br>
-            Because of the autocasting, theres not a lot of cases where this error can occur.<br>
+            Expected a string type.
         </p>
 
-        <h2>E52: ERROR_CANNOT_MODIFY_CONSTANT</h2>
+        <h2>E52: E_EXPECTED_NUMBER</h2>
 
         <p>
-            The given value is a constant and cannot be modified.<br>
-            Right now thats only certain standard library constants.<br>
+            Expected a number type.
         </p>
 
-        <h2>E53: ERROR_CANNOT_MODIFY_LITERAL</h2>
-        <h2>E54: ERROR_EXPECTED_REFRENCE</h2>
+        <h2>E53: E_FILE_NOT_FOUND</h2>
 
         <p>
-            Unused<br>
+            File not found.
         </p>
 
-        <h2>E55: ERROR_INVALID_REFRENCE_EXPRESSION</h2>
+        <h2>E54: E_FILE_ALREADY_EXISTS</h2>
 
         <p>
-            When trying to access a refrence, the given operator is not correct (expecting # operator).<br>
+            File already exists.
         </p>
 
-        <h2>E56: ERROR_ARRAY_OUT_OF_BOUNDS</h2>
+        <h2>E55: E_FILE_PERMISSION_DENIED</h2>
 
         <p>
-            When trying to access an array with an index that is out of bounds, this error will be thrown.<br>
-            Example:
+            Permission denied.
         </p>
 
-        <!-- Code block -->
-
-        <pre>
-<code class="language-dosato">MAKE ARRAY INT arr = [1, 2, 3];
-DO SAYLN (arr[3]); // arr[3] is out of bounds, so an error is thrown</code></pre>
-
-        <h2>E57: ERROR_EXPECTED_ARRAY</h2>
+        <h2>E56: E_CANNOT_BE_ZERO</h2>
 
         <p>
-            when making an array with MAKE, the compiler expects an array, but none was found.<br>
-            or, a for loop expects an array, but none was found.<br>
-            Examples:
+            Value cannot be zero.
         </p>
 
-        <!-- Code block -->
-
-        <pre>
-<code class="language-dosato">MAKE ARRAY INT arr = 123; // Error: expected array, found int
-DO SAY (i) FOR (123 => i); // Error: expected array, found int</code></pre>
-
-        <h2>E58: ERROR_INCORRECT_ARRAY_DEPTH</h2>   
+        <h2>E57: E_CANNOT_BE_NEGATIVE</h2>
 
         <p>
-            When casting two arrays, if the dimensions do no match, this error will be thrown.<br>
+            Value cannot be negative.
         </p>
 
-        <h2>E59: ERROR_INVALID_CAST</h2>
+        <h2>E58: E_EMPTY_MESSAGE</h2>
 
         <p>
-            When a typecast has an invalid type:<br>
-            (ARRAY INT) is valid, but (INT ARRAY) is not.<br>
+            This error message doesn't print a message, it's empty. <br>
+            It does still print the location of the error. <br>
+            You shouldn't get this error with normal use. <br>
+            Libraries can use this error to print their own messages.
         </p>
 
-        <h2>E60: ERROR_ARRAY_CAST_ERROR</h2>
+        <h2>E59: E_UNKNOWN</h2>
+        <h2>E60: E_AMOUNT</h2>
 
         <p>
-            When an array can't cast it's type, this error will be thrown.<br>
+            If you see these errors, something went wrong. <br>
+            Please report this as a bug.
         </p>
-
 
 
         <div>
-            <a href="../4.4/index.html"> << 4.4 Errors 41-50 </a> || <a href="../4.6/index.html"> >> 4.6 Errors 61-70</a>
+            <a href="../4.4/index.html"> << 4.4 Errors 41-50 </a>
         </div>
 
     </body>

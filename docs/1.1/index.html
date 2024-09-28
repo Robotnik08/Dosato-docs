@@ -4,9 +4,7 @@
         <title>1.1 Introduction</title>
 
         <!-- Dosato prism support -->
-        
-        
-<link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
@@ -47,7 +45,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ("Hello world");</code></pre>
+<code class="language-dosato">do say ("Hello world");</code></pre>
     
         <p>
             Save the file and run it with the Dosato interpreter. <br>
@@ -67,15 +65,15 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO // the master keyword DO is used to call a function
-SAY // the function SAY is called 
-("Hello world") // the function SAY takes a string as an argument
+<code class="language-dosato">do // the master keyword do is used to call a function
+say // the function say is called 
+("Hello world") // the function say takes a string as an argument
 ; // all lines end with a semicolon</code></pre>
 
         <p>
-            The master keyword <code>DO</code> is used to call a function. <br>
-            The function <code>SAY</code> is called. <br>
-            The function <code>SAY</code> takes a string as an argument. <br>
+            The master keyword <code>do</code> is used to call a function. <br>
+            The function <code>say</code> is called. <br>
+            The function <code>say</code> takes a string as an argument. <br>
             The string is <code>"Hello world"</code>. <br>
             All lines end with a semicolon. <br>
         </p>
@@ -94,13 +92,13 @@ SAY // the function SAY is called
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO {
-    DO SAY ("Hello ");
-    DO SAY ("world");
+<code class="language-dosato">do {
+    do say ("Hello ");
+    do say ("world");
 };</code></pre>
 
         <p>
-            DO can also be used to call a block. <br>
+            do can also be used to call a block. <br>
             A block is a group of lines. <br>
         </p>
 
@@ -110,6 +108,7 @@ SAY // the function SAY is called
                 A block starts with <code>{</code> and ends with <code>}</code>. <br>
                 A block can contain any number of lines. <br>
                 You can think of a block as a function without a name. <br>
+                Blocks also must end with a semicolon. <br>
             </p>
         </div>
 
@@ -118,7 +117,7 @@ SAY // the function SAY is called
         </p>
 
         <div>
-            <a href="../../index.html"> << Home</a> || <a href="../1.2/index.html"> >> 1.2 MAKE and SET</a>
+            <a href="../../index.html"> << Home</a> || <a href="../1.2/index.html"> >> 1.2 make and set</a>
         </div>
 
     </body>

@@ -4,9 +4,7 @@
         <title>3.5 Time</title>
 
         <!-- Dosato prism support -->
-        
-        
-<link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
@@ -28,43 +26,30 @@
 
         <h2>Functions</h2>
 
-        <p><code class="language-dosato">INT TIME ()</code></p>
+        <p><code class="language-dosato">long TIME ()</code></p>
 
         <p>
             Returns the current time in seconds.
         </p>
 
-        <p><code class="language-dosato">STRING DATE (LONG timestamp = now)</code></p>
+        <p><code class="language-dosato">void SLEEP (double amount_seconds)</code></p>
 
         <p>
-            Returns a string representation of the given timestamp.<br>
-            The format is: <code>DD-MM-YYYY</code>
+            Waits execution for the given amount of seconds (can be decimal).
         </p>
 
-        <p><code class="language-dosato">STRING DATETIME (LONG timestamp = now)</code></p>
+        <p><code class="language-dosato">string DATETIME (long time_stamp = ?, string format = ?)</code></p>
 
         <p>
-            Returns a string representation of the given timestamp.<br>
-            The format is: <code>DD-MM-YYYY hh:mm:ss</code>
+            Returns a string representation of the given timestamp. <br>
+            If no timestamp is given, the current time is used. <br>
+            If no format is given, the default format is used: <code>YYYY-MM-DD HH:MM:SS</code>
         </p>
 
-        <p><code class="language-dosato">LONG TIMESTAMP (LONG timestamp = now)</code></p>
-        
-        <p>
-            Returns a string representation of the given timestamp.<br>
-            The format is: <code>hh:mm:ss</code>
-        </p>
-
-        <p><code class="language-dosato">LONG CLOCK ()</code></p>
+        <p><code class="language-dosato">long CLOCK ()</code></p>
 
         <p>
             Returns the current time in milliseconds.
-        </p>
-
-        <p><code class="language-dosato">VOID SLEEP (DOUBLE seconds)</code></p>
-
-        <p>
-            Waits excecution for the given amount of seconds (can be decimal).
         </p>
 
 

@@ -4,9 +4,7 @@
         <title>3.6 Random</title>
 
         <!-- Dosato prism support -->
-        
-        
-<link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
@@ -28,30 +26,35 @@
 
         <h2>Functions</h2>
 
-        <p><code class="language-dosato">VOID SRAND (UINT seed)</code></p>
+        <p><code class="language-dosato">void SRANDOM (uint seed)</code></p>
 
         <p>
             Sets the seed for the random number generator.
         </p>
 
-        <p><code class="language-dosato">DOUBLE RAND ()</code></p>
+        <p><code class="language-dosato">double RANDOM ()</code></p>
 
         <p>
             Returns a random decimal number between 0 and 1.
         </p>
 
-        <p><code class="language-dosato">INT RANDINT ()</code></p>
+        <p><code class="language-dosato">long RANDOMINT ()</code></p>
 
         <p>
             Returns a random number between 0 and 2^32 - 1 (integer limit).
         </p>
 
-        <p><code class="language-dosato">INT RANDRANGE (INT min, INT max)</code></p>
+        <p><code class="language-dosato">long RANDOMRANGE (long min, long max)</code></p>
 
         <p>
             Returns a random number between min and max.
         </p>
 
+        <p><code class="language-dosato">bool RANDOMBOOL ()</code></p>
+
+        <p>
+            Returns a random boolean value.
+        </p>
 
         
 

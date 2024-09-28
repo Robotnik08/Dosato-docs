@@ -33,84 +33,89 @@
                 <th>Explanation</th>
             </tr>
             <tr>
-                <td>BYTE</td>
+                <td>byte</td>
                 <td>100</td>
                 <td>Any whole number (8 bit)</td>
             </tr>
             <tr>
-                <td>SHORT</td>
+                <td>short</td>
                 <td>10000</td>
                 <td>Any whole number (16 bit)</td>
             <tr>
-                <td>INT</td>
+                <td>int</td>
                 <td>1000000</td>
                 <td>Any whole number (32 bit)</td>
             </tr>
             <tr>
-                <td>LONG</td>
+                <td>long</td>
                 <td>100000000000</td>
                 <td>Any whole number (64 bit)</td>
             </tr>
             <tr>
-                <td>FLOAT</td>
+                <td>float</td>
                 <td>1.5</td>
                 <td>Any decimal number</td>
             </tr>
             <tr>
-                <td>UBYTE</td>
+                <td>ubyte</td>
                 <td>255</td>
                 <td>Any whole number non negative (unsigned) (8 bit)</td>
             </tr>
             <tr>
-                <td>USHORT</td>
+                <td>ushort</td>
                 <td>65535</td>
                 <td>Any whole number non negative (unsigned) (16 bit)</td>
             </tr>
             <tr>
-                <td>UINT</td>
+                <td>uint</td>
                 <td>4294967295</td>
                 <td>Any whole number non negative (unsigned) (32 bit)</td>
             </tr>
             <tr>
-                <td>ULONG</td>
+                <td>ulong</td>
                 <td>18446744073709551615</td>
                 <td>Any whole number non negative (unsigned) (64 bit)</td>
             </tr>
             <tr>
-                <td>DOUBLE</td>
+                <td>double</td>
                 <td>1.5</td>
                 <td>Any decimal number (twice as precise as a float)</td>
             </tr>
             <tr>
-                <td>BOOL</td>
-                <td>TRUE</td>
-                <td>TRUE or FALSE</td>
+                <td>bool</td>
+                <td>true</td>
+                <td>true or false</td>
             </tr>
             <tr>
-                <td>CHAR</td>
+                <td>char</td>
                 <td>'a'</td>
                 <td>Singular ascii character</td>
             </tr>
             <tr>
-                <td>STRING</td>
+                <td>string</td>
                 <td>"Hello World"</td>
                 <td>Any string of characters</td>
             </tr>
             <tr>
-                <td>VOID</td>
+                <td>array</td>
+                <td>[1, 2, 3]</td>
+                <td>List of values</td>
+            </tr> 
+            <tr>
+                <td>object</td>
+                <td>{"key": "value"}</td>
+                <td>List of Key Value pairs</td>
+            </tr>
+            <tr>
+                <td>void</td>
                 <td>Nothing</td>
                 <td>Used to indecate no return on Functions</td>
             </tr>
             <tr>
-                <td>FUNC</td>
-                <td>Function</td>
-                <td>Used to declare a function</td>
+                <td>function</td>
+                <td>define void func(){};</td>
+                <td>Functions are first class citizens.</td>
             </tr>
-            <tr>
-                <td>ARRAY</td>
-                <td>[1, 2, 3]</td>
-                <td>Used to declare an array</td>
-            </tr> 
         </table>
 
         <h2>Type syntax</h2>
@@ -124,10 +129,10 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY (100); // 100</code></pre>
+<code class="language-dosato">do say (100); // 100</code></pre>
 
         <p>
-            Intergers literals are by default LONG, but when they overflow they become ULONG. <br>
+            Intergers literals are by default long, but when they overflow they become ulong. <br>
         </p>
 
         <h3>Floats</h3>
@@ -139,23 +144,23 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY (1.5); // 1.5
-DO SAY (1.5F); // 1.5 (float form)</code></pre>
+<code class="language-dosato">do say (1.5); // 1.5
+do say (1.5F); // 1.5 (float form)</code></pre>
 
         <p>
-            Float literals are by default DOUBLE, but can be specified with an F to become a FLOAT. <br>
+            Float literals are by default double, but can be specified with an F to become a float. <br>
         </p>
 
         <h3>Booleans</h3>
 
         <p>
-            A boolean is a value that can be either TRUE or FALSE. <br>
+            A boolean is a value that can be either true or false. <br>
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY (TRUE); // TRUE
-DO SAY (FALSE); // FALSE</code></pre>
+<code class="language-dosato">do say (true); // true
+do say (false); // false</code></pre>
 
         <h3>Characters and strings</h3>
 
@@ -166,8 +171,8 @@ DO SAY (FALSE); // FALSE</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ('a'); // a
-DO SAY ("Hello World"); // Hello World</code></pre>
+<code class="language-dosato">do say ('a'); // a
+do say ("Hello World"); // Hello World</code></pre>
 
         <p>
             Characters are surrounded by single quotes. <br>
@@ -177,16 +182,33 @@ DO SAY ("Hello World"); // Hello World</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ("Hello world!\n"); // \n is converted to a new line character</code></pre>
+<code class="language-dosato">do say ("Hello world!\n"); // \n is converted to a new line character</code></pre>
 
         <p>
-            You can also include new lines directly in strings, but they will be replaced with a space. <br>
+            You can also include new lines directly in strings. <br>
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ("Hello world!
-This is a new line!"); // Hello world! This is a new line!</code></pre>
+<code class="language-dosato">do say ("Hello world!
+This is a new line!");</code></pre>
+
+        <h3>Functions</h3>
+
+        <p>
+            Functions are first class citizens. <br>
+            They can be assigned to variables, passed as arguments and returned from other functions. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">define void func() {
+    do say ("Hello world");
+};
+
+do func(); // Hello world
+make var other = func;
+do other(); // Hello world</code></pre>
 
         <div>
             <a href="../2.0/index.html"> << 2.0 Specifications</a> || <a href="../2.2/index.html"> >> 2.2 Operators</a>

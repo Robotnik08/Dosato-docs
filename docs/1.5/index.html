@@ -4,8 +4,6 @@
         <title>1.5 Functions</title>
 
         <!-- Dosato prism support -->
-        
-        
         <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
@@ -30,25 +28,25 @@
 
         <p>
             Functions are blocks of code that can be called from anywhere in your program. <br>
-            Functions can be created with the <code>MAKE</code> keyword. <br>
-            Functions can be called with the <code>DO</code> keyword. <br>
+            Functions can be created with the <code>define</code> keyword. <br>
+            Functions can be called with the <code>do</code> keyword. <br>
 
             Simple function example:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE FUNC VOID sayHello() {
-    DO SAY ("Hello world");
+<code class="language-dosato">define void sayHello() {
+    do say ("Hello world");
 };</code></pre>
 
         <p>
-            This function can be called with the <code>DO</code> keyword:
+            This function can be called with the <code>do</code> keyword:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO sayHello(); // Hello world</code></pre>
+<code class="language-dosato">do sayHello(); // Hello world</code></pre>
 
         <p>
             Let's break down the function declaration:
@@ -56,13 +54,12 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE // Make is used as a function declaration keyword
-FUNC // Func is used to declare a function
-VOID // Void is the return type of the function (more on this later)
+<code class="language-dosato">define // Define is used as a function declaration keyword
+void // Void is the return type of the function (more on this later)
 sayHello // The name of the function
 () // The parameters of the function
 { // The start of the function block
-    DO SAY ("Hello world"); // The code inside the function
+    do say ("Hello world"); // The code inside the function
 }; // The end of the function block</code></pre>
 
 
@@ -80,8 +77,8 @@ sayHello // The name of the function
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE FUNC VOID sayHello(STRING name) {
-    DO SAY ("Hello " + name);
+<code class="language-dosato">define void sayHello(string name) {
+    do say ("Hello " + name);
 };</code></pre>
 
         <p>
@@ -92,7 +89,7 @@ sayHello // The name of the function
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO sayHello("Robotnik"); // Hello Robotnik</code></pre>
+<code class="language-dosato">do sayHello("Robotnik"); // Hello Robotnik</code></pre>
 
 
 
@@ -101,30 +98,30 @@ sayHello // The name of the function
         <p>
             Functions can have return types. <br>
             Return types are used to determine what type of data the function returns. <br>
-            Return types are declared after the <code>FUNC</code> keyword. <br>
+            Return types are declared after the <code>define</code> keyword. <br>
             Any variable type can be used as a return type. <br>
-            If a function does not return anything, the return type <code>VOID</code> can be used. <br>
+            If a function does not return anything, the return type <code>void</code> can be used. <br>
             Example of a function with a return type:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE FUNC INT addNumbers(INT a, INT b) {
-    DO RETURN (a + b);
+<code class="language-dosato">define int addNumbers(int a, int b) {
+    return a + b;
 };</code></pre>
 
         <p>
-            The RETURN function is used to return a value from a function. <br>
-            The RETURN function has 1 parameter, the value to return. <br>
-            The RETURN function also stops the execution of the function. <br>
+            <code>return</code> is used to return a value from a function. <br>
+            <code>return</code> has the value to return. <br>
+            <code>return</code> also stops the execution of the function. <br>
         </p>
         
 
         <div class="info">
             <p>
                 <strong>Info!</strong> <br>
-                RETURN can also be used to end a VOID function. <br>
-                RETURN can be used anywhere in a function. <br>
+                return can also be used to end a void function. <br>
+                return can be used anywhere in a function. <br>
             </p>
         </div>
 
@@ -135,7 +132,7 @@ sayHello // The name of the function
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE INT sum = addNumbers(5, 10); // sum is 15</code></pre>
+<code class="language-dosato">make int sum = addNumbers(5, 10); // sum is 15</code></pre>
 
         <p>
             The parameters will be copied into the function. <br>
@@ -145,14 +142,14 @@ sayHello // The name of the function
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE FUNC VOID addOne(INT a) {
-    SET a += 1;
-    DO SAY (a); // a is 6, number is still 5
+<code class="language-dosato">define void addOne(int a) {
+    set a += 1;
+    do say (a); // a is 6, number is still 5
 };
 
-MAKE INT number = 5;
-DO addOne(number); // number is still 5, nothing happened
-DO SAY (number);</code></pre>
+make int number = 5;
+do addOne(number); // number is still 5, number did not change
+do say (number);</code></pre>
 
         <div class="info">
             <p>

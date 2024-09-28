@@ -30,7 +30,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY (1 + 2); // 1 on the left, 2 on the right</code></pre>
+<code class="language-dosato">do say (1 + 2); // 1 on the left, 2 on the right</code></pre>
 
         <p>Here is a list of all binary operators:</p>
 
@@ -89,7 +89,7 @@
                 <td>Root of</td>
             </tr>
             <tr>
-                <td>|&gt;</td>
+                <td>&gt;|</td>
                 <td>max</td>
             </tr>
             <tr>
@@ -132,6 +132,14 @@
                 <td>#</td>
                 <td>Hashing</td>
             </tr>
+            <tr>
+                <td>-&gt;</td>
+                <td>Object subscript</td>
+            </tr>
+            <tr>
+                <td>=></td>
+                <td>For loop directing</td>
+            </tr>
         </table>
 
         <h2>Unary operators</h2>
@@ -140,7 +148,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY (-1); // 1 on the right</code></pre>
+<code class="language-dosato">do say (-1); // 1 on the right</code></pre>
 
         <p>Here is a list of all unary operators:</p>
         
@@ -170,15 +178,31 @@
                 <td>!-</td>
                 <td>absolute</td>
             </tr>
+            <tr>
+                <td>&gt;|</td>
+                <td>max (of array)</td>
+            </tr>
+            <tr>
+                <td>&lt;|</td>
+                <td>min (of array)</td>
+            </tr>
         </table>
 
-        <h2>assigment operators</h2>
+        <h2>Ternary operators</h2>
 
-        <p>Assigment operators are operators that take two operands the left is always an expression from a SET keyword. They are used in the following way:</p>
+        <p>Ternary operators are operators that take three operands. They are used in the following way:</p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">SET number += 1; // 1 on the right</code></pre>
+<code class="language-dosato">do say (true ? 1 : 2); // 1 on the left</code></pre>
+
+        <h2>assigment operators</h2>
+
+        <p>Assigment operators are operators that take two operands the left is always an expression from a set keyword. They are used in the following way:</p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">set number += 1; // 1 on the right</code></pre>
 
         <p>Here is a list of all assigment operators:</p>
 
@@ -224,6 +248,34 @@
                 <td>|=</td>
                 <td>Bitwise OR</td>
             </tr>
+            <tr>
+                <td>&lt;&lt;=</td>
+                <td>Bitwise left shift</td>
+            </tr>
+            <tr>
+                <td>&gt;&gt;=</td>
+                <td>Bitwise right shift</td>
+            </tr>
+            <tr>
+                <td>**=</td>
+                <td>Power</td>
+            </tr>
+            <tr>
+                <td>&gt;|=</td>
+                <td>Max</td>
+            </tr>
+            <tr>
+                <td>&lt;|=</td>
+                <td>Min</td>
+            </tr>
+            <tr>
+                <td>++</td>
+                <td>increment</td>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>decrement</td>
+            </tr>
         </table>
 
         <h2>Operator precedence</h2>
@@ -237,7 +289,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY (1 + 2 * 3); // 7</code></pre>
+<code class="language-dosato">do say (1 + 2 * 3); // 7</code></pre>
 
         <p>
             here's a full table of operator precedence:
@@ -257,12 +309,12 @@
             </tr>
             <tr>
                 <td>1</td>
-                <td>#</td>
-                <td>Hashing arrays</td>
+                <td>#, -&gt;</td>
+                <td>Hashing arrays, subscripting objects</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>!, ~, ^/, !-, **, |>, <|</td>
+                <td>!, ~, ^/, !-, **, &gt;|, &lt;|</td>
                 <td>Unary operators, and POW, MAX, MIN</td>
             </tr>
             <tr>
@@ -315,6 +367,11 @@
                 <td>||</td>
                 <td>Logical OR</td>
             </tr>
+            <tr>
+                <td>13</td>
+                <td>? :</td>
+                <td>Ternary operator</td>
+            </tr>
         </table>
 
 
@@ -323,28 +380,31 @@
         <p>
             The addition operator (+) is used to add two numbers together. <br>
             It can also be used to concatenate two strings. <br>
-            Or to join two arrays together. <br>
+            Or to join two arrays or objects together. <br>
             Example:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY (1 + 2); // 3
-DO SAY ("Hello " + "world!"); // Hello world!
-DO SAY ([1, 2, 3] + [4, 5, 6]); // [1, 2, 3, 4, 5, 6]</code></pre>
+<code class="language-dosato">do say (1 + 2); // 3
+do say ("Hello " + "world!"); // Hello world!
+do say ([1, 2, 3] + [4, 5, 6]); // [1, 2, 3, 4, 5, 6]
+do say ({"key1": 1} + {"key2": 2}); // {"key1": 1, "key2": 2}</code></pre>
 
         <h2>Subtraction oparator</h2>
 
         <p>
             The subtraction operator (-) is used to subtract two numbers. <br>
-            But it can also be used to remove elements from an array. <br>
+            But it can also be used to remove elements from an array, object or string. <br>
             Example:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY (1 - 2); // -1
-DO SAY ([1, 2, 3] - 1); // [1, 2]</code></pre>
+<code class="language-dosato">do say (1 - 2); // -1
+do say ("Hello" - 3); // He
+do say ([1, 2, 3] - 1); // [1, 2]
+do say ({"key1": 1, "key2": 2} - "key2"); // {"key1": 1}</code></pre>
 
         <h2>Hashing operator</h2>
 
@@ -355,7 +415,22 @@ DO SAY ([1, 2, 3] - 1); // [1, 2]</code></pre>
         
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ([1, 2, 3]#0); // 1</code></pre>
+<code class="language-dosato">do say ([1, 2, 3]#0); // 1</code></pre>
+
+        <h2>Object Subscripting</h2>
+
+        <p>
+            The object subscripting operator (->) is used to get an element from an object. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make object person = {
+    "name": "John",
+    "age": 30
+};
+do say (person->"name"); // John</code></pre>
 
         <h2>Power and root</h2>
 
@@ -367,8 +442,8 @@ DO SAY ([1, 2, 3] - 1); // [1, 2]</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAYLN (2 ** 3); // 8
-DO SAYLN (3 ^/ 8); // 2</code></pre>
+<code class="language-dosato">do sayln (2 ** 3); // 8
+do sayln (3 ^/ 8); // 2</code></pre>
 
         <p>
             The root operator can take a second argument to specify the root. (left one) <br>
@@ -378,20 +453,20 @@ DO SAYLN (3 ^/ 8); // 2</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAYLN (^/81); // 9</code></pre>
+<code class="language-dosato">do sayln (^/81); // 9</code></pre>
 
         <h2>Max and min</h2>
 
         <p>
-            The max operator (|>) is used to get the largest number. <br>
+            The max operator (&gt;|) is used to get the largest number. <br>
             The min operator (&lt;|) is used to get the smallest number. <br>
             Example:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAYLN (5 |> 1); // 5
-DO SAYLN (5 &lt;| 1); // 1</code></pre>
+<code class="language-dosato">do sayln (5 &gt;| 1); // 5
+do sayln (5 &lt;| 1); // 1</code></pre>
 
         <h2>Abs</h2>
         
@@ -402,7 +477,7 @@ DO SAYLN (5 &lt;| 1); // 1</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAYLN (!- -5); // 5</code></pre>
+<code class="language-dosato">do sayln (!- -5); // 5</code></pre>
 
         <div class="info">
             <p>
@@ -412,13 +487,41 @@ DO SAYLN (5 &lt;| 1); // 1</code></pre>
             </p>
         </div>
 
+        <h2>Increment and decrement</h2>
+
+        <p>
+            The increment operator (++) is used to increase a number by 1. <br>
+            The decrement operator (--) is used to decrease a number by 1. <br>
+            You can only use these operators in set statements. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make int number = 5;
+set number++; // number is now 6
+set number--; // number is now 5</code></pre>
+
+        <h2>Ternary operators</h2>
+
+        <p>
+            The ternary operator (?:) is used to return a value based on a condition. <br>
+            It takes three operands, the condition, the value if true and the value if false. <br>
+            Example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">do say (true ? 1 : 2); // 1
+do say (false ? 1 : 2); // 2</code></pre>
+
 
         <p>
             The rest of the operators are pretty self explanatory. and behave the same as in other languages. <br>
         </p>
 
         <div>
-            <a href="../2.1/index.html"> << 2.1 Types</a> || <a href="../2.3/index.html"> >> 2.3 DO extensions</a>
+            <a href="../2.1/index.html"> << 2.1 Types</a> || <a href="../2.3/index.html"> >> 2.3 do extensions</a>
         </div>
 
     </body>

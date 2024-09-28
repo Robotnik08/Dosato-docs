@@ -55,6 +55,8 @@ pre[class*="language-"] {
 	color: #6A9955; 
 }
 
+.token.null,
+.token.boolean,
 .token.type_identifier {
 	color: #569CD6;
 }
@@ -75,7 +77,6 @@ pre[class*="language-"] {
 	color: #f92672;
 }
 
-.token.boolean,
 .token.number {
 	color: #B5CEA8;
 }
@@ -104,7 +105,7 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.function,
 .token.class-name {
-	color: #e6db74;
+	color: #DCDCAA;
 }
 
 .token.keyword {

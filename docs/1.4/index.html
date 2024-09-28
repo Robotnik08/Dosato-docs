@@ -4,9 +4,7 @@
         <title>1.4 Conditionals</title>
 
         <!-- Dosato prism support -->
-        
-        
-<link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
@@ -26,63 +24,48 @@
         
         <h1>1.4 Conditionals</h1>
 
-        <h2>WHEN</h2>
+        <h2>when</h2>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO {
-    DO SAY ("Access granted");
-} WHEN (password == "1234");</code></pre>
+<code class="language-dosato">do {
+    do say ("Access granted");
+} when (password == "1234");</code></pre>
 
         <p>
-            WHEN is used to create a conditional statement. <br>
-            WHEN is followed by a boolean expression, a block of code and an optional ELSE block. <br>
-            The boolean expression is evaluated and if it is TRUE, the block of code is executed. <br>
-            If the boolean expression is FALSE, the ELSE block is executed. <br>
-            Example of a WHEN statement with an ELSE extension:
+            when is used to create a conditional statement. <br>
+            when is followed by a boolean expression, a block of code and an optional else block. <br>
+            The boolean expression is evaluated and if it is true, the block of code before is executed. <br>
+            If the boolean expression is false, the else block is executed. <br>
+            Example of a when statement with an else extension:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO {
-    DO SAY ("Access granted");
-} WHEN (password == "1234") ELSE {
-    DO SAY ("Access denied");
+<code class="language-dosato">do {
+    do say ("Access granted");
+} when (password == "1234") else {
+    do say ("Access denied");
 };</code></pre>
 
-        <p>
-            WHEN ELSE statements can be chained. <br>
-            Example of a chained WHEN statement:
-        </p>
-
-        <!-- Code block -->
-        <pre>
-<code class="language-dosato">DO {
-    DO SAY ("Access granted");
-} WHEN (password == "1234") ELSE {
-    DO SAY ("Access granted");
-} WHEN (password == "4321") ELSE {
-    DO SAY ("Access denied");
-};</code></pre>
-
-        <h2>IF</h2>
+        <h2>if</h2>
 
         <p>
-            IF is also a way to do conditionals, they look and feel like the more familiar way of doing it.
+            if is also a way to do conditionals, they look and feel like the more familiar way of doing it.<br>
         </p>
 
         <pre>
-<code class="language-dosato">DO IF (password == "1234") THEN {
-    DO SAY ("Access granted");    
-} ELSE {
-    DO SAY ("Access denied");
+<code class="language-dosato">do if password == "1234" then {
+    do say ("Access granted");    
+} else {
+    do say ("Access denied");
 };</code></pre>
 
         <h2>Boolean operators</h2>
 
         <p>
             Boolean operators are used to compare values. <br>
-            Boolean operators return a boolean value. (TRUE or FALSE) <br>
+            Boolean operators return a boolean value. (true or false) <br>
         </p>
         <p>
             Common boolean operators are: <br>
@@ -102,8 +85,8 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO IF (password == "1234" && username == "Robotnik") THEN {
-    DO SAY ("Access granted");
+<code class="language-dosato">do if (password == "1234" && username == "Robotnik") then {
+    do say ("Access granted");
 };</code></pre>
 
         <p>
@@ -113,8 +96,8 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO IF (password == "1234" || password == "4321") THEN{
-    DO SAY ("Access granted");
+<code class="language-dosato">do if (password == "1234" || password == "4321") then {
+    do say ("Access granted");
 };</code></pre>
 
         <p>
@@ -124,8 +107,8 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO IF (age >= 18) THEN {
-    DO SAY ("Access granted");
+<code class="language-dosato">do if (age >= 18) then {
+    do say ("Access granted");
 };</code></pre>
 
         <p>
@@ -133,21 +116,32 @@
             For a full list of operators, go to <a href="../2.2/index.html">2.2 Operators</a>. <br>
         </p>
 
-
-        <h2>DO EXTENSIONS</h2>
+        <h2>extension keywords</h2>
 
         <p>
-            On a more advanced note, WHEN is actually a DO extension. <br>
-            DO extensions are functionality that can be added to the DO keyword. <br>
-            Example of a WHEN extension on the DO keyword:
+            On a more advanced note, when and is is actually extension keywords. <br>
+            extension keywords are functionality that can be added to a master keyword. <br>
         </p>
 
-        <!-- Code block -->
-        <pre>
-<code class="language-dosato">DO SAY ("Hello world!") WHEN (TRUE);</code></pre>
+        <div class="info">
+            <p>
+                <strong>Info!</strong> <br>
+                When vs if <br>
+                When and if both act as conditionals, but when and if act very differently. <br><br>
+
+                When encapsulates all code before it, so if the condition is false, ALL the code before it is not executed. <br>
+                If only encapsulates the block of code after it, so if the condition is false, only the block of code after it is not executed. <br><br>
+
+                Now, extensions can be put on any master keyword, not only do. <br>
+                This means you can do quick conditionals with set, return, break and more. <br>
+                <pre><code class="language-dosato">set int number = 5 when (condition);
+return number when (!condition);</code></pre>
+                This is something if can't do. <br>
+            </p>
+        </div>
 
         <p>
-            We'll learn more about DO extensions in a later chapter <a href="../1.6/index.html">1.6 Extensions and loops</a>. <br>
+            We'll learn more about do extensions in a later chapter <a href="../1.6/index.html">1.6 Extensions and loops</a>. <br>
         </p>
 
 

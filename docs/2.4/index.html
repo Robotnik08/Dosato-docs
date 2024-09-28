@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>2.4 The _ variable</title>
+        <title>2.4 Type casting</title>
 
         <!-- Dosato prism support -->
         <link rel="stylesheet" href="../../main.css">
@@ -22,56 +22,59 @@
             <p>Copyright &copy 2024 Sebastiaan Heins</p>
         </header>
         
-        <h1>2.4 The _ variable</h1>
+        <h1>2.4 Type casting</h1>
 
         <p>
-            The <code>_</code> variable is a special variable that is used to store the result of the last function call. <br>
-            It's also used to store the error code when an error occurs. <br>
-            The <code>_</code> variable is read-only and cannot be modified. <br>
-            The <code>_</code> variable is a global variable and can be accessed from anywhere in the program. <br>
+            Dosato has an autocasting system, which means that you can cast types without using a keyword. <br>
+            If you want to cast a type, you can use the following syntax: <code>(TYPE) VALUE</code>
+            This means that in most cases, any type can be cast to any other type. <br>
         </p>
 
-        <h2>Example</h2>
+        <!--
+            Type table
+        -->
 
-        <p>
-            In this example, the <code>_</code> variable is used to store the result of the last function call:
-        </p>
+        <table>
+            <tr>
+                <th>Operation</th>
+                <th>Example</th>
+                <th>Explanation</th>
+            </tr>
+            <tr>
+                <td>int -&gt; float</td>
+                <td>make float a = (int) 1.5; // 1</td>
+                <td>Value is interpreted as int, is floored.</td>
+            </tr>
+            <tr>
+                <td>int -&gt; string</td>
+                <td>make string a = (int) 1; // "1"</td>
+                <td>Value is interpreted as string.</td>
+            </tr>
+            <tr>
+                <td>float -&gt; string</td>
+                <td>make string a = 1.5; // "1.5"</td>
+                <td>Value is interpreted as string.</td>
+            </tr>
+            <tr>
+                <td>array -&gt; string</td>
+                <td>make string a = [1,2,3,4,5]; // "[1, 2, 3, 4, 5]"</td>
+                <td>Value is interpreted as string nicely formatted.</td>
+            </tr>
+            <tr>
+                <td>string -&gt; int</td>
+                <td>make int a = "Hello!"; // 6</td>
+                <td>Value is the length of the string.</td>
+            </tr>
+            <tr>
+                <td>array -&gt; int</td>
+                <td>make int a = [1,2,3,4,5]; // 5</td>
+                <td>Value is the length of the array.</td>
+            </tr>
 
-        <!-- Code block -->
-        <pre>
-<code class="language-dosato">MAKE FUNC INT add(INT a, INT b) {
-    DO RETURN (a + b);
-};
-
-DO add(5, 10);
-DO SAY (_); // 15</code></pre>
-
-        <p>
-            Function calls in expressions are automatically seen as _ variables. <br>
-        </p>
-
-        <!-- Code block -->
-        <pre>
-<code class="language-dosato">DO SAY (add(5, 10)); // 15, the function call is converted to _, so the interpreter sees it as DO SAY (_);</code></pre>
-
-        <p>
-            The <code>_</code> variable is also used to store the error message when an error occurs. <br>
-            It turns into an INT when an error occurs. <br>
-            Example:
-        </p>
-
-        <!-- Code block -->
-        <pre>
-<code class="language-dosato">DO {
-    DO SAY (notDefined); // Error is thrown
-} CATCH {
-    DO SAY (_); // The error message is stored in the _ variable
-};</code></pre>
-
-        
+        </table>
 
         <div>
-            <a href="../2.3/index.html"> << 2.3 DO extensions</a> || <a href="../2.5/index.html"> >> 2.5 Type casting</a>
+            <a href="../2.3/index.html"> << 2.3 extensions</a> || <a href="../2.5/index.html"> >>2.5 Including and Importing</a>
         </div>
 
     </body>

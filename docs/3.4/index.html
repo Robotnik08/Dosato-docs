@@ -4,9 +4,7 @@
         <title>3.4 IO</title>
 
         <!-- Dosato prism support -->
-        
-        
-<link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
@@ -28,21 +26,21 @@
 
         <h2>Functions</h2>
 
-        <p><code class="language-dosato">VOID SAY (ANY val, ANY other ...)</code></p>
+        <p><code class="language-dosato">void SAY (var val, var other ...)</code></p>
 
         <p>
             Prints the given values to the console. <br>
             The value is converted to a string before being printed.
         </p>
 
-        <p><code class="language-dosato">VOID SAYLN (ANY val, ANY other ...)</code></p>
+        <p><code class="language-dosato">void SAYLN (var val, var other ...)</code></p>
 
         <p>
             Prints the given values to the console, followed by a newline. <br>
             The value is converted to a string before being printed.
         </p>
 
-        <p><code class="language-dosato">STRING LISTEN (STRING prompt = ?)</code></p>
+        <p><code class="language-dosato">string LISTEN (string prompt = ?, char delimiter = ?)</code></p>
 
         <p>
             Prints the given prompt (optional) to the console, then waits for the user to input a string. <br>
@@ -52,28 +50,58 @@
 
         <h3>File IO</h3>
 
-        <p><code class="language-dosato">STRING READ (STRING path)</code></p>
+        <p><code class="language-dosato">string READ (string path)</code></p>
 
         <p>
             Reads the contents of the file at the given path and returns it as a string.<br>
-            If the file does not exist, <code>err72:ERROR_FILE_NOT_FOUND</code> is thrown.<br>
-            If the program does not have permission to read the file, <code>err75:ERROR_PERMISSION_DENIED</code> is thrown.
+            If the file does not exist, <code>err53:ERROR_FILE_NOT_FOUND</code> is thrown.<br>
+            If the program does not have permission to read the file, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
         </p>
 
-        <p><code class="language-dosato">VOID WRITE (STRING path, STRING content)</code></p>
+        <p><code class="language-dosato">void WRITE (string path, string content)</code></p>
 
         <p>
             Writes the given content to the file at the given path.<br>
             If the file does not exist, it is created.<br>
-            If the program does not have permission to write to the file or create it, <code>err75:ERROR_PERMISSION_DENIED</code> is thrown.
+            If the program does not have permission to write to the file or create it, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
         </p>
 
-        <p><code class="language-dosato">VOID APPEND (STRING path, STRING content)</code></p>
+        <p><code class="language-dosato">void APPEND (string path, string content)</code></p>
 
         <p>
             Appends the given content to the file at the given path.<br>
             If the file does not exist, it is created.<br>
-            If the program does not have permission to write to the file or create it, <code>err75:ERROR_PERMISSION_DENIED</code> is thrown.
+            If the program does not have permission to write to the file or create it, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
+        </p>
+
+        <p><code class="language-dosato">void DELETE (string path)</code></p>
+
+        <p>
+            Deletes the file at the given path.<br>
+            If the file does not exist, <code>err53:ERROR_FILE_NOT_FOUND</code> is thrown.<br>
+            If the program does not have permission to delete the file, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
+        </p>
+
+        <p><code class="language-dosato">bool EXISTS (string path)</code></p>
+
+        <p>
+            Returns true if the file at the given path exists, false otherwise.
+        </p>
+
+        <p><code class="language-dosato">bool MOVE (string path)</code></p>
+
+        <p>
+            Moves the file at the given path to the trash.<br>
+            If the file does not exist, <code>err53:ERROR_FILE_NOT_FOUND</code> is thrown.<br>
+            If the program does not have permission to move the file to the trash, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
+        </p>
+
+        <p><code class="language-dosato">bool COPY (string path)</code></p>
+
+        <p>
+            Copies the file at the given path to the trash.<br>
+            If the file does not exist, <code>err53:ERROR_FILE_NOT_FOUND</code> is thrown.<br>
+            If the program does not have permission to copy the file to the trash, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
         </p>
 
         

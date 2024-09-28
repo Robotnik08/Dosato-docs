@@ -4,9 +4,7 @@
         <title>4.3 Errors 31-40</title>
 
         <!-- Dosato prism support -->
-        
-        
-<link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
@@ -26,56 +24,73 @@
         
         <h1>4.3 Errors 31-40</h1>
 
-        <h2>E31: ERROR_FUNCTION_NOT_FOUND</h2>
+        <h2>E31: E_EXPECTED_STRING</h2>
 
         <p>
-            If you try to call a function that does not exist, this error will be thrown.<br>
+            Import and include want a string literal.
         </p>
 
-        <h2>E32: ERROR_FUNCTION_ARG_NOT_CORRECT_AMOUNT</h2>
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">import 0; // expected string</code></pre>
+
+        <h2>E32: E_TOO_MANY_INCLUDES</h2>
 
         <p>
-            If you call a function with the wrong amount of arguments, this error will be thrown.<br>
+            Too many includes. Often because of a circular include.
         </p>
 
-        <h2>E33: ERROR_INVALID_LITERAL</h2>
+        <h2>E33: E_UNDEFINED_VARIABLE</h2>
 
         <p>
-            If you try to use a literal that is not valid, this error will be thrown.<br>
+            Variable is not defined.
         </p>
 
-        <h2>E34: ERROR_INVALID_OPERATOR</h2>
+        <h2>E34: E_ALREADY_DEFINED_VARIABLE</h2>
 
         <p>
-            If you try to use an operator that is not valid, this error will be thrown.<br>
+            Variable is already defined.
+        </p>
+    
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make int a = 0;
+make int a = 1; // already defined</code></pre>
+
+        <h2>E35: E_NOT_AN_ARRAY</h2>
+
+        <p>
+            Variable is not an array where an array is expected.
         </p>
 
-        <h2>E35: ERROR_CANT_USE_TYPE_IN_ADDITION</h2>
+        <h2>E36: E_NOT_AN_OBJECT</h2>
 
         <p>
-            If you try to add with something you can't add with, this error will be thrown.<br>
-            (currently theres no type that can't be used in addition, so this error will never be thrown)<br>
+            Variable is not an object where an object is expected.
         </p>
 
-        <h2>E36: ERROR_CANT_CONVERT_TO_STRING</h2>
+        <h2>E37: E_INDEX_OUT_OF_BOUNDS</h2>
 
         <p>
-            If something can not be converted into a string, this error will be thrown.<br>
-            In practice everything can be converted into a string, so this error will never be thrown.<br>
+            Index of array is out of bounds.
         </p>
 
-        <h2>E37: ERROR_FLOATING_CANT_BE_UNSIGNED</h2>
+        <h2>E38: E_INVALID_KEY_TYPE</h2>
 
         <p>
-            Unused<br>
+            The type of a object key must be a string.
         </p>
 
-        <h2>E38: ERROR_TYPE_NOT_SUBTRACTABLE</h2>
-        <h2>E39: ERROR_CANT_USE_TYPE_IN_MULTIPLICATION</h2>
-        <h2>E40: ERROR_CANT_USE_TYPE_IN_DIVISION</h2>
+        <h2>E39: E_KEY_ALREADY_DEFINED</h2>
 
         <p>
-            Because Dosato automatically converts types, these errors will never be thrown.<br>
+            Key in object is already defined.
+        </p>
+
+        <h2>E40: E_KEY_NOT_FOUND</h2>
+
+        <p>
+            Value at key in object is not found.
         </p>
 
         <div>

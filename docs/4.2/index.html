@@ -4,9 +4,7 @@
         <title>4.2 Errors 21-30</title>
 
         <!-- Dosato prism support -->
-        
-        
-<link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
@@ -26,98 +24,99 @@
         
         <h1>4.2 Errors 21-30</h1>
 
-        <h2>E21: ERROR_EXPECTED_EXTENSION</h2>
+        <h2>E21: E_INVALID_EXPRESSION</h2>
 
         <p>
-            The compiler expected an extension, but none was found. <br>
-            Example:
+            Invalid expression.
+        </p>
+
+        <h2>E22: E_EXPECTED_COLON_OPERATOR</h2>
+
+        <p>
+            Expected a colon operator. ':'.
+        </p>
+
+        <h2>E23: E_INVALID_TYPE</h2>
+
+        <p>
+            Invalid type cast.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ("Hello!") // if theres no semicolon, it expects an extension
-MAKE INT x = 123; // this line is not an extension, so an error is thrown</code></pre>
+<code class="language-dosato">make int a = (int long)0; // the type cast is invalid</code></pre>
 
-        <h2>E22: ERROR_EXPECTED_BLOCK</h2>
+        <h2>E24: E_MUST_BE_GLOBAL</h2>
 
         <p>
-            The compiler expected a block, but none was found. <br>
-            Example:
+            Defining a function, importing a library or including a source file must be done at the global scope.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE FUNC VOID myFunc (); // Error: A function must have a block.</code></pre>
+<code class="language-dosato">do {
+    include "file.to"; // must be global
+}</code></pre>
 
-        <h2>E23: ERROR_EXPECTED_EXPRESSION</h2>
+        <h2>E25: E_CANT_RETURN_OUTSIDE_FUNCTION</h2>
 
         <p>
-            The compiler expected an expression, but none was found. <br>
-            Things like WHILE, WHEN, IF, FOR, etc. expect an expression. right after <br>
-            Example:
+            Return statement must be inside a function.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAYLN ("loop") WHILE; // WHILE expects an expression, an error is thrown</code></pre>
+<code class="language-dosato">return 0; // must be inside a function</code></pre>
 
-        <h2>E24: ERROR_INVALID_EXPRESSION</h2>
-
-        <p>
-            The compiler found an invalid expression. <br>
-            This is trown rarely, but it can happen. <br>
-            It's usually pretty self-explanatory whats wrong if it happens. <br>
-        </p>
-
-        <h2>E25: ERROR_OPERATOR_NOT_UNARY</h2>
+        <h2>E26: E_MASTER_CANT_HAVE_EXTENSIONS</h2>
 
         <p>
-            The compiler expected a unary operator (-, !, ~, ^/ or !-), but found a binary operator. <br>
-            Example:
+            Certain master keywords can not have extensions. (make, define, import, include)
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAYLN (+2); // + is a binary operator, so it can't be used like a unary operator</code></pre>
+<code class="language-dosato">make int a = 0 when (condition); // can not have extensions</code></pre>
 
-        <h2>E26: ERROR_INVALID_FUNCTION_DECLARATION_ARGUMENT</h2>
+        <h2>E27: E_ELSE_WITHOUT_IF</h2>
 
         <p>
-            The compiler found an invalid function declaration argument. <br>
-            Example:
+            Else statement without an if statement or when being used.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE FUNC VOID myFunc (STRING name, age) {DO SAY ("func!");}; // Error: age doesn't have it's type set</code></pre>
+<code class="language-dosato">do sayln ("Hello") else sayln("Not allowed"); // else being using without an if or a when</code></pre>
 
-        <h2>E27: ERROR_UNEXPECTED_TOKEN</h2>
-
-        <p>
-            Unused <br>
-        </p>
-
-        <h2>E28: ERROR_PROCESS_NOT_RUNNING</h2>
+        <h2>E28: E_EXPECTED_THEN</h2>
 
         <p>
-            If this error is thrown, report it to the developer. <br>
-            This error is thrown when the compiler tries to access the process, but it's not running. <br>
-            The process should always be running when the compiler tries to access it. <br>
+            if expects a then statement.
         </p>
 
-        <h2>E29: ERROR_INTERPRETER_INVALID_COMMAND</h2>
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">do if (true) sayln("Error"); // expected then after if</code></pre>
+
+        <h2>E29: E_BREAK_OUTSIDE_LOOP</h2>
 
         <p>
-            If this error is thrown, report it to the developer. <br>
-            This error is thrown when the interpreter tries to execute an invalid command. <br>
-            The interpreter should never try to execute an invalid command. <br>
+            Break statement must be inside a loop.
         </p>
 
-        <h2>E30: ERROR_SAY_ERROR</h2>
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">break; // must be inside a loop</code></pre>
+
+        <h2>E30: E_CONTINUE_OUTSIDE_LOOP</h2>
 
         <p>
-            This error is thrown if the SAY function fails to print the message. <br>
+            Continue statement must be inside a loop.
         </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">continue; // must be inside a loop</code></pre>
         
 
         <div>

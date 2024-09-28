@@ -24,100 +24,112 @@
         
         <h1>4.1 Errors 11-20</h1>
 
-        <h2>E11: ERROR_WRONG_BRACKET_ROUND</h2>
+        <h2>E11: E_EXPECTED_ASSIGNMENT_OPERATOR</h2>
 
         <p>
-            The compiler expected round brackets, but got different brackets instead.<br>
-            Example:
+            Expected an assignment operator. '=' or operator assignment.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ["Hello World"]; // Error, Expected round bracket.</code></pre>
+<code class="language-dosato">make int a = 0;
+set a 1; // expected =
+</code></pre>
 
-        <h2>E12: ERROR_WRONG_BRACKET_SQUARE</h2>
-        <h2>E13: ERROR_WRONG_BRACKET_CURLY</h2>
-
-        <p>
-            Currently are not in use, they are here for consistency.<br>
-        </p>
-
-        <h2>E14: ERROR_EXPECTED_ARGUMENTS</h2>
+        <h2>E12: E_EXPECTED_ASSIGNMENT_OPERATOR_PURE</h2>
 
         <p>
-            The compiler found a function call/creation without argument brackets.<br>
-            Example:
+            Expected an assignment operator. '='.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY; // Error, Expected arguments.
-MAKE FUNC VOID sayHello; // Error, Expected arguments.</code></pre>
-
-        <h2>E15: ERROR_EXPECTED_ARGUMENT</h2>
+<code class="language-dosato">make int a 0; // expected =</code></pre>
+        
+        <h2>E13: E_EXPECTED_BRACKET_ROUND</h2>
 
         <p>
-            The compiler wanted an argument, but didn't find one.<br>
-            Example:
+            Expected a round bracket '('.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">DO SAY ("Hello",); // Because of the comma, the compiler expects another argument.</code></pre>
+<code class="language-dosato">define void a [] {}; // expected ( instead</code></pre>
 
-        <h2>E16: ERROR_EXPECTED_TYPE</h2>
+        <h2>E14: E_EXPECTED_BRACKET_CURLY</h2>
 
         <p>
-            The compiler expected a type (INT, STRING, etc...), but didn't find one.<br>
-            Example:
+            Expected a curly bracket '{'.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE number = 5; // Error, Expected type.</code></pre>
+<code class="language-dosato">define void a () (
+    
+); // expected { instead</code></pre>
 
-        <h2>E17: ERROR_EXPECTED_ASSIGN_OPERATOR</h2>
+        <h2>E15: E_EXPECTED_BRACKET_SQUARE</h2>
 
         <p>
-            The compiler expected an assignment operator, but didn't find one.<br>
-            Example:
+            Expected a square bracket '['.
+        </p>
+
+        <h2>E16: E_EMPTY_EXPRESSION</h2>
+
+        <p>
+            The expression is empty.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE INT number 5; // Error, Expected assignment operator.</code></pre>
+<code class="language-dosato">do say (()); // empty expression</code></pre>
 
-        <h2>E18: ERROR_EXPECTED_COMMA</h2>
-
-        <p>
-            Unused. <br>
-        </p>
-
-        <h2>E19: ERROR_EXPECTED_SEPERATOR</h2>
+        <h2>E17: E_NON_UNARY_OPERATOR</h2>
 
         <p>
-            The compiler expected a seperator (semicolon), but didn't find one.<br>
-            This happens mainly after a MAKE or SET, because a DO can accept extensions.<br>
-            Example:
+            The operator is not unary.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">SET number = 12 // Error, expected a seperator.</code></pre>
+<code class="language-dosato">do say (*2); // * is not unary</code></pre>
 
-        <h2>E20: ERROR_EMPTY_BLOCK</h2>
+        <h2>E18: E_INCOMPLETE_TERNARY_OPERATOR</h2>
 
         <p>
-            A function can't be empty, it needs at least one line.<br>
-            A work around is just to return instantly.<br>
-            Example:
+            The ternary operator is incomplete.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE FUNC VOID doNothing() {
-    // Error, empty block.
-};</code></pre>
+<code class="language-dosato">do say (true ? 1); // incomplete ternary operator</code></pre>
+
+        <h2>E19: E_NON_BINARY_OPERATOR</h2>
+
+        <p>
+            The operator is not binary.
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">do say (2 ! 2); // ! is not binary</code></pre>
+
+        <h2>E20: E_EXPECTED_HASH_OPERATOR</h2>
+
+        <p>
+            Expected a hash operator '#'.
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make array list = [1,2,3,4];
+set list+1 = 5; // expected #
+</code></pre>
+
+
+
+
+        
 
         <div>
             <a href="../4.0/index.html"> << 4.0 Errors 1-10 </a> || <a href="../4.2/index.html"> >> 4.2 Errors 21-30</a>

@@ -4,9 +4,7 @@
         <title>3.3 Arrays</title>
 
         <!-- Dosato prism support -->
-        
-        
-<link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
@@ -28,74 +26,82 @@
 
         <h2>Functions</h2>
 
-        <p><code class="language-dosato">ARRAY ANY ARRAYSHIFT (ARRAY ANY arr)</code></p>
+        <p><code class="language-dosato">array SORT (array arr, function compare_function = ?)</code></p>
 
         <p>
-            Shifts the given array, removing the first element and returning a copy.
+            Returns a copy of the given array, with the elements sorted in ascending order.<br>
+            Optionally, a compare function can be passed to sort the array in a custom way.<br>
+            Sorting is based of the numerical value of the elements. (or the return value of the compare function)
         </p>
 
-        <p><code class="language-dosato">ARRAY ANY ARRAYREMOVE (ARRAY ANY arr, INT start, INT amount)</code></p>
+        <p><code class="language-dosato">array PUSH (array arr, var value)</code></p>
 
         <p>
-            Removes the given amount of elements from the given array, starting at the given index, and returns a copy.
+            Adds the given value to the end of the given array, and returns a copy.
         </p>
 
-        <p><code class="language-dosato">ARRAY ANY ARRAYINSERT (ARRAY ANY arr, INT start, ANY insert)</code></p>
+        <p><code class="language-dosato">array POP (array arr)</code></p>
 
         <p>
-            Inserts the given element into the given array, starting at the given index, and returns a copy.
+            Removes the last element from the given array, and returns a copy.
         </p>
 
-        <p><code class="language-dosato">ARRAY ANY ARRAYSLICE (ARRAY ANY arr, INT start, INT amount)</code></p>
+        <p><code class="language-dosato">array SHIFT (array arr)</code></p>
 
         <p>
-            Returns a slice of the given array, starting at the given index and ending at the given index + amount.
+            Removes the first element from the given array, and returns a copy.
         </p>
 
-        <p><code class="language-dosato">INT ARRAYFINDINDEX (ARRAY ANY arr, ANY element)</code></p>
+        <p><code class="language-dosato">array UNSHIFT (array arr, var value)</code></p>
 
         <p>
-            Returns the index of the first occurence of the given element in the given array.<br>
-            Returns -1 if the element is not found.
+            Adds the given value to the start of the given array, and returns a copy.
         </p>
 
-        <p><code class="language-dosato">INT ARRAYLASTINDEX (ARRAY ANY arr, ANY element)</code></p>
+        <p><code class="language-dosato">array SLICE (array arr, long start, long end = ?)</code></p>
 
         <p>
-            Returns the index of the last occurence of the given element in the given array.<br>
-            Returns -1 if the element is not found.
+            Returns a copy of the given array, starting at the given start index, and ending at the given end index.<br>
+            If no end index is given, the slice will go to the end of the array.
         </p>
 
-        <p><code class="language-dosato">BOOL ARRAYCONTAINS (ARRAY ANY arr, ANY element)</code></p>
+        <p><code class="language-dosato">array SPLICE (array arr, long start, long delete_count = ?)</code></p>
 
         <p>
-            Returns true if the given element is found in the given array, false otherwise.
+            Removes a number of elements from the given array, starting at the given start index, and returns a copy.<br>
+            If no delete count is given, all elements from the start index to the end of the array will be removed.
         </p>
 
-        <p><code class="language-dosato">ARRAY ANY ARRAYREVERSE (ARRAY ANY arr)</code></p>
+        <p><code class="language-dosato">long INDEXOF (array arr, var value)</code></p>
+
+        <p>
+            Returns the index of the first occurence of the given value in the given array.<br>
+            If the value is not found, -1 is returned.
+        </p>
+
+        <p><code class="language-dosato">long LASTINDEXOF (array arr, var value)</code></p>
+
+        <p>
+            Returns the index of the last occurence of the given value in the given array.<br>
+            If the value is not found, -1 is returned.
+        </p>
+
+        <p><code class="language-dosato">array REVERSE (array arr)</code></p>
 
         <p>
             Returns a copy of the given array, with the elements in reverse order.
         </p>
 
-        <p><code class="language-dosato">ARRAY ANY ARRAYSORT (ARRAY ANY arr)</code></p>
+        <p><code class="language-dosato">array FILL (var element, int amount)</code></p>
 
         <p>
-            Returns a copy of the given array, with the elements sorted in ascending order.<br>
-            Sorting is based of the numerical value of the elements.
+            Returns an array of the given amount, filled with copies of the given element.
         </p>
 
-        <p><code class="language-dosato">ARRAY ANY ARRAYSORTFUNC (ARRAY ANY arr, STRING callback_name)</code></p>
 
         <p>
-            Returns a copy of the given array, with the elements sorted in ascending order.<br>
-            Sorting is based of the return value of the given callback function.<br>
-            Since Dosato can't pass functions as parameters, the name of the callback in string form must be passed instead.
-        </p>
-
-        <p>
-            <code class="language-dosato">ARRAY INT RANGE (INT end)</code><br>
-            <code class="language-dosato">ARRAY INT RANGE (INT start, INT end, INT step = 1)</code><br>
+            <code class="language-dosato">array RANGE (long end)</code><br>
+            <code class="language-dosato">array RANGE (long start, long end, long step = 1)</code><br>
         </p>
 
         <p>
@@ -105,8 +111,8 @@
         </p>
 
         <p>
-            <code class="language-dosato">ARRAY DOUBLE RANGEF (DOUBLE end)</code><br>
-            <code class="language-dosato">ARRAY DOUBLE RANGEF (DOUBLE start, DOUBLE end, DOUBLE step = 1.0)</code><br>
+            <code class="language-dosato">array RANGEF (double end)</code><br>
+            <code class="language-dosato">array RANGEF (double start, double end, double step = 1.0)</code><br>
         </p>
 
         <p>
@@ -115,12 +121,18 @@
             If only 1 parameter is given, the default start value of 0.0 is used. and the given parameter is used as the end value.
         </p>
 
-        <p><code class="language-dosato">ARRAY ANY FILL (ANY element, INT amount)</code></p>
+        <p><code class="language-dosato">long COUNTER ()</code></p>
 
         <p>
-            Returns an array of the given amount, filled with copies of the given element.
+            Returns the current value of the counter.<br>
+            The counter is a global variable that is incremented by 1 every time it is called.
         </p>
 
+        <p><code class="language-dosato">void SETCOUNTER (long value)</code></p>
+
+        <p>
+            Sets the value of the internal counter to the given value.
+        </p>
 
         <div>
             <a href="../3.2/index.html"> << 3.2 Strings </a> || <a href="../3.4/index.html"> >> 3.4 IO</a>

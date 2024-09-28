@@ -24,7 +24,7 @@
         
         <h1>1.7 Scopes</h1>
         
-        <h2>DO scopes</h2>
+        <h2>do scopes</h2>
 
         <p>
             A scope is a block of code that can be used to limit the visibility of variables. <br>
@@ -37,12 +37,12 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE INT a = 1;    
-DO {
-    MAKE INT b = 2;
-    DO SAY (a + b); // 3
+<code class="language-dosato">make int a = 1;    
+do {
+    make int b = 2;
+    do say (a + b); // 3
 };
-DO SAY (a + b); // Error: b is not defined</code></pre>
+do say (a + b); // Error: b is not defined</code></pre>
 
         <p>
             You can see how the variable <code>b</code> is not defined outside of the scope of the block. <br>
@@ -61,11 +61,11 @@ DO SAY (a + b); // Error: b is not defined</code></pre>
         <!-- Code block -->
 
         <pre>
-<code class="language-dosato">MAKE FUNC VOID sayAAA() {
-    MAKE INT a = 1;
-    DO SAY (a); // 1
+<code class="language-dosato">define void sayAAA() {
+    make int a = 1;
+    do say (a); // 1
 };
-DO SAY (a); // Error: a is not defined</code></pre>
+do say (a); // Error: a is not defined</code></pre>
 
         <p>
             However, just like blocks, variables defined outside of a function are visible inside of the function. <br>
@@ -74,11 +74,11 @@ DO SAY (a); // Error: a is not defined</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE INT a = 1;
-MAKE FUNC VOID sayAAA() {
-    DO SAY (a); // 1
+<code class="language-dosato">make int a = 1;
+define void sayAAA() {
+    do say (a); // 1
 };
-DO SAY (a); // 1</code></pre>
+do say (a); // 1</code></pre>
 
         <p>
             You can see how the variable <code>a</code> is visible inside and outside of the function. <br>
@@ -98,12 +98,12 @@ DO SAY (a); // 1</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">MAKE INT a = 1;
-MAKE FUNC VOID sayAAA() {
-    MAKE INT a = 2;
-    DO SAY (a); // 2
+<code class="language-dosato">make int a = 1;
+define void sayAAA() {
+    make int a = 2;
+    do say (a); // 2
 };
-DO SAY (a); // 1</code></pre>
+do say (a); // 1</code></pre>
 
         <p>
             You can see how the variable <code>a</code> is defined twice. <br>

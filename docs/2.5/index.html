@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>2.5 Type casting</title>
+        <title>2.5 Including and Importing</title>
 
         <!-- Dosato prism support -->
         <link rel="stylesheet" href="../../main.css">
@@ -22,59 +22,38 @@
             <p>Copyright &copy 2024 Sebastiaan Heins</p>
         </header>
         
-        <h1>2.5 Type casting</h1>
+        <h1>2.5 Including and Importing</h1>
 
         <p>
-            Dosato has an autocasting system, which means that you can cast types without using a keyword. <br>
-            If you want to cast a type, you can use the following syntax: <code>(TYPE) VALUE</code>
-            This means that in most cases, any type can be cast to any other type. <br>
+            Dosato has a system for including and importing files. <br>
+            This is useful for splitting up your code into multiple files, and reusing code. <br>
+            The syntax for including a file is as follows: <code>include "filename"</code> <br>
+            The syntax for importing a file is as follows: <code>import "libraryname"</code> <br>
+            You can only import and include on a top level. <br>
         </p>
 
-        <!--
-            Type table
-        -->
+        <h2>Including files</h2>
 
-        <table>
-            <tr>
-                <th>Operation</th>
-                <th>Example</th>
-                <th>Explanation</th>
-            </tr>
-            <tr>
-                <td>INT - FLOAT</td>
-                <td>MAKE FLOAT a = (INT) 1.5; // 1</td>
-                <td>Value is interpreted as INT, is floored.</td>
-            </tr>
-            <tr>
-                <td>INT - STRING</td>
-                <td>MAKE STRING a = (INT) 1; // "1"</td>
-                <td>Value is interpreted as STRING.</td>
-            </tr>
-            <tr>
-                <td>FLOAT - STRING</td>
-                <td>MAKE STRING a = 1.5; // "1.5"</td>
-                <td>Value is interpreted as STRING.</td>
-            </tr>
-            <tr>
-                <td>ARRAY - STRING</td>
-                <td>MAKE STRING a = [1,2,3,4,5]; // "[1,2,3,4,5]"</td>
-                <td>Value is interpreted as STRING nicely formatted.</td>
-            </tr>
-            <tr>
-                <td>STRING - INT</td>
-                <td>MAKE INT a = "Hello!"; // 6</td>
-                <td>Value is the length of the string.</td>
-            </tr>
-            <tr>
-                <td>ARRAY - INT</td>
-                <td>MAKE INT a = [1,2,3,4,5]; // 5</td>
-                <td>Value is the length of the array.</td>
-            </tr>
+        <p>
+            Including files is useful for splitting up your code into multiple files. <br>
+            This can make your code more readable and maintainable. <br>
+            To include a file, use the <code>include</code> keyword followed by the filename in quotes. <br>
+            Example: <code>include "myfile.to"</code> <br>
+            The file will be run, and the functions will become available. <br>
+        </p>
 
-        </table>
+        <h2>Importing libraries</h2>
+
+        <p>
+            Dosato has support for external libraries written in C or other low level languages. <br>
+            To import a library, use the <code>import</code> keyword followed by the library name in quotes. <br>
+            Example: <code>import "mylibrary"</code> <br>
+            The library will be loaded and the functions will become available. <br>
+            More information on how to write libraries can be found in the Dosato library documentation. <br>
+        </p>
 
         <div>
-            <a href="../2.4/index.html"> << 2.4 The _ variable</a> || <a href="../3.0/index.html"> >> 3.0 Universal constants</a>
+            <a href="../2.4/index.html"> << 2.4 TypeCasting</a> || <a href="../3.0/index.html"> >> 3.0 Universal constants</a>
         </div>
 
     </body>
