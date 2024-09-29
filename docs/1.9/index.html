@@ -53,7 +53,7 @@
 
         <p>
             You can access values in an object with the <code>-></code> operator. <br>
-            The <code>-></code> operator is followed by the key of the value you want to access. (string form) <br>
+            The <code>-></code> operator is followed by the key of the value you want to access. (either a string or an identifier) <br>
             Example:
         </p>
 
@@ -66,14 +66,14 @@
 };
 
 do say (person->"name"); // John
-do say (person->"age"); // 30
-do say (person->"isMarried"); // false</code></pre>
+do say (person->age); // 30, can also use an identifier
+do say (person->isMarried); // false</code></pre>
 
         <h2>Setting values</h2>
 
         <p>
             You can set values in an object with the <code>-></code> operator. <br>
-            The <code>-></code> operator is followed by the key of the value you want to set. (string form) <br>
+            The <code>-></code> operator is followed by the key of the value you want to set. (either a string or an identifier) <br>
             Example:
         </p>
 
@@ -87,8 +87,8 @@ do say (person->"isMarried"); // false</code></pre>
 
 set person->"name" = "Jane";
 set person->"age" = 25;
-set person->"isMarried" = true;
-set person->"occupation" = "Programmer"; // adds a new key</code></pre>
+set person->isMarried = true; // can also use an identifier
+set person->occupation = "Programmer"; // adds a new key</code></pre>
 
         <p>
             This sets the values of the keys <code>name</code>, <code>age</code> and <code>isMarried</code> to <code>"Jane"</code>, <code>25</code> and <code>true</code> respectively. <br>
