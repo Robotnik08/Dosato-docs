@@ -29,7 +29,6 @@
         <p><code class="language-dosato">array SORT (array arr, function compare_function = ?)</code></p>
 
         <p>
-            Returns a copy of the given array, with the elements sorted in ascending order.<br>
             Optionally, a compare function can be passed to sort the array in a custom way.<br>
             Sorting is based of the numerical value of the elements. (or the return value of the compare function)
         </p>
@@ -37,38 +36,38 @@
         <p><code class="language-dosato">array PUSH (array arr, var value)</code></p>
 
         <p>
-            Adds the given value to the end of the given array, and returns a copy.
+            Adds the given value to the end of the given array, and returns the array.
         </p>
 
-        <p><code class="language-dosato">array POP (array arr)</code></p>
+        <p><code class="language-dosato">var POP (array arr)</code></p>
 
         <p>
-            Removes the last element from the given array, and returns a copy.
+            Removes the last element from the given array, and returns the popped value.
         </p>
 
-        <p><code class="language-dosato">array SHIFT (array arr)</code></p>
+        <p><code class="language-dosato">var SHIFT (array arr)</code></p>
 
         <p>
-            Removes the first element from the given array, and returns a copy.
+            Removes the first element from the given array, and returns the shifted value.
         </p>
 
         <p><code class="language-dosato">array UNSHIFT (array arr, var value)</code></p>
 
         <p>
-            Adds the given value to the start of the given array, and returns a copy.
+            Adds the given value to the start of the given array, and returns the array.
         </p>
 
         <p><code class="language-dosato">array SLICE (array arr, long start, long end = ?)</code></p>
 
         <p>
-            Returns a copy of the given array, starting at the given start index, and ending at the given end index.<br>
+            Returns a slice of the given array, starting at the given start index, and ending at the given end index.<br>
             If no end index is given, the slice will go to the end of the array.
         </p>
 
         <p><code class="language-dosato">array SPLICE (array arr, long start, long delete_count = ?)</code></p>
 
         <p>
-            Removes a number of elements from the given array, starting at the given start index, and returns a copy.<br>
+            Removes a number of elements from the given array, starting at the given start index, then returns a soft copy.<br>
             If no delete count is given, all elements from the start index to the end of the array will be removed.
         </p>
 
