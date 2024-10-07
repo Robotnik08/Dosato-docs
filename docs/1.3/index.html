@@ -34,8 +34,8 @@
         
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int number = 5;
-set number = 10;</code></pre>
+<code class="language-dosato">make int number = 5
+set number = 10</code></pre>
 
         <p>
             Variables have a type, this type is set when the variable is created and cannot be changed. <br>
@@ -43,8 +43,8 @@ set number = 10;</code></pre>
         </p>
 
         <pre>
-<code class="language-dosato">make var value = 10; // 5
-set value = "Hello!"; // OK</code></pre>
+<code class="language-dosato">make var value = 10 // 5
+set value = "Hello!" // OK</code></pre>
 
         <p>
             The type of the variable above is <code>var</code>, this is a generic type that can store any type of data. <br>
@@ -61,9 +61,9 @@ set value = "Hello!"; // OK</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int number = 5; // 5
-make int bigger = number + 5; // 5 + 5
-do say (number + bigger); // 5 + 10 = 15</code></pre>
+<code class="language-dosato">make int number = 5 // 5
+make int bigger = number + 5 // 5 + 5
+do say (number + bigger) // 5 + 10 = 15</code></pre>
 
         <p>
             This expression adds <code>5</code> to the variable <code>number</code>. <br>
@@ -82,8 +82,8 @@ do say (number + bigger); // 5 + 10 = 15</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int number = 5;
-do say (number + 5 * 2 - 10 / 2); // 10</code></pre>
+<code class="language-dosato">make int number = 5
+do say (number + 5 * 2 - 10 / 2) // 10</code></pre>
 
         <p>
             You can observe how the order of operations is followed. <br>
@@ -101,8 +101,8 @@ do say (number + 5 * 2 - 10 / 2); // 10</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make string name = "Robotnik";
-do say (name + " is the best"); // Robotnik is the best</code></pre>
+<code class="language-dosato">make string name = "Robotnik"
+do say (name + " is the best") // Robotnik is the best</code></pre>
 
         <p>
             Additionally, any type can be concatenated to a string. <br>
@@ -110,8 +110,8 @@ do say (name + " is the best"); // Robotnik is the best</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int number = 5;
-do say ("The number is " + number); // The number is 5</code></pre>
+<code class="language-dosato">make int number = 5
+do say ("The number is " + number) // The number is 5</code></pre>
 
         <p>
             You can also use other operators on strings.
@@ -119,8 +119,8 @@ do say ("The number is " + number); // The number is 5</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make string name = "Robotnik"; // 8 characters long
-do say (name - 4); // "Robo"</code></pre>
+<code class="language-dosato">make string name = "Robotnik" // 8 characters long
+do say (name - 4) // "Robo"</code></pre>
 
         <h2>Parentheses</h2>
 
@@ -131,9 +131,9 @@ do say (name - 4); // "Robo"</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int number = 5;
-do say (number + 5 * 2 - 10 / 2); // 10
-do say ((number + 5) * 2 - 10 / 2); // 15</code></pre>
+<code class="language-dosato">make int number = 5
+do say (number + 5 * 2 - 10 / 2) // 10
+do say ((number + 5) * 2 - 10 / 2) // 15</code></pre>
 
         <p>
             Parentheses first! <br>

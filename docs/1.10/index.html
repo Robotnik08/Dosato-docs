@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>1.10 Error Handling</title>
+        <title>1.10 Switch</title>
 
         <!-- Dosato prism support -->
         <link rel="stylesheet" href="../../main.css">
@@ -22,37 +22,85 @@
             <p>Copyright &copy 2024 Sebastiaan Heins</p>
         </header>
         
-        <h1>1.10 Error Handling</h1>
+        <h1>1.10 Switch</h1>
 
-        <h2>catch</h2>
+        <h2>switch</h2>
 
         <p>
-            catch is a do extension. <br>
-            catch is used to catch errors. <br>
-            catch is followed by a block of code. <br>
-            If an error occurs in the block of code, the error is caught and the block of code is executed. It prevents the program from crashing<br>
-            Catch encapsulates everything before it, so it can be used to catch errors in a larger block of code. <br>
-            Example of a catch statement:
+            switch is a master keyword, it is used to create a switch statement. <br>
+            A switch statement is used to compare a value to a list of possible values. <br>
+            If the value matches one of the possible values, the code block is executed. <br>
+            If no value matches, the `other` block is executed. <br>
+            Example of a switch statement:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do {
-    do say (notDefined); // Error is thrown
-} catch {
-    do say ("An error occurred"); // Error is caught
-    do say ("The code: " + _); // The code is stored in the _ variable
-};</code></pre>
+<code class="language-dosato">make int a = 1
+switch a => { // value to compare
+    1 => { // case 1
+        do say ("a is 1")
+        break // exit switch
+    }
+    2 => {
+        do say ("a is 2")
+        break
+    }
+    other => { // default case
+        do say ("a is not 1 or 2")
+        break
+    }
+}</code></pre>
 
-        <div class="info">
-            <strong>Info!</strong><br>
-            The _ variable is a special variable that stores the error message.<br>
-            More info about the _ variable can be found in the <a href="../2.4/index.html">2.4 The _ variable</a>
-        </div>
+        <p>
+            You can compare for any type of value, not just integers. <br>
+            It's the same comparison as with a `==`. <br>
+            You can also have multiple cases for the same block of code. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make string a = "hello"
+switch a => {
+    "hello", "HELLO" => { // multiple cases
+        do say ("a is hello")
+        break
+    }
+    "world" => {
+        do say ("a is world")
+        break
+    }
+    other => {
+        do say ("a is not hello or world")
+        break
+    }
+}</code></pre>
+        
+        <p>
+            You can also fall through cases by not using a `break`. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make int a = 1
+switch a => {
+    1 => {
+        do say ("a is 1")
+        // no break, fall through to next case
+    }
+    2 => {
+        do say ("a is 2 or 1")
+        break // exit switch
+    }
+    other => {
+        do say ("a is not 1 or 2")
+        break
+    }
+}</code></pre>
 
 
         <div>
-            <a href="../1.9/index.html"> << 1.9 Objects</a> || <a href="../2.0/index.html"> >> 2.0 Specifications</a>
+            <a href="../1.9/index.html"> << 1.9 Objects</a> || <a href="../1.12/index.html"> >> 1.11 Template Strings</a>
         </div>
 
     </body>

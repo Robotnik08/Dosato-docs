@@ -34,7 +34,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5];</code></pre>
+<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5]</code></pre>
 
         <p>
             This creates an array of integers with the values <code>1, 2, 3, 4, 5</code>. <br>
@@ -47,7 +47,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array values = [1.1, 2, "Hello!", 4, [1,2,3]];</code></pre>
+<code class="language-dosato">make array values = [1.1, 2, "Hello!", 4, [1,2,3]]</code></pre>
 
         <h2>Accessing values</h2>
 
@@ -59,12 +59,12 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5];
-do say (numbers#0); // 1
-do say (numbers#1); // 2
-do say (numbers#2); // 3
-do say (numbers#3); // 4
-do say (numbers#4); // 5</code></pre>
+<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5]
+do say (numbers#0) // 1
+do say (numbers#1) // 2
+do say (numbers#2) // 3
+do say (numbers#3) // 4
+do say (numbers#4) // 5</code></pre>
 
         <p>
             The index of an array starts at <code>0</code> and ends at <code>length - 1</code>. <br>
@@ -75,8 +75,8 @@ do say (numbers#4); // 5</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5];
-do say (numbers#5); // Error: Index out of bounds</code></pre>
+<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5]
+do say (numbers#5) // Error: Index out of bounds</code></pre>
 
 
         <p>
@@ -85,12 +85,12 @@ do say (numbers#5); // Error: Index out of bounds</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5];
-do say (numbers#-1); // 5
-do say (numbers#-2); // 4
-do say (numbers#-3); // 3
-do say (numbers#-4); // 2
-do say (numbers#-5); // 1</code></pre>
+<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5]
+do say (numbers#-1) // 5
+do say (numbers#-2) // 4
+do say (numbers#-3) // 3
+do say (numbers#-4) // 2
+do say (numbers#-5) // 1</code></pre>
 
         <p>
             You can also use the <code>#</code> operator to set values in an array. <br>
@@ -99,9 +99,9 @@ do say (numbers#-5); // 1</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5];
-set numbers#0 = 10;
-do say (numbers#0); // 10</code></pre>
+<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5]
+set numbers#0 = 10
+do say (numbers#0) // 10</code></pre>
 
         <h2>Array expressions</h2>
 
@@ -113,7 +113,7 @@ do say (numbers#0); // 10</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ([1, 2, 3, 4, 5]);</code></pre>
+<code class="language-dosato">do say ([1, 2, 3, 4, 5])</code></pre>
 
         <p>
             This will print <code>[1, 2, 3, 4, 5]</code> to the console. <br>
@@ -125,9 +125,9 @@ do say (numbers#0); // 10</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ([1, 2, 3, 4, 5]#0); // 1
-do say ([1, 2, 3, 4, 5]#1); // 2
-do say ([1, 2, 3, 4, 5]#2); // 3
+<code class="language-dosato">do say ([1, 2, 3, 4, 5]#0) // 1
+do say ([1, 2, 3, 4, 5]#1) // 2
+do say ([1, 2, 3, 4, 5]#2) // 3
 </code></pre>
 
         <h2>Pushing and popping elements</h2>
@@ -139,9 +139,9 @@ do say ([1, 2, 3, 4, 5]#2); // 3
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5];
-make array numbers2 = [6, 7, 8, 9, 10];
-do say (numbers + numbers2); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</code></pre>
+<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5]
+make array numbers2 = [6, 7, 8, 9, 10]
+do say (numbers + numbers2) // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</code></pre>
 
         <p>
             Using this, we can push elements to the end of an array. <br>
@@ -149,9 +149,9 @@ do say (numbers + numbers2); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5];
-set numbers += [6];
-do say (numbers); // [1, 2, 3, 4, 5, 6]</code></pre>
+<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5]
+set numbers += [6]
+do say (numbers) // [1, 2, 3, 4, 5, 6]</code></pre>
 
         <p>
             You can also pop elements from the end of an array. <br>
@@ -159,9 +159,9 @@ do say (numbers); // [1, 2, 3, 4, 5, 6]</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5];
-set numbers -= 1;
-do say (numbers); // [1, 2, 3, 4]</code></pre>
+<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5]
+set numbers -= 1
+do say (numbers) // [1, 2, 3, 4]</code></pre>
 
         <p>
             Using the - operator, you pop the last element from an array. <br>
@@ -176,8 +176,8 @@ do say (numbers); // [1, 2, 3, 4]</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5];
-do say ((int)numbers); // 5</code></pre>
+<code class="language-dosato">make array numbers = [1, 2, 3, 4, 5]
+do say ((int)numbers) // 5</code></pre>
 
         <h2>Multidimensional arrays</h2>
 
@@ -188,16 +188,16 @@ do say ((int)numbers); // 5</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-do say (numbers#0#0); // 1
-do say (numbers#1#1); // 5
-do say (numbers#2); // [7, 8, 9]</code></pre>
+<code class="language-dosato">make array numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+do say (numbers#0#0) // 1
+do say (numbers#1#1) // 5
+do say (numbers#2) // [7, 8, 9]</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array numbers = [[[[[[1]]]]]];
-do sayln (numbers); // [[[[[[1]]]]]]
-do sayln (numbers#0#0#0#0#0#0); // 1</code></pre>
+<code class="language-dosato">make array numbers = [[[[[[1]]]]]]
+do sayln (numbers) // [[[[[[1]]]]]]
+do sayln (numbers#0#0#0#0#0#0) // 1</code></pre>
 
         
 

@@ -60,10 +60,10 @@ catch</code></pre>
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
-    do say ("Access granted");
+    do say ("Access granted")
 } when (password == "1234") else {
-    do say ("Access denied");
-};</code></pre>
+    do say ("Access denied")
+}</code></pre>
 
         <p>
             when encapsulates the entire block of code, if the condition is true, the block is executed. <br>
@@ -72,7 +72,7 @@ catch</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Will not run") then say ("Will also not run") when (false);</code></pre>
+<code class="language-dosato">do say ("Will not run") then say ("Will also not run") when (false)</code></pre>
 
         <p>
             When doesn't need the parentheses.
@@ -80,7 +80,7 @@ catch</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Will run") when true;</code></pre>
+<code class="language-dosato">do say ("Will run") when true</code></pre>
 
 
         <h2>while loops</h2>
@@ -96,11 +96,11 @@ catch</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int i = 0;
+<code class="language-dosato">make int i = 0
 do {
-    do sayln (i);
-    set i++;
-} while (i < 10);</code></pre>
+    do sayln (i)
+    set i++
+} while (i < 10)</code></pre>
 
         <p>
             This loop will print the numbers 0 to 9 to the console. <br>
@@ -112,15 +112,15 @@ do {
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int i = 0;
-do sayln (i) then {set i++;} while i < 10;</code></pre>
+<code class="language-dosato">make int i = 0
+do sayln (i) then {set i++} while i < 10</code></pre>
 
 
         <h2>for</h2>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">make int i = 0;
-do sayln (i) for (range(100) => i);</code></pre>
+        <pre><code class="language-dosato">make int i = 0
+do sayln (i) for (range(100) => i)</code></pre>
 
         <p>
             for loops are used to iterate over an array, in this example, the <code>range(100)</code> function returns an array of numbers from 0 to 99. <br>
@@ -131,7 +131,7 @@ do sayln (i) for (range(100) => i);</code></pre>
         </p>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">do sayln ("Hello world!") for (range(10) => _);</code></pre>
+        <pre><code class="language-dosato">do sayln ("Hello world!") for (range(10) => _)</code></pre>
         
         <h2>then</h2>
 
@@ -143,7 +143,7 @@ do sayln (i) for (range(100) => i);</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Hello world!") then say ("Hello again!");</code></pre>
+<code class="language-dosato">do say ("Hello world!") then say ("Hello again!")</code></pre>
 
         <p>
             This will print <code>Hello world!</code> and then <code>Hello again!</code> to the console. <br>
@@ -154,7 +154,7 @@ do sayln (i) for (range(100) => i);</code></pre>
         <h2>if</h2>
 
         <pre>
-<code class="language-dosato">do if (condition) then sayln ("Access granted") else sayln ("Access denied");</code></pre>
+<code class="language-dosato">do if (condition) then sayln ("Access granted") else sayln ("Access denied")</code></pre>
         
 
         <p>
@@ -167,7 +167,7 @@ do sayln (i) for (range(100) => i);</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do if (true) then sayln ("Will print when the condition is true") then sayln ("Will always print regardless");</code></pre>
+<code class="language-dosato">do if (true) then sayln ("Will print when the condition is true") then sayln ("Will always print regardless")</code></pre>
 
         <p>
             You can chain else and ifs together.
@@ -175,14 +175,14 @@ do sayln (i) for (range(100) => i);</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make bool result = listen("True or False?\n") == "true"; 
+<code class="language-dosato">make bool result = listen("True or False?\n") == "true" 
 do if result then {
-    do say("Hello, World!");
+    do say("Hello, World!")
 } else if !result then {
-    do say("Goodbye, World!");
+    do say("Goodbye, World!")
 } else {
-    do say("This should never happen.");
-};</code></pre>
+    do say("This should never happen.")
+}</code></pre>
 
         <h2>catch</h2>
 
@@ -195,10 +195,10 @@ do if result then {
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
-    do say (undfined_variable); // This will throw an error
+    do say (undfined_variable) // This will throw an error
 } catch {
-    do say ("An error occured!\n Code: " + _);
-};</code></pre>
+    do say ("An error occured!\n Code: " + _)
+}</code></pre>
 
         <p>
             If an error occurs in the block of code, <code>An error occured!</code> will be printed to the console. <br>
@@ -216,10 +216,10 @@ do if result then {
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
-    do say ("Access granted");
+    do say ("Access granted")
 } then login() when (password == "1234") else {
-    do say ("Access denied");
-};</code></pre>
+    do say ("Access denied")
+}</code></pre>
 
         <p>
             This will call the <code>login</code> function after the <code>say</code> function has finished. <br>

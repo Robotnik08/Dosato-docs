@@ -29,8 +29,8 @@
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
-    do say ("Access granted");
-} when (password == "1234");</code></pre>
+    do say ("Access granted")
+} when (password == "1234")</code></pre>
 
         <p>
             when is used to create a conditional statement. <br>
@@ -43,10 +43,10 @@
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
-    do say ("Access granted");
+    do say ("Access granted")
 } when (password == "1234") else {
-    do say ("Access denied");
-};</code></pre>
+    do say ("Access denied")
+}</code></pre>
 
         <h2>if</h2>
 
@@ -56,10 +56,10 @@
 
         <pre>
 <code class="language-dosato">do if password == "1234" then {
-    do say ("Access granted");    
+    do say ("Access granted")    
 } else {
-    do say ("Access denied");
-};</code></pre>
+    do say ("Access denied")
+}</code></pre>
 
         <h2>Boolean operators</h2>
 
@@ -86,8 +86,8 @@
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do if (password == "1234" && username == "Robotnik") then {
-    do say ("Access granted");
-};</code></pre>
+    do say ("Access granted")
+}</code></pre>
 
         <p>
             Here password must be equal to "1234" and username must be equal to "Robotnik" for the block to be executed. <br>
@@ -97,8 +97,8 @@
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do if (password == "1234" || password == "4321") then {
-    do say ("Access granted");
-};</code></pre>
+    do say ("Access granted")
+}</code></pre>
 
         <p>
             Here password must be equal to "1234" or "4321" for the block to be executed. <br>
@@ -108,8 +108,8 @@
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do if (age >= 18) then {
-    do say ("Access granted");
-};</code></pre>
+    do say ("Access granted")
+}</code></pre>
 
         <p>
             Here age (variable) must be greater or equal to 18 for the block to be executed. <br>
@@ -134,8 +134,8 @@
 
                 Now, extensions can be put on any master keyword, not only do. <br>
                 This means you can do quick conditionals with set, return, break and more. <br>
-                <pre><code class="language-dosato">set int number = 5 when (condition);
-return number when (!condition);</code></pre>
+                <pre><code class="language-dosato">set int number = 5 when (condition)
+return number when (!condition)</code></pre>
                 This is something if can't do. <br>
             </p>
         </div>

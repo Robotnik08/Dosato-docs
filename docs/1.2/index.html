@@ -33,7 +33,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int number = 5;</code></pre>
+<code class="language-dosato">make int number = 5</code></pre>
 
         <p>
             This creates a new variable called <code>number</code> with the value <code>5</code>. <br>
@@ -48,15 +48,24 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int number = 5;
-make float floatNum = 5.5F;
-make string name = "Robotnik";
-make bool valid = true;</code></pre>
+<code class="language-dosato">make int number = 5
+make float floatNum = 5.5F
+make string name = "Robotnik"
+make bool valid = true</code></pre>
 
         <p>
             You can see there's quite a few types. <br>
             To get a list of all types, go to <a href="../2.1/index.html">2.1 Types</a>. <br>
         </p>
+
+        <p>
+            If you want to use the var type explicitly (a generic type that can store any type of data), you can also not specify a type. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make value = 10 // 10
+set value = "Hello!" // OK</code></pre>
 
         <h2>set</h2>
 
@@ -68,8 +77,8 @@ make bool valid = true;</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int number = 5;
-set number = 10; // number is now 10</code></pre>
+<code class="language-dosato">make int number = 5
+set number = 10 // number is now 10</code></pre>
 
         <p>
             You can also use other assigment operators. <br>
@@ -77,15 +86,54 @@ set number = 10; // number is now 10</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int number = 5;
-set number += 10; // number is now 15
-set number -= 5; // number is now 10
-set number *= 2; // number is now 20
-set number /= 2; // number is now 10</code></pre>
+<code class="language-dosato">make int number = 5
+set number += 10 // number is now 15
+set number -= 5 // number is now 10
+set number *= 2 // number is now 20
+set number /= 2 // number is now 10</code></pre>
 
         <p>
             For a full list of operators, go to <a href="../2.2/index.html">2.2 Operators</a>. <br>
         </p>
+
+        <h2>const</h2>
+
+        <p>
+            const is used to create a constant variable. <br>
+            const is followed by the type of the variable, the name of the variable and the value of the variable. <br>
+            The value of a constant variable cannot be changed. <br>
+            Here's an example:
+        </p>
+
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">const int number = 5</code></pre>
+
+        <p>
+            This creates a new constant variable called <code>number</code> with the value <code>5</code>. <br>
+            The type of the variable is <code>int</code>. <br>
+            The value of the variable cannot be changed. <br>
+        </p>
+
+        <p>
+            Here are a few examples of valid constant variable declarations:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">const int number = 5
+const float floatNum = 5.5F
+const string name = "Robotnik"
+const bool valid = true</code></pre>
+
+        <p>
+            If you want to use the var type explicitly (a generic type that can store any type of data), you can also not specify a type. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">const value = 10 // 10</code></pre>
 
 
         <div>

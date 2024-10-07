@@ -38,6 +38,15 @@
             Dosato script files are called <code>.to</code> files. <br>
         </p>
 
+        <!-- info -->
+
+        <div class="info">
+            <p>
+                <strong>Info!</strong> <br>
+                Visual Studio Code has a Marketplace extension that provides syntax highlighting. <br>
+            </p>
+        </div>
+
         <p>
             Now, let's write our first Dosato program. <br>
             Type the following code into your text editor:
@@ -45,7 +54,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Hello world");</code></pre>
+<code class="language-dosato">do say ("Hello world")</code></pre>
     
         <p>
             Save the file and run it with the Dosato interpreter. <br>
@@ -67,15 +76,13 @@
         <pre>
 <code class="language-dosato">do // the master keyword do is used to call a function
 say // the function say is called 
-("Hello world") // the function say takes a string as an argument
-; // all lines end with a semicolon</code></pre>
+("Hello world") // the function say takes a string as an argument</code></pre>
 
         <p>
             The master keyword <code>do</code> is used to call a function. <br>
             The function <code>say</code> is called. <br>
             The function <code>say</code> takes a string as an argument. <br>
             The string is <code>"Hello world"</code>. <br>
-            All lines end with a semicolon. <br>
         </p>
 
         <div class="info">
@@ -83,6 +90,7 @@ say // the function say is called
                 <strong>Info!</strong> <br>
                 A comment is a line that is ignored by the interpreter. <br>
                 A comment starts with <code>//</code> and ends with a new line. <br>
+                You can also use <code>/*</code> and <code>*/</code> to create a multi-line comment. <br>
             </p>
         </div>
 
@@ -93,9 +101,9 @@ say // the function say is called
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
-    do say ("Hello ");
-    do say ("world");
-};</code></pre>
+    do say ("Hello ")
+    do say ("world")
+}</code></pre>
 
         <p>
             do can also be used to call a block. <br>
@@ -108,7 +116,6 @@ say // the function say is called
                 A block starts with <code>{</code> and ends with <code>}</code>. <br>
                 A block can contain any number of lines. <br>
                 You can think of a block as a function without a name. <br>
-                Blocks also must end with a semicolon. <br>
             </p>
         </div>
 

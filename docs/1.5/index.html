@@ -37,8 +37,8 @@
         <!-- Code block -->
         <pre>
 <code class="language-dosato">define void sayHello() {
-    do say ("Hello world");
-};</code></pre>
+    do say ("Hello world")
+}</code></pre>
 
         <p>
             This function can be called with the <code>do</code> keyword:
@@ -46,7 +46,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do sayHello(); // Hello world</code></pre>
+<code class="language-dosato">do sayHello() // Hello world</code></pre>
 
         <p>
             Let's break down the function declaration:
@@ -59,8 +59,8 @@ void // Void is the return type of the function (more on this later)
 sayHello // The name of the function
 () // The parameters of the function
 { // The start of the function block
-    do say ("Hello world"); // The code inside the function
-}; // The end of the function block</code></pre>
+    do say ("Hello world") // The code inside the function
+} // The end of the function block</code></pre>
 
 
         <h2>Parameters</h2>
@@ -78,8 +78,8 @@ sayHello // The name of the function
         <!-- Code block -->
         <pre>
 <code class="language-dosato">define void sayHello(string name) {
-    do say ("Hello " + name);
-};</code></pre>
+    do say ("Hello " + name)
+}</code></pre>
 
         <p>
             The function takes 1 parameter, the name of the person to say hello to. <br>
@@ -89,7 +89,7 @@ sayHello // The name of the function
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do sayHello("Robotnik"); // Hello Robotnik</code></pre>
+<code class="language-dosato">do sayHello("Robotnik") // Hello Robotnik</code></pre>
 
 
 
@@ -107,8 +107,8 @@ sayHello // The name of the function
         <!-- Code block -->
         <pre>
 <code class="language-dosato">define int addNumbers(int a, int b) {
-    return a + b;
-};</code></pre>
+    return a + b
+}</code></pre>
 
         <p>
             <code>return</code> is used to return a value from a function. <br>
@@ -132,7 +132,7 @@ sayHello // The name of the function
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int sum = addNumbers(5, 10); // sum is 15</code></pre>
+<code class="language-dosato">make int sum = addNumbers(5, 10) // sum is 15</code></pre>
 
         <p>
             The parameters will be copied into the function. <br>
@@ -143,13 +143,13 @@ sayHello // The name of the function
         <!-- Code block -->
         <pre>
 <code class="language-dosato">define void addOne(int a) {
-    set a += 1;
-    do say (a); // a is 6, number is still 5
-};
+    set a += 1
+    do say (a) // a is 6, number is still 5
+}
 
-make int number = 5;
-do addOne(number); // number is still 5, number did not change
-do say (number);</code></pre>
+make int number = 5
+do addOne(number) // number is still 5, number did not change
+do say (number)</code></pre>
 
         <div class="info">
             <p>

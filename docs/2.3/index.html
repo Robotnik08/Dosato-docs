@@ -41,7 +41,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do if (password == "1234") then say ("Access granted") else say ("Access denied");</code></pre>
+<code class="language-dosato">do if (password == "1234") then say ("Access granted") else say ("Access denied")</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
@@ -53,7 +53,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do if (password == "1234") then say ("Access granted") then say ("Started!");</code></pre>
+<code class="language-dosato">do if (password == "1234") then say ("Access granted") then say ("Started!")</code></pre>
 
         <p>
             The code above will print <code>"Access granted"</code> when true and then <code>"Started!"</code>.<br>
@@ -72,7 +72,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Access granted") when (password == "1234") else say ("Access denied");</code></pre>
+<code class="language-dosato">do say ("Access granted") when (password == "1234") else say ("Access denied")</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
@@ -84,7 +84,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Access granted") then say ("Started!") when (password == "1234");</code></pre>
+<code class="language-dosato">do say ("Access granted") then say ("Started!") when (password == "1234")</code></pre>
 
         <p>
             The code above will print <code>"Access granted"</code> when true and then <code>"Started!"</code>.<br>
@@ -103,7 +103,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do if (password == "1234") then say ("Access granted") else say ("Access denied");</code></pre>
+<code class="language-dosato">do if (password == "1234") then say ("Access granted") else say ("Access denied")</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
@@ -114,7 +114,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Access granted") when (password == "1234") else say ("Access denied");</code></pre>
+<code class="language-dosato">do say ("Access granted") when (password == "1234") else say ("Access denied")</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
@@ -133,8 +133,8 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make var i = 0;
-do sayln (i) for (range(100) => i);</code></pre>
+<code class="language-dosato">make var i = 0
+do sayln (i) for (range(100) => i)</code></pre>
 
         <p>
             <code>range(100)</code> returns an array of numbers from 0 to 99.<br>
@@ -147,7 +147,7 @@ do sayln (i) for (range(100) => i);</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do sayln ("Hello world!") for (range(10) => _);</code></pre>
+<code class="language-dosato">do sayln ("Hello world!") for (range(10) => _)</code></pre>
 
         <p>
             You can iterate over any array, not just the <code>range</code> function.<br>
@@ -156,9 +156,9 @@ do sayln (i) for (range(100) => i);</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array names = ["Robotnik", "Alex"];
-make var i = null; // Recommended to use the var type, as a list might differ in types.
-do sayln ("Hi " + i) for (names => i);</code></pre>
+<code class="language-dosato">make array names = ["Robotnik", "Alex"]
+make var i = null // Recommended to use the var type, as a list might differ in types.
+do sayln ("Hi " + i) for (names => i)</code></pre>
 
         <p>
             You can break out of a for loop by using the <code>break</code> keyword.<br>
@@ -167,11 +167,11 @@ do sayln ("Hi " + i) for (names => i);</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make var i = 0;
+<code class="language-dosato">make var i = 0
 do {
-    do sayln (i);
-    break when i == 5;
-} for (range(10) => i);</code></pre>
+    do sayln (i)
+    break when i == 5
+} for (range(10) => i)</code></pre>
 
         <p>
             Or you can continue to the next iteration of the loop by using the <code>continue</code> keyword.<br>
@@ -179,11 +179,11 @@ do {
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make var i = 0;
+<code class="language-dosato">make var i = 0
 do {
-    do sayln (i);
-    continue when i % 2 == 0;
-} for (range(10) => i);</code></pre>
+    do sayln (i)
+    continue when i % 2 == 0
+} for (range(10) => i)</code></pre>
 
         <h2>while</h2>
 
@@ -199,11 +199,11 @@ do {
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int i = 0;
+<code class="language-dosato">make int i = 0
 do {
-    do sayln (i);
-    set i++;
-} while (i < 100);</code></pre>
+    do sayln (i)
+    set i++
+} while (i < 100)</code></pre>
 
         <p>
             This loop will print the numbers 0 to 99 to the console.<br>
@@ -219,12 +219,12 @@ do {
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int i = 0;
+<code class="language-dosato">make int i = 0
 do {
-    do sayln (i);
-    set i++;
-    break when i == 5;
-} while (i < 10);</code></pre>
+    do sayln (i)
+    set i++
+    break when i == 5
+} while (i < 10)</code></pre>
 
         <p>
             This will print the numbers 0 to 4 to the console.<br>
@@ -242,7 +242,7 @@ do {
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Hello world!") then say ("Hello again!");</code></pre>
+<code class="language-dosato">do say ("Hello world!") then say ("Hello again!")</code></pre>
 
         <p>
             This will print <code>Hello world!</code> and then <code>Hello again!</code> to the console.<br>
@@ -261,8 +261,8 @@ do {
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do say (thisVarDoesNotExist) catch {
-    do say ("Error!");
-};</code></pre>
+    do say ("Error!")
+}</code></pre>
 
         <p>
             This will print <code>Error!</code> to the console.<br>
@@ -276,8 +276,8 @@ do {
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do say (thisVarDoesNotExist) catch {
-    do say ("Error: " + _);
-};</code></pre>
+    do say ("Error: " + _)
+}</code></pre>
 
         <p>
             This will print <code>Error: 47</code> to the console.<br>

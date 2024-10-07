@@ -23,7 +23,7 @@
 
         <p>
             Dosato is a high level, general purpose, interpreted programming language designed to be easy to use.<br>
-            Dosato is built with user readability in mind, every line must end with a semicolon and every line must start with one of the master keywords:
+            Dosato is built with user readability in mind, every line must start with one of the master keywords:
         </p>
 
         <!-- Code block -->
@@ -36,18 +36,21 @@ return
 break
 continue
 import
-include</code></pre>
+include
+switch
+const</code></pre>
 
         <p>
-            These keywords represent the core features of the programming language. These make spotting lines and visualising structures way easier.  
+            These keywords represent the core features of the programming language. These make spotting lines and visualising structures way easier. <br>
+            This also means that the semicolon is not needed to end a line, allowing for semicolon-less code with full whitespace support. 
         </p>
         <p>Below is an example.</p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Hello world!"); // do 
-make int number = 5; // make 
-set number = 10; // set</code></pre>
+<code class="language-dosato">do say ("Hello world!") // do 
+make int number = 5 // make 
+set number = 10 // set</code></pre>
 
         <strong>do: Calls a function or block</strong>
         <p>A function must start with the function name, followed by parentheses containing the arguments passed into the function.</p>
@@ -64,7 +67,7 @@ set number = 10; // set</code></pre>
         <strong>return: returns a value from a function.</strong>
         <p>Functions must return a value of the same type as the function. </p>
 
-        <strong>break: breaks out of a loop.</strong>
+        <strong>break: breaks out of a loop or switch case.</strong>
         <p>Breaks out of the current loop. </p>
 
         <strong>continue: continues to the next iteration of a loop.</strong>
@@ -91,7 +94,9 @@ set number = 10; // set</code></pre>
         <li><a href="docs/1.7/index.html">1.7 Scopes</a></li>
         <li><a href="docs/1.8/index.html">1.8 Arrays</a></li>
         <li><a href="docs/1.9/index.html">1.9 Objects</a></li>
-        <li><a href="docs/1.10/index.html">1.10 Error Handling</a></li>
+        <li><a href="docs/1.10/index.html">1.10 Switch</a></li>
+        <li><a href="docs/1.11/index.html">1.11 Template Strings</a></li>
+        <li><a href="docs/1.12/index.html">1.12 Error Handling</a></li>
     </ol>
 
     <h3>Section 2. Specifications</h3>

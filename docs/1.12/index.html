@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.12 Error Handling</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="../../index.html">Return to homepage</a>
+            <h2>DOSATO</h2>
+            <p>Copyright &copy 2024 Sebastiaan Heins</p>
+        </header>
+        
+        <h1>1.12 Error Handling</h1>
+
+        <h2>catch</h2>
+
+        <p>
+            catch is an extension. <br>
+            catch is used to catch errors. <br>
+            catch is followed by a block of code. <br>
+            If an error occurs in the previous block of code, the error is caught and the block of code is executed. It prevents the program from crashing<br>
+            Catch encapsulates everything before it, so it can be used to catch errors in a larger block of code. <br>
+            Example of a catch statement:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">do {
+    do say (notDefined) // Error is thrown
+} catch {
+    do say ("An error occurred") // Error is caught
+    do say ("The code: " + _) // The code is stored in the _ variable
+}</code></pre>
+
+        <div class="info">
+            <strong>Info!</strong><br>
+            The _ variable is a special variable that stores the error message.<br>
+            More info about the _ variable can be found in the <a href="../2.4/index.html">2.4 The _ variable</a>
+        </div>
+
+
+        <div>
+            <a href="../1.11/index.html"> << 1.11 Template Strings</a> || <a href="../2.0/index.html"> >> 2.0 Specifications</a>
+        </div>
+
+    </body>
+</html>

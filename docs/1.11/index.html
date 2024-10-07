@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.10 Template Strings</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="../../index.html">Return to homepage</a>
+            <h2>DOSATO</h2>
+            <p>Copyright &copy 2024 Sebastiaan Heins</p>
+        </header>
+        
+        <h1>1.11 Template Strings</h1>
+
+        <p>
+            Strings defined with backticks are called template strings. <br>
+            They can be used to create strings with variables inside of them. <br>
+            The syntax for a template string is <code>`string {external_value}`</code>. <br>
+            Example of a template string:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make int a = 1
+make int b = 2
+make string result = `The result of {a} + {b} is {a + b}`
+
+do say (result) // The result of 1 + 2 is 3</code></pre>
+
+        <p>
+            In the example above, the variables <code>a</code> and <code>b</code> are used inside of the template string. <br>
+            The variables are enclosed in curly braces <code>${}</code> and are replaced with their values. <br>
+            The result of the expression <code>a + b</code> is also used inside of the template string. <br>
+            The template string is then assigned to the variable <code>result</code> and printed to the console. <br>
+
+            Template strings can also be used to create multi-line strings. <br>
+            Example of a multi-line template string:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make string multiLine = `This is a
+multi-line
+string`</code></pre>
+
+        <p>
+            In the example above, the template string is split over multiple lines. <br>
+            The newlines are preserved in the string. <br>
+            The template string is assigned to the variable <code>multiLine</code>. <br>
+        </p>
+        
+
+
+        <div>
+            <a href="../1.10/index.html"> << 1.10 Switch</a> || <a href="../1.12/index.html"> >> 1.12 Error Handling</a>
+        </div>
+
+    </body>
+</html>

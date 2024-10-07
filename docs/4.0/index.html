@@ -49,7 +49,7 @@
             - 1.0.0<br>
         </p>
 
-<pre><code class="language-dosato">do say (1.); // 1. is an invalid number literal</code></pre>
+<pre><code class="language-dosato">do say (1.) // 1. is an invalid number literal</code></pre>
 
         <h2>E2: E_INVALID_CHAR_LITERAL</h2>
 
@@ -61,7 +61,7 @@
         </p>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">do say ('Hello'); // char literal must only have 1 char</code></pre>
+        <pre><code class="language-dosato">do say ('Hello') // char literal must only have 1 char</code></pre>
 
         <h2>E3: E_UNCLOSED_STRING_LITERAL</h2>
 
@@ -73,22 +73,22 @@
         </p>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">do say ("Hello); // string literal must be closed</code></pre>
+        <pre><code class="language-dosato">do say ("Hello) // string literal must be closed</code></pre>
 
         <h2>E4: E_EXPECTED_MASTER</h2>
 
         <p>
             A master keyword MUST be at the beginning of each line of code.<br>
-            do, set, make, define, import, include, return, continue, break
+            do, set, make, define, import, include, return, continue, break, switch, const
         </p>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">say ("Hello"); // Error, line doesn't start with a master keyword</code></pre>
+        <pre><code class="language-dosato">say ("Hello") // Error, line doesn't start with a master keyword</code></pre>
 
         <h2>E5: E_MISSING_SEPERATOR</h2>
 
         <p>
-            The line seperator character ';' is missing.<br>
+            The line seperator character '' is missing.<br>
         </p>
 
         <!-- Code block -->
@@ -101,7 +101,7 @@
         </p>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">do say ("Hello"; // Error, missing closing parenthesis</code></pre>
+        <pre><code class="language-dosato">do say ("Hello" // Error, missing closing parenthesis</code></pre>
 
         <h2>E7: E_MISSING_OPENING_PARENTHESIS</h2>
 
@@ -122,7 +122,7 @@
         </p>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">define void () {}; // expected identifier</code></pre>
+        <pre><code class="language-dosato">define void () {} // expected identifier</code></pre>
 
         <h2>E10: E_EXPECTED_TYPE_INDENTIFIER</h2>
 
@@ -131,7 +131,7 @@
         </p>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">make a = 0; // expected type identifier</code></pre>
+        <pre><code class="language-dosato">make a = 0 // expected type identifier</code></pre>
 
 
         <div>

@@ -44,7 +44,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int a = (int long)0; // the type cast is invalid</code></pre>
+<code class="language-dosato">make int a = (int long)0 // the type cast is invalid</code></pre>
 
         <h2>E24: E_MUST_BE_GLOBAL</h2>
 
@@ -55,7 +55,7 @@
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
-    include "file.to"; // must be global
+    include "file.to" // must be global
 }</code></pre>
 
         <h2>E25: E_CANT_RETURN_OUTSIDE_FUNCTION</h2>
@@ -66,7 +66,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">return 0; // must be inside a function</code></pre>
+<code class="language-dosato">return 0 // must be inside a function</code></pre>
 
         <h2>E26: E_MASTER_CANT_HAVE_EXTENSIONS</h2>
 
@@ -76,7 +76,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int a = 0 when (condition); // can not have extensions</code></pre>
+<code class="language-dosato">make int a = 0 when (condition) // can not have extensions</code></pre>
 
         <h2>E27: E_ELSE_WITHOUT_IF</h2>
 
@@ -86,7 +86,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do sayln ("Hello") else sayln("Not allowed"); // else being using without an if or a when</code></pre>
+<code class="language-dosato">do sayln ("Hello") else sayln("Not allowed") // else being using without an if or a when</code></pre>
 
         <h2>E28: E_EXPECTED_THEN</h2>
 
@@ -96,17 +96,17 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do if (true) sayln("Error"); // expected then after if</code></pre>
+<code class="language-dosato">do if (true) sayln("Error") // expected then after if</code></pre>
 
         <h2>E29: E_BREAK_OUTSIDE_LOOP</h2>
 
         <p>
-            Break statement must be inside a loop.
+            Break statement must be inside a loop or switch case.
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">break; // must be inside a loop</code></pre>
+<code class="language-dosato">break // must be inside a loop</code></pre>
 
         <h2>E30: E_CONTINUE_OUTSIDE_LOOP</h2>
 
@@ -116,7 +116,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">continue; // must be inside a loop</code></pre>
+<code class="language-dosato">continue // must be inside a loop</code></pre>
         
 
         <div>

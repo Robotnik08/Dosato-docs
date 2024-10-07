@@ -32,8 +32,8 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int a = 0;
-set a 1; // expected =
+<code class="language-dosato">make int a = 0
+set a 1 // expected =
 </code></pre>
 
         <h2>E12: E_EXPECTED_ASSIGNMENT_OPERATOR_PURE</h2>
@@ -44,7 +44,7 @@ set a 1; // expected =
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int a 0; // expected =</code></pre>
+<code class="language-dosato">make int a 0 // expected =</code></pre>
         
         <h2>E13: E_EXPECTED_BRACKET_ROUND</h2>
 
@@ -54,7 +54,7 @@ set a 1; // expected =
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">define void a [] {}; // expected ( instead</code></pre>
+<code class="language-dosato">define void a [] {} // expected ( instead</code></pre>
 
         <h2>E14: E_EXPECTED_BRACKET_CURLY</h2>
 
@@ -66,7 +66,7 @@ set a 1; // expected =
         <pre>
 <code class="language-dosato">define void a () (
     
-); // expected { instead</code></pre>
+) // expected { instead</code></pre>
 
         <h2>E15: E_EXPECTED_BRACKET_SQUARE</h2>
 
@@ -82,7 +82,7 @@ set a 1; // expected =
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (()); // empty expression</code></pre>
+<code class="language-dosato">do say (()) // empty expression</code></pre>
 
         <h2>E17: E_NON_UNARY_OPERATOR</h2>
 
@@ -92,7 +92,7 @@ set a 1; // expected =
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (*2); // * is not unary</code></pre>
+<code class="language-dosato">do say (*2) // * is not unary</code></pre>
 
         <h2>E18: E_INCOMPLETE_TERNARY_OPERATOR</h2>
 
@@ -102,7 +102,7 @@ set a 1; // expected =
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (true ? 1); // incomplete ternary operator</code></pre>
+<code class="language-dosato">do say (true ? 1) // incomplete ternary operator</code></pre>
 
         <h2>E19: E_NON_BINARY_OPERATOR</h2>
 
@@ -112,7 +112,7 @@ set a 1; // expected =
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (2 ! 2); // ! is not binary</code></pre>
+<code class="language-dosato">do say (2 ! 2) // ! is not binary</code></pre>
 
         <h2>E20: E_EXPECTED_HASH_OPERATOR</h2>
 
@@ -122,8 +122,8 @@ set a 1; // expected =
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make array list = [1,2,3,4];
-set list+1 = 5; // expected #
+<code class="language-dosato">make array list = [1,2,3,4]
+set list+1 = 5 // expected #
 </code></pre>
 
 

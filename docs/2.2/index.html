@@ -30,7 +30,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (1 + 2); // 1 on the left, 2 on the right</code></pre>
+<code class="language-dosato">do say (1 + 2) // 1 on the left, 2 on the right</code></pre>
 
         <p>Here is a list of all binary operators:</p>
 
@@ -148,7 +148,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (-1); // 1 on the right</code></pre>
+<code class="language-dosato">do say (-1) // 1 on the right</code></pre>
 
         <p>Here is a list of all unary operators:</p>
         
@@ -194,7 +194,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (true ? 1 : 2); // 1 on the left</code></pre>
+<code class="language-dosato">do say (true ? 1 : 2) // 1 on the left</code></pre>
 
         <h2>assigment operators</h2>
 
@@ -202,7 +202,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">set number += 1; // 1 on the right</code></pre>
+<code class="language-dosato">set number += 1 // 1 on the right</code></pre>
 
         <p>Here is a list of all assigment operators:</p>
 
@@ -289,7 +289,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (1 + 2 * 3); // 7</code></pre>
+<code class="language-dosato">do say (1 + 2 * 3) // 7</code></pre>
 
         <p>
             here's a full table of operator precedence:
@@ -386,10 +386,10 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (1 + 2); // 3
-do say ("Hello " + "world!"); // Hello world!
-do say ([1, 2, 3] + [4, 5, 6]); // [1, 2, 3, 4, 5, 6]
-do say ({"key1": 1} + {"key2": 2}); // {"key1": 1, "key2": 2}</code></pre>
+<code class="language-dosato">do say (1 + 2) // 3
+do say ("Hello " + "world!") // Hello world!
+do say ([1, 2, 3] + [4, 5, 6]) // [1, 2, 3, 4, 5, 6]
+do say ({"key1": 1} + {"key2": 2}) // {"key1": 1, "key2": 2}</code></pre>
 
         <h2>Subtraction oparator</h2>
 
@@ -401,10 +401,10 @@ do say ({"key1": 1} + {"key2": 2}); // {"key1": 1, "key2": 2}</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (1 - 2); // -1
-do say ("Hello" - 3); // He
-do say ([1, 2, 3] - 1); // [1, 2]
-do say ({"key1": 1, "key2": 2} - "key2"); // {"key1": 1}</code></pre>
+<code class="language-dosato">do say (1 - 2) // -1
+do say ("Hello" - 3) // He
+do say ([1, 2, 3] - 1) // [1, 2]
+do say ({"key1": 1, "key2": 2} - "key2") // {"key1": 1}</code></pre>
 
         <h2>Hashing operator</h2>
 
@@ -415,7 +415,7 @@ do say ({"key1": 1, "key2": 2} - "key2"); // {"key1": 1}</code></pre>
         
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ([1, 2, 3]#0); // 1</code></pre>
+<code class="language-dosato">do say ([1, 2, 3]#0) // 1</code></pre>
 
         <h2>Object Subscripting</h2>
 
@@ -429,8 +429,8 @@ do say ({"key1": 1, "key2": 2} - "key2"); // {"key1": 1}</code></pre>
 <code class="language-dosato">make object person = {
     "name": "John",
     "age": 30
-};
-do say (person->"name"); // John</code></pre>
+}
+do say (person->"name") // John</code></pre>
 
         <h2>Power and root</h2>
 
@@ -442,8 +442,8 @@ do say (person->"name"); // John</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do sayln (2 ** 3); // 8
-do sayln (3 ^/ 8); // 2</code></pre>
+<code class="language-dosato">do sayln (2 ** 3) // 8
+do sayln (3 ^/ 8) // 2</code></pre>
 
         <p>
             The root operator can take a second argument to specify the root. (left one) <br>
@@ -453,7 +453,7 @@ do sayln (3 ^/ 8); // 2</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do sayln (^/81); // 9</code></pre>
+<code class="language-dosato">do sayln (^/81) // 9</code></pre>
 
         <h2>Max and min</h2>
 
@@ -465,8 +465,8 @@ do sayln (3 ^/ 8); // 2</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do sayln (5 &gt;| 1); // 5
-do sayln (5 &lt;| 1); // 1</code></pre>
+<code class="language-dosato">do sayln (5 &gt;| 1) // 5
+do sayln (5 &lt;| 1) // 1</code></pre>
 
         <h2>Abs</h2>
         
@@ -477,7 +477,7 @@ do sayln (5 &lt;| 1); // 1</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do sayln (!- -5); // 5</code></pre>
+<code class="language-dosato">do sayln (!- -5) // 5</code></pre>
 
         <div class="info">
             <p>
@@ -498,9 +498,9 @@ do sayln (5 &lt;| 1); // 1</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int number = 5;
-set number++; // number is now 6
-set number--; // number is now 5</code></pre>
+<code class="language-dosato">make int number = 5
+set number++ // number is now 6
+set number-- // number is now 5</code></pre>
 
         <h2>Ternary operators</h2>
 
@@ -512,8 +512,8 @@ set number--; // number is now 5</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (true ? 1 : 2); // 1
-do say (false ? 1 : 2); // 2</code></pre>
+<code class="language-dosato">do say (true ? 1 : 2) // 1
+do say (false ? 1 : 2) // 2</code></pre>
 
 
         <p>
