@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
+        <script src="../../dark-mode.js" defer></script>
     
         <script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -19,7 +20,9 @@
         <header>
             <a href="../../index.html">Return to homepage</a>
             <h2>DOSATO</h2>
-            <p>Copyright &copy 2024 Sebastiaan Heins</p>
+            <p>
+                <button id="dark-mode-toggle">🌙</button>
+                Copyright &copy 2024 Sebastiaan Heins</p>
         </header>
 
         <h1>1.1 Introduction</h1>
@@ -123,7 +126,7 @@ say // the function say is called
             In the next section we will take a look at the two other master keywords. <br>
         </p>
 
-        <div>
+        <div id="footer-select">
             <a href="../../index.html"> << Home</a> || <a href="../1.2/index.html"> >> 1.2 make and set</a>
         </div>
 

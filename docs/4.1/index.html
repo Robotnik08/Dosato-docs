@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
+        <script src="../../dark-mode.js" defer></script>
     
         <script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -19,7 +20,9 @@
         <header>
             <a href="../../index.html">Return to homepage</a>
             <h2>DOSATO</h2>
-            <p>Copyright &copy 2024 Sebastiaan Heins</p>
+            <p>
+                <button id="dark-mode-toggle">🌙</button>
+                Copyright &copy 2024 Sebastiaan Heins</p>
         </header>
         
         <h1>4.1 Errors 11-20</h1>
@@ -131,7 +134,7 @@ set list+1 = 5 // expected #
 
         
 
-        <div>
+        <div id="footer-select">
             <a href="../4.0/index.html"> << 4.0 Errors 1-10 </a> || <a href="../4.2/index.html"> >> 4.2 Errors 21-30</a>
         </div>
 

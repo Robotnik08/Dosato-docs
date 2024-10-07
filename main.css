@@ -1,16 +1,4 @@
-.info {
-    background-color: lightyellow;
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid goldenrod;
-}
 
-.warning {
-    background-color: lightsalmon;
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid salmon;
-}
 
 :not(code):not(pre):not(span) {
     font-family: sans-serif;
@@ -38,6 +26,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: #007BFF;
+    padding: 10px;
 }
 
 header a, header p {
@@ -56,4 +45,57 @@ header p {
 header h2 {
     font-size: xx-large;
     color: whitesmoke;
+}
+
+.info {
+    background-color: lightyellow;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid goldenrod;
+}
+
+.warning {
+    background-color: lightsalmon;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid salmon;
+}
+
+#footer-select {
+    padding: 10px;
+    border: 1px solid #007BFF;
+    border-radius: 10px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#dark-mode-toggle { /* Dark mode toggle button */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    border: 1px solid #007BFF;
+    border-radius: 10px;
+    background-color: #007BFF;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+/* Dark mode */
+
+body.dark {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+body.dark .info {
+    background-color: #444;
+    color: whitesmoke;
+    border: 1px solid #666;
+}
+
+body.dark .warning {
+    background-color: #555;
+    color: whitesmoke;
+    border: 1px solid #777;
 }

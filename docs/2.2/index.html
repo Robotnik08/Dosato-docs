@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
+        <script src="../../dark-mode.js" defer></script>
     
         <script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -19,7 +20,9 @@
         <header>
             <a href="../../index.html">Return to homepage</a>
             <h2>DOSATO</h2>
-            <p>Copyright &copy 2024 Sebastiaan Heins</p>
+            <p>
+                <button id="dark-mode-toggle">🌙</button>
+                Copyright &copy 2024 Sebastiaan Heins</p>
         </header>
         
         <h1>2.2 Operators</h1>
@@ -520,7 +523,7 @@ do say (false ? 1 : 2) // 2</code></pre>
             The rest of the operators are pretty self explanatory. and behave the same as in other languages. <br>
         </p>
 
-        <div>
+        <div id="footer-select">
             <a href="../2.1/index.html"> << 2.1 Types</a> || <a href="../2.3/index.html"> >> 2.3 do extensions</a>
         </div>
 
