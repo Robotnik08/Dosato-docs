@@ -96,6 +96,28 @@ set number /= 2 // number is now 10</code></pre>
             For a full list of operators, go to <a href="../2.2/index.html">2.2 Operators</a>. <br>
         </p>
 
+        <p>
+            You can also set and make multiple variables at once. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make int x, y = 1, 2
+set x, y = y, x // x is now 2, y is now 1</code></pre>
+
+        <p>
+            This swaps the values of x and y. <br>
+            You can also use this to set multiple variables to the same value. <br>
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make int x, y = 0, 1
+set x, y += 5 // x is now 5, y is now 6
+set x, y = 10 // x is now 10, y is now 10
+set x, y = 12, 14 // x is now 12, y is now 14</code></pre>
+
+
         <h2>const</h2>
 
         <p>
