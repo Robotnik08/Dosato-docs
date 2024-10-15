@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../../prism/prism-okaidia.css">
         <script src="../../prism/prism.js"></script>
         <script src="../../prism/prism-dosato.js"></script>
+        <script src="../../dark-mode.js" defer></script>
     
         <script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -19,7 +20,9 @@
         <header>
             <a href="../../index.html">Return to homepage</a>
             <h2>DOSATO</h2>
-            <p>Copyright &copy 2024 Sebastiaan Heins</p>
+            <p>
+                <button id="dark-mode-toggle">🌙</button>
+                Copyright &copy 2024 Sebastiaan Heins</p>
         </header>
         
         <h1>1.2 make and set</h1>
@@ -158,7 +161,7 @@ const bool valid = true</code></pre>
 <code class="language-dosato">const value = 10 // 10</code></pre>
 
 
-        <div>
+        <div id="footer-select">
             <a href="../1.1/index.html"> << 1.1 Introduction</a> || <a href="../1.3/index.html"> >> 1.3 Variables and expressions</a>
         </div>
 
