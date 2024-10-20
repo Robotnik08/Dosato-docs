@@ -58,7 +58,7 @@
         <!-- Code block -->
         <pre>
 <code class="language-dosato">define // Define is used as a function declaration keyword
-void // Void is the return type of the function (more on this later)
+void // Void is the return type of the function (more on this later) (optional)
 sayHello // The name of the function
 () // The parameters of the function
 { // The start of the function block
@@ -99,7 +99,7 @@ sayHello // The name of the function
         <h2>Return types</h2>
 
         <p>
-            Functions can have return types. <br>
+            Functions can have optional return types. <br>
             Return types are used to determine what type of data the function returns. <br>
             Return types are declared after the <code>define</code> keyword. <br>
             Any variable type can be used as a return type. <br>
@@ -145,7 +145,7 @@ sayHello // The name of the function
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">define void addOne(int a) {
+<code class="language-dosato">define addOne(int a) {
     set a += 1
     do say (a) // a is 6, number is still 5
 }
