@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.13 Anonymous functions</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+        <script src="../../dark-mode.js" defer></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="../../index.html">Return to homepage</a>
+            <h2>DOSATO</h2>
+            <p>
+                <button id="dark-mode-toggle">🌙</button>
+                Copyright &copy 2024 Sebastiaan Heins</p>
+        </header>
+        
+        <h1>1.13 Anonymous functions</h1>
+
+        <h2>Arrow functions</h2>
+
+        <p>
+            Arrow functions are a way to define functions without a name. <br>
+            They are useful for short functions that are only used once. <br>
+            Or functions that are passed as arguments to other functions. <br>
+            Or capturing values from the surrounding scope (closure). <br>
+        </p>
+
+        <p>
+            Example of an arrow function:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make myadder = int (int a, int b) => {
+    return a + b
+}
+do sayln(myadder(1, 2)) // 3</code></pre>
+
+        <p>
+            The syntax for an arrow function is step-by-step:
+        </p>
+
+        <p>
+            1. The type first, this is the return type of the function. <br>
+            2. Then the arguments of the function, these are enclosed in parentheses. <br>
+            3. Then the arrow <code>=></code> operator. <br>
+            4. Then the body of the function, this is enclosed in curly braces. <br>
+        </p>
+
+        <p>
+            The arrow function above is a function that takes two arguments <code>a</code> and <code>b</code> and returns their sum. <br>
+            The function is then assigned to the variable <code>myadder</code> and called with the arguments <code>1</code> and <code>2</code>. <br>
+            The result is then printed to the console. <br>
+        </p>
+
+        <h2>Closures</h2>
+
+        <p>
+            Arrow functions can capture values from the surrounding scope. <br>
+            This is called a closure. <br>
+            Example of a closure:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">make myadder = null
+do { // inside a local scope
+    make int a = 1
+    set myadder = int (int b) => {
+        return a + b
+    }
+}
+do sayln(myadder(2)) // 3</code></pre>
+
+        <p>
+            The variable <code>a</code> is defined outside of the arrow function. <br>
+            The arrow function captures the value of <code>a</code> and uses it inside of the function. <br>
+            The arrow function is then assigned to the variable <code>myadder</code> and called with the argument <code>2</code>. <br>
+            The result is then printed to the console. <br>
+        </p>
+
+        <div class="info">
+            <p>
+                <strong>Info!</strong> <br>
+                The variable a in this example is saved in the closure of the arrow function. <br>
+                The block it was in doesn't exist anymore, but the arrow function still has access to the variable a. <br>
+            </p>
+        </div>  
+
+        <h2>Function factory</h2>
+
+        <p>
+            Arrow functions can be used to create functions dynamically and return them from other functions. <br>
+            This is called a function factory. <br>
+            Example of a function factory:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">define function makeAdder(int a) {
+    return int (int b) => {
+        return a + b
+    }
+}
+make myadder = makeAdder(10)
+make myadder2 = makeAdder(20)
+do sayln(myadder(2)) // 12
+do sayln(myadder2(2)) // 22</code></pre>
+
+        <p>
+            Each time the function <code>makeAdder</code> is called, it creates a new arrow function that adds the argument <code>a</code> to the argument <code>b</code>. <br>
+            Each instance has it's own closure, so the value of <code>a</code> is different for each instance. <br>
+        </p>
+
+        <div id="footer-select">
+            <a href="../1.12/index.html"> << 1.12 Error handling</a> || <a href="../1.14/index.html"> >> 1.14 Classes</a>
+        </div>
+
+    </body>
+</html>

@@ -35,90 +35,96 @@
 
         <h3 class="info">
             Note: <br>
-            Each and every function/constant also has a lowercase version, for example <code>MAXLONG</code> can also be written as <code>maxlong</code>.
+            Each and every function/constant also has a uppercase version, for example <code>sayln</code> can also be written as <code>SAYLN</code>.
         </h3>
 
         <h2>General Constants</h2>
 
         
-        <h3>long: MAXLONG</h3>
+        <h3>long: maxlong</h3>
 
         <p>
-            MAXLONG is a constant defined in the standard library, it is the maximum value of a long. <br>
+            maxlong is a constant defined in the standard library, it is the maximum value of a long. <br>
             It's value internally is <code>9223372036854775807</code>
         </p>
 
-        <h3>long: MINLONG</h3>
+        <h3>long: minlong</h3>
 
         <p>
-            MINLONG is a constant defined in the standard library, it is the minimum value of a long. <br>
+            minlong is a constant defined in the standard library, it is the minimum value of a long. <br>
             It's value internally is <code>-9223372036854775808</code>
         </p>
 
-        <h3>long: MAXINT</h3>
+        <h3>long: maxint</h3>
 
         <p>
-            MAXINT is a constant defined in the standard library, it is the maximum value of an int. <br>
+            maxint is a constant defined in the standard library, it is the maximum value of an int. <br>
             It's value internally is <code>2147483647</code>
         </p>
 
-        <h3>long: MININT</h3>
+        <h3>long: minint</h3>
 
         <p>
-            MININT is a constant defined in the standard library, it is the minimum value of an int. <br>
+            minint is a constant defined in the standard library, it is the minimum value of an int. <br>
             It's value internally is <code>-2147483648</code>
         </p>
 
-        <h3>long: MAXSHORT</h3>
+        <h3>long: maxshort</h3>
         
         <p>
-            MAXSHORT is a constant defined in the standard library, it is the maximum value of a short. <br>
+            maxshort is a constant defined in the standard library, it is the maximum value of a short. <br>
             It's value internally is <code>32767</code>
         </p>
 
-        <h3>long: MINSHORT</h3>
+        <h3>long: minshort</h3>
 
         <p>
-            MINSHORT is a constant defined in the standard library, it is the minimum value of a short. <br>
+            minshort is a constant defined in the standard library, it is the minimum value of a short. <br>
             It's value internally is <code>-32768</code>
         </p>
 
-        <h3>long: MAXBYTE</h3>
+        <h3>long: maxbyte</h3>
 
         <p>
-            MAXBYTE is a constant defined in the standard library, it is the maximum value of a byte. <br>
+            maxbyte is a constant defined in the standard library, it is the maximum value of a byte. <br>
             It's value internally is <code>127</code>
         </p>
 
-        <h3>long: MINBYTE</h3>
+        <h3>long: minbyte</h3>
 
         <p>
-            MINBYTE is a constant defined in the standard library, it is the minimum value of a byte. <br>
+            minbyte is a constant defined in the standard library, it is the minimum value of a byte. <br>
             It's value internally is <code>-128</code>
         </p>
 
 
         <h2>General Functions</h2>
 
-        <p><code class="language-dosato">string TYPEOF (var value)</code></p>
+        <p><code class="language-dosato">string typeof (var value)</code></p>
 
         <p>
             Returns the type of the given value as a string. <br>
         </p>
 
-        <p><code class="language-dosato">bool ISNULL (var value)</code></p>
+        <p><code class="language-dosato">bool isnull (var value)</code></p>
 
         <p>
             Returns true if the given value is null, false otherwise. <br>
         </p>
 
-        <p><code class="language-dosato">long TYPEOFINT (var value)</code></p>
+        <p><code class="language-dosato">long typeofint (var value)</code></p>
 
         <p>
             Returns the type of the given value as a long. <br>
         </p>
 
-        <p><code class="language-dosato">void THROW (long error_code|string error_msg)</code></p>
+        <p><code class="language-dosato">long isnan (var value)</code></p>
+
+        <p>
+            Returns true if the given value is NaN, or the value is not a number. <br>
+        </p>
+
+        <p><code class="language-dosato">void throw (long error_code|string error_msg)</code></p>
 
         <p>
             Throws an error with the given error code or message. <br>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>2.3 extensions</title>
+        <title>2.3 Extensions</title>
 
         <!-- Dosato prism support -->
         <link rel="stylesheet" href="../../main.css">
@@ -130,14 +130,14 @@
         <p>
             for is used to create an array iteration loop.<br>
             for is placed at the end of a call chain.<br>
-            for is followed by (), in the () you put the array you want to iterate over, then the => operator and after that the variable name for the element.<br>
+            for is followed by (), in the () you put the array you want to iterate over, then the <code>as</code> keyword and after that the variable name for the element.<br>
             Example of a for loop:
         </p>
 
         <!-- Code block -->
         <pre>
 <code class="language-dosato">make i = 0
-do sayln (i) for (range(100) => i)</code></pre>
+do sayln (i) for (range(100) as i)</code></pre>
 
         <p>
             <code>range(100)</code> returns an array of numbers from 0 to 99.<br>
@@ -150,7 +150,7 @@ do sayln (i) for (range(100) => i)</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do sayln ("Hello world!") for (range(10) => _)</code></pre>
+<code class="language-dosato">do sayln ("Hello world!") for (range(10) as _)</code></pre>
 
         <p>
             You can iterate over any array, not just the <code>range</code> function.<br>
@@ -161,7 +161,7 @@ do sayln (i) for (range(100) => i)</code></pre>
         <pre>
 <code class="language-dosato">make array names = ["Robotnik", "Alex"]
 make i = null
-do sayln ("Hi " + i) for (names => i)</code></pre>
+do sayln ("Hi " + i) for (names as i)</code></pre>
 
         <p>
             You can break out of a for loop by using the <code>break</code> keyword.<br>
@@ -174,7 +174,7 @@ do sayln ("Hi " + i) for (names => i)</code></pre>
 do {
     do sayln (i)
     break when i == 5
-} for (range(10) => i)</code></pre>
+} for (range(10) as i)</code></pre>
 
         <p>
             Or you can continue to the next iteration of the loop by using the <code>continue</code> keyword.<br>
@@ -186,7 +186,7 @@ do {
 do {
     do sayln (i)
     continue when i % 2 == 0
-} for (range(10) => i)</code></pre>
+} for (range(10) as i)</code></pre>
 
         <h2>while</h2>
 

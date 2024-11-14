@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>1.14 Classes</title>
+
+        <!-- Dosato prism support -->
+        <link rel="stylesheet" href="../../main.css">
+        <link rel="stylesheet" href="../../prism/prism-okaidia.css">
+        <script src="../../prism/prism.js"></script>
+        <script src="../../prism/prism-dosato.js"></script>
+        <script src="../../dark-mode.js" defer></script>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Prism.highlightAll();
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="../../index.html">Return to homepage</a>
+            <h2>DOSATO</h2>
+            <p>
+                <button id="dark-mode-toggle">🌙</button>
+                Copyright &copy 2024 Sebastiaan Heins</p>
+        </header>
+        
+        <h1>1.14 Classes</h1>
+
+        <h2>Class</h2>
+
+        <p>
+            <code>class</code> is a master keyword, it is used to create a class definition. <br>
+            A class is a blueprint for creating objects. <br>
+            A class can have properties and methods. <br>
+            Example of a simple class definition:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">class Person (string name, int age) {
+    set self->name = name
+    set self->age = age    
+}
+
+make p = Person("John", 30)
+do say (p->name) // John
+do say (p->age) // 30</code></pre>
+
+        <p>
+            The syntax for creating a class is as follows: <br>
+        </p>
+
+        <p>
+            1. After the class keyword, you write the name of the class. <br>
+            2. Write the constructor parameters in parentheses (same as function parameters). <br>
+            3. A class body, this is enclosed in curly braces. <br>
+        </p>
+
+        <h2>The Object</h2>
+
+        <p>
+            A class is a blueprint for creating objects. <br>
+            The object the class creates is called an instance. <br>
+            In the class you can access the instance with the <code>self</code> keyword. <br>
+            Like a regular dictionary, you can set and get properties on the instance with the <code>-></code> operator.<br>
+        </p>
+
+        <h2>Implement methods</h2>
+
+        <p>
+            A class can have methods. <br>
+            Methods are functions that are defined inside of a class. <br>
+            Methods can access the instance with the <code>self</code> keyword. <br>
+            Example of a class with a method:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">class Person (string name, int age) {
+    set self->name = name
+    set self->age = age
+
+    implement greet() {
+        do sayln (`Hello, my name is {self->name} and I am {self->age} years old`)
+    }
+}
+
+make p = Person("John", 30)
+do p->greet() // Hello, my name is John and I am 30 years old</code></pre>
+
+        <p>
+            The implement master keyword is used to define a method. <br>
+            The method can be called on the instance with the <code>-></code> operator. <br>
+        </p>
+
+        <div class="info">
+            <p>
+                <strong>Info!</strong> <br>
+                You can't use the <code>implement</code> master keyword outside of a class. <br>
+                You can't use the <code>self</code> keyword outside of a class. <br>
+                You can't use the <code>return</code> master keyword inside of a class body. <br>
+            </p>
+        </div>
+        
+        <h2>Inheritance</h2>
+
+        <p>
+            Although this isn't nativly included in the grammar, it's really easy to implement. <br>
+            Take a look at the following example:
+        </p>
+
+        <!-- Code block -->
+        <pre>
+<code class="language-dosato">class Person (string name, int age) {
+    set self->name = name
+    set self->age = age
+
+    implement greet() {
+        do sayln (`Hello, my name is {self->name} and I am {self->age} years old`)
+    }
+}
+
+class Employee (string name, int age, string occupation) {
+    // Inherit from Person
+    set self += Person(name, age)
+
+    set self->occupation = occupation
+
+    implement sayOccupation() {
+        do sayln (`I am a {self->occupation}`)
+    }
+}
+
+make e = Employee("John", 30, "Programmer")
+do e->greet() // Hello, my name is John and I am 30 years old
+do e->sayOccupation() // I am a Programmer</code></pre>
+
+        <p>
+            Since, when you add two objects together, the properties of the right object are added to the left object, you can use this to inherit from another class. <br>
+            It will add all the missing fields and methods from the parent class to the child class. <br>
+        </p>
+
+        <div id="footer-select">
+            <a href="../1.13/index.html"> << 1.13 Anonymous functions</a> || <a href="../2.0/index.html"> >> 2.0 Specifications</a>
+        </div>
+
+    </body>
+</html>

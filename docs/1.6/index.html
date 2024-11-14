@@ -123,18 +123,18 @@ do sayln (i) then {set i++} while i < 10</code></pre>
 
         <!-- Code block -->
         <pre><code class="language-dosato">make int i = 0
-do sayln (i) for (range(100) => i)</code></pre>
+do sayln (i) for (range(100) as i)</code></pre>
 
         <p>
             for loops are used to iterate over an array, in this example, the <code>range(100)</code> function returns an array of numbers from 0 to 99. <br>
             The for loop will iterate over the array and assign the current value to the variable <code>i</code>. <br>
             The variable <code>i</code> is then printed to the console. <br>
 
-            You can use the <code>_</code> variable after the => to discard the value, and just loop as many times as the length of the array <br>
+            You can use the <code>_</code> variable after the <code>as</code> to discard the value, and just loop as many times as the length of the array <br>
         </p>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">do sayln ("Hello world!") for (range(10) => _)</code></pre>
+        <pre><code class="language-dosato">do sayln ("Hello world!") for (range(10) as _)</code></pre>
         
         <h2>then</h2>
 
