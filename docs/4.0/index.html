@@ -78,7 +78,17 @@
         <!-- Code block -->
         <pre><code class="language-dosato">do say ("Hello) // string literal must be closed</code></pre>
 
-        <h2>E4: E_EXPECTED_MASTER</h2>
+        <h2>E4: E_TEMPLATE_RECURSION_LIMIT</h2>
+
+        <p>
+            If the template recursion limit is reached, throw this error.<br>
+            The template recursion limit is set to 1000 by default.<br>
+            This limit can be changed by the user.<br>
+
+            Template recursion is the process of putting template strings inside of template strings.<br>
+        </p>
+
+        <h2>E5: E_EXPECTED_MASTER</h2>
 
         <p>
             A master keyword MUST be at the beginning of each line of code.<br>
@@ -87,15 +97,6 @@
 
         <!-- Code block -->
         <pre><code class="language-dosato">say ("Hello") // Error, line doesn't start with a master keyword</code></pre>
-
-        <h2>E5: E_MISSING_SEPERATOR</h2>
-
-        <p>
-            The line seperator character '' is missing.<br>
-        </p>
-
-        <!-- Code block -->
-        <pre><code class="language-dosato">do say ("Hello") // Error, missing seperator</code></pre>
 
         <h2>E6: E_MISSING_CLOSING_PARENTHESIS</h2>
 
