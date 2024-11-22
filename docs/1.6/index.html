@@ -30,8 +30,8 @@
         <h2>Extensions</h2>
 
         <p>
-            Extension keywords are used to extend the functionality of the do keyword. <br>
-            There are 8 extensions:
+            Extension keywords are used to extend the functionality of a line of code. <br>
+            There are 10 extensions:
         </p>
 
         <!-- Code Block -->
@@ -42,14 +42,16 @@ else
 while
 for
 then
-catch</code></pre>
+catch
+unless
+until</code></pre>
 
         <p>
-            Extensions are used to create conditional statements, loops and error handling. <br>
+            Extensions are used to do conditional statements, loops and error handling. <br>
             Extensions are always followed by some kind of expression or a block of code. <br>
         </p>
 
-        <h2>when else</h2>
+        <h2>when and else</h2>
 
 
         <p>
@@ -63,9 +65,9 @@ catch</code></pre>
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
-    do say ("Access granted")
+    do say("Access granted")
 } when (password == "1234") else {
-    do say ("Access denied")
+    do say("Access denied")
 }</code></pre>
 
         <p>
@@ -75,15 +77,11 @@ catch</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Will not run") then say ("Will also not run") when (false)</code></pre>
-
-        <p>
-            When doesn't need the parentheses.
-        </p>
+<code class="language-dosato">do say("Will not run") then say("Will also not run") when false</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Will run") when true</code></pre>
+<code class="language-dosato">do say("Will run") when true</code></pre>
 
 
         <h2>while loops</h2>
@@ -101,40 +99,40 @@ catch</code></pre>
         <pre>
 <code class="language-dosato">make int i = 0
 do {
-    do sayln (i)
+    do sayln(i)
     set i++
-} while (i < 10)</code></pre>
+} while i < 10</code></pre>
 
         <p>
             This loop will print the numbers 0 to 9 to the console. <br>
             The variable <code>i</code> is incremented by 1 each time the loop is executed. <br>
             The loop will stop when <code>i</code> is equal to 10. <br><br>
 
-            Just like with when, while doesn't need the parentheses, and encapsulates the entire block of code.
+            Just like with when, while encapsulates the entire block of code.
         </p>
 
         <!-- Code block -->
         <pre>
 <code class="language-dosato">make int i = 0
-do sayln (i) then {set i++} while i < 10</code></pre>
+do sayln(i) then {set i++} while i < 10</code></pre>
 
 
         <h2>for</h2>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">make int i = 0
-do sayln (i) for (range(100) as i)</code></pre>
+        <pre><code class="language-dosato">do sayln(i) for i in range(100)</code></pre>
 
         <p>
             for loops are used to iterate over an array, in this example, the <code>range(100)</code> function returns an array of numbers from 0 to 99. <br>
             The for loop will iterate over the array and assign the current value to the variable <code>i</code>. <br>
             The variable <code>i</code> is then printed to the console. <br>
+            The variable <code>i</code> is created for the loop body, and is not accessible outside of the loop. <br>
 
-            You can use the <code>_</code> variable after the <code>as</code> to discard the value, and just loop as many times as the length of the array <br>
+            You can not use a variable, which means the loop will just iterate over the array and do nothing with the value: <br>
         </p>
 
         <!-- Code block -->
-        <pre><code class="language-dosato">do sayln ("Hello world!") for (range(10) as _)</code></pre>
+        <pre><code class="language-dosato">do sayln("Hello world!") for range(10)</code></pre>
         
         <h2>then</h2>
 
@@ -146,7 +144,7 @@ do sayln (i) for (range(100) as i)</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Hello world!") then say ("Hello again!")</code></pre>
+<code class="language-dosato">do sayln("Hello world!") then sayln("Hello again!")</code></pre>
 
         <p>
             This will print <code>Hello world!</code> and then <code>Hello again!</code> to the console. <br>
@@ -157,10 +155,11 @@ do sayln (i) for (range(100) as i)</code></pre>
         <h2>if</h2>
 
         <pre>
-<code class="language-dosato">do if (condition) then sayln ("Access granted") else sayln ("Access denied")</code></pre>
+<code class="language-dosato">if condition then sayln("Access granted") else if other_condition sayln("AdminAcess granted")</code></pre>
         
 
         <p>
+            If is also a master keyword, but behaves as an extension when used after an else. <br>
             if is used to create a conditional statement. <br>
             if is followed by a boolean expression, a then extension and an optional else extension. <br>
             The boolean expression is evaluated and if it is true, the block of code is executed. <br>
@@ -170,16 +169,12 @@ do sayln (i) for (range(100) as i)</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do if (true) then sayln ("Will print when the condition is true") then sayln ("Will always print regardless")</code></pre>
-
-        <p>
-            You can chain else and ifs together.
-        </p>
+<code class="language-dosato">if true then sayln("Will print when the condition is true") then sayln("Will always print regardless")</code></pre>
 
         <!-- Code block -->
         <pre>
 <code class="language-dosato">make bool result = listen("True or False?\n") == "true" 
-do if result then {
+if result then {
     do say("Hello, World!")
 } else if !result then {
     do say("Goodbye, World!")
@@ -198,9 +193,9 @@ do if result then {
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
-    do say (undfined_variable) // This will throw an error
+    do say(undfined_variable) // This will throw an error
 } catch {
-    do say ("An error occured!\n Code: " + _)
+    do say("An error occured!\n Code: " + _)
 }</code></pre>
 
         <p>
@@ -219,9 +214,9 @@ do if result then {
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
-    do say ("Access granted")
-} then login() when (password == "1234") else {
-    do say ("Access denied")
+    do say("Access granted")
+} then login() when password == "1234" else {
+    do say("Access denied")
 }</code></pre>
 
         <p>
@@ -233,7 +228,7 @@ do if result then {
         <div class="info">
             <p>
                 <strong>Info!</strong> <br>
-                You can learn more about extensions in <a href="../2.3/index.html">2.3 do extensions</a> <br>
+                You can learn more about extensions in <a href="../2.3/index.html">2.3 Extensions</a> <br>
             </p>
         </div>
 

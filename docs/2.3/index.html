@@ -32,50 +32,18 @@
             We will take a closer look at all the extensions.<br>
         </p>
 
-        <h2>if</h2>
-
-        <p>
-            if is an extension to the do function, it is used to create a conditional statement.<br>
-            if is followed by (), then right after a then block and an optional else block after the full then.<br>
-            The expression inside the () is evaluated and if it is true, the then block is executed.<br>
-            If the expression is false, the else block is executed.<br>
-            Heres some example code:
-        </p>
-
-        <!-- Code block -->
-        <pre>
-<code class="language-dosato">do if (password == "1234") then say ("Access granted") else say ("Access denied")</code></pre>
-
-        <p>
-            This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
-            If it is, it will print <code>"Access granted"</code>, otherwise it will print <code>"Access denied"</code>.<br>
-            This is a simple example of an if statement.<br>
-            if statements only count for the first then in the chain, the rest of the THENs are ignored.<br>
-            Example of this:
-        </p>
-
-        <!-- Code block -->
-        <pre>
-<code class="language-dosato">do if (password == "1234") then say ("Access granted") then say ("Started!")</code></pre>
-
-        <p>
-            The code above will print <code>"Access granted"</code> when true and then <code>"Started!"</code>.<br>
-            <code>"Started!"</code> will always be printed, even if the expression is false, this is because the second then is ignored.<br>
-        </p>
-
         <h2>when</h2>
 
         <p>
             when is the second way to create a conditional statement.<br>
-            when is followed by (), when is placed at the end of a statement, right after can follow an else.<br>
-            The expression inside the () is evaluated and if it is true, everything before the when will be excecuted.<br>
+            The expression after the when is evaluated, if it's true, everything before the when will be excecuted.<br>
             If the expression is false, the else block is executed.<br>
             Heres some example code:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Access granted") when (password == "1234") else say ("Access denied")</code></pre>
+<code class="language-dosato">do say("Access granted") when password == "1234" else say("Access denied")</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
@@ -87,7 +55,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Access granted") then say ("Started!") when (password == "1234")</code></pre>
+<code class="language-dosato">do say("Access granted") then say("Started!") when password == "1234"</code></pre>
 
         <p>
             The code above will print <code>"Access granted"</code> when true and then <code>"Started!"</code>.<br>
@@ -106,7 +74,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do if (password == "1234") then say ("Access granted") else say ("Access denied")</code></pre>
+<code class="language-dosato">if password == "1234" then say("Access granted") else say("Access denied")</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
@@ -117,7 +85,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Access granted") when (password == "1234") else say ("Access denied")</code></pre>
+<code class="language-dosato">do say("Access granted") when password == "1234" else say("Access denied")</code></pre>
 
         <p>
             This code will check if the variable <code>password</code> is equal to <code>"1234"</code>.<br>
@@ -129,15 +97,13 @@
 
         <p>
             for is used to create an array iteration loop.<br>
-            for is placed at the end of a call chain.<br>
-            for is followed by (), in the () you put the array you want to iterate over, then the <code>as</code> keyword and after that the variable name for the element.<br>
+            for is followed by an expression, you put the array you want to iterate over, and then optionally before that the variable you want to use to store the current element of the array.<br>
             Example of a for loop:
         </p>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make i = 0
-do sayln (i) for (range(100) as i)</code></pre>
+<code class="language-dosato">do sayln(i) for i in range(100)</code></pre>
 
         <p>
             <code>range(100)</code> returns an array of numbers from 0 to 99.<br>
@@ -150,7 +116,7 @@ do sayln (i) for (range(100) as i)</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do sayln ("Hello world!") for (range(10) as _)</code></pre>
+<code class="language-dosato">do sayln("Hello world!") for in range(10)</code></pre>
 
         <p>
             You can iterate over any array, not just the <code>range</code> function.<br>
@@ -160,8 +126,7 @@ do sayln (i) for (range(100) as i)</code></pre>
         <!-- Code block -->
         <pre>
 <code class="language-dosato">make array names = ["Robotnik", "Alex"]
-make i = null
-do sayln ("Hi " + i) for (names as i)</code></pre>
+do sayln("Hi " + i) for i in names</code></pre>
 
         <p>
             You can break out of a for loop by using the <code>break</code> keyword.<br>
@@ -170,11 +135,11 @@ do sayln ("Hi " + i) for (names as i)</code></pre>
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make  i = 0
+<code class="language-dosato">
 do {
-    do sayln (i)
+    do sayln(i)
     break when i == 5
-} for (range(10) as i)</code></pre>
+} for i in range(10)</code></pre>
 
         <p>
             Or you can continue to the next iteration of the loop by using the <code>continue</code> keyword.<br>
@@ -182,11 +147,10 @@ do {
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make  i = 0
-do {
-    do sayln (i)
+<code class="language-dosato">do {
+    do sayln(i)
     continue when i % 2 == 0
-} for (range(10) as i)</code></pre>
+} for i in range(10)</code></pre>
 
         <h2>while</h2>
 
@@ -204,9 +168,9 @@ do {
         <pre>
 <code class="language-dosato">make int i = 0
 do {
-    do sayln (i)
+    do sayln(i)
     set i++
-} while (i < 100)</code></pre>
+} while i < 100</code></pre>
 
         <p>
             This loop will print the numbers 0 to 99 to the console.<br>
@@ -222,12 +186,11 @@ do {
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">make int i = 0
-do {
-    do sayln (i)
+<code class="language-dosato">do {
+    do sayln(i)
     set i++
     break when i == 5
-} while (i < 10)</code></pre>
+} while i < 10</code></pre>
 
         <p>
             This will print the numbers 0 to 4 to the console.<br>
@@ -245,7 +208,7 @@ do {
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say ("Hello world!") then say ("Hello again!")</code></pre>
+<code class="language-dosato">do say("Hello world!") then say("Hello again!")</code></pre>
 
         <p>
             This will print <code>Hello world!</code> and then <code>Hello again!</code> to the console.<br>
@@ -263,8 +226,8 @@ do {
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do say (thisVarDoesNotExist) catch {
-    do say ("Error!")
+<code class="language-dosato">do say(thisVarDoesNotExist) catch {
+    do say("Error!")
 }</code></pre>
 
         <p>
@@ -279,7 +242,7 @@ do {
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do say (thisVarDoesNotExist) catch {
-    do say ("Error: " + _)
+    do say("Error: " + _)
 }</code></pre>
 
         <p>
