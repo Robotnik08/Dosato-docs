@@ -27,13 +27,54 @@
         
         <h1>1.4 Conditionals</h1>
 
+        <h2>if</h2>
+
+        <p>
+            The master keyword <code>if</code> is used to create a conditional statement. <br>
+        </p>
+
+        <pre>
+<code class="language-dosato">if password == "1234" then {
+    do say ("Access granted")    
+} else {
+    do say ("Access denied")
+}</code></pre>
+
+        <p>
+            if is followed by a boolean expression, the <code>then</code> keyword and a block of code and an optional else block. <br>
+            The boolean expression is evaluated and if it is true, the block of code before is executed. <br>
+            If the boolean expression is false, the else block is executed. <br>
+            Example of an if statement with an else extension:
+        </p>
+
+        <pre>
+<code class="language-dosato">if password == "1234" then {
+    do say ("Access granted")
+} else if password == "4321" then {
+    do say ("Access granted with alternative password")
+} else {
+    do say ("Access denied")
+}</code></pre>
+
+        <p>
+            Here password must be equal to "1234" for the first block to be executed. <br>
+            If password is equal to "4321" the second block is executed. <br>
+            If password is not equal to "1234" or "4321" the else block is executed. <br>
+        </p>
+            
+
+
         <h2>when</h2>
+
+        <p>
+            The extension keyword <code>when</code> is also used to create a conditional statement. <br>
+        </p>
 
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
     do say ("Access granted")
-} when (password == "1234")</code></pre>
+} when password == "1234"</code></pre>
 
         <p>
             when is used to create a conditional statement. <br>
@@ -43,26 +84,29 @@
             Example of a when statement with an else extension:
         </p>
 
+
         <!-- Code block -->
         <pre>
 <code class="language-dosato">do {
     do say ("Access granted")
-} when (password == "1234") else {
+} when password == "1234" else {
     do say ("Access denied")
 }</code></pre>
 
-        <h2>if</h2>
+
+        <h2>unless</h2>
 
         <p>
-            if is also a way to do conditionals, they look and feel like the more familiar way of doing it.<br>
+            The extension keyword <code>unless</code> is also used to create a conditional statement. <br>
+            It's the same as when, but the boolean expression is inverted. <br>
         </p>
 
+        <!-- Code block -->
         <pre>
-<code class="language-dosato">do if password == "1234" then {
-    do say ("Access granted")    
-} else {
+<code class="language-dosato">do {
     do say ("Access denied")
-}</code></pre>
+} unless password == "1234"</code></pre>
+        
 
         <h2>Boolean operators</h2>
 
@@ -88,7 +132,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do if (password == "1234" && username == "Robotnik") then {
+<code class="language-dosato">if password == "1234" && username == "Robotnik" then {
     do say ("Access granted")
 }</code></pre>
 
@@ -99,7 +143,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do if (password == "1234" || password == "4321") then {
+<code class="language-dosato">if password == "1234" || password == "4321" then {
     do say ("Access granted")
 }</code></pre>
 
@@ -110,7 +154,7 @@
 
         <!-- Code block -->
         <pre>
-<code class="language-dosato">do if (age >= 18) then {
+<code class="language-dosato">if age >= 18 then {
     do say ("Access granted")
 }</code></pre>
 
@@ -137,9 +181,9 @@
 
                 Now, extensions can be put on any master keyword, not only do. <br>
                 This means you can do quick conditionals with set, return, break and more. <br>
-                <pre><code class="language-dosato">set number = 5 when (condition)
-return number when (!condition)</code></pre>
-                This is something if can't do. <br>
+                <pre><code class="language-dosato">set number = 5 when condition
+return number unless condition</code></pre>
+                This is something if can't do like this. <br>
             </p>
         </div>
 
