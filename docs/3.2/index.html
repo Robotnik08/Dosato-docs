@@ -29,32 +29,32 @@
 
         <h2>Functions</h2>
 
-        <p><code class="language-dosato">string to_string (val value)</code></p>
+        <p><code class="language-dosato">string toString (var value)</code></p>
 
         <p>
             Converts the given value to a string. <br>
             Exact same behaviour as a typecast to string.
         </p>
 
-        <p><code class="language-dosato">array split (string value, string delimiter)</code></p>
+        <p><code class="language-dosato">array stringSplit (string value, string delimiter)</code></p>
 
         <p>
             Splits a string into an array of strings, using the given delimiter.
         </p>
 
-        <p><code class="language-dosato">string lower (string value)</code></p>
+        <p><code class="language-dosato">string stringLower (string value)</code></p>
 
         <p>
             Returns the given string in lowercase.
         </p>
 
-        <p><code class="language-dosato">string upper (string value)</code></p>
+        <p><code class="language-dosato">string stringUpper (string value)</code></p>
         
         <p>
             Returns the given string in uppercase.
         </p>
 
-        <p><code class="language-dosato">long stringlength (string value)</code></p>
+        <p><code class="language-dosato">long stringLength (string value)</code></p>
 
         <p>
             Returns the length of the given string.
@@ -66,67 +66,67 @@
             Returns a substring of the given string, starting at the given start index and ending at the given end index.
         </p>
 
-        <p><code class="language-dosato">long stringindexof (string value, string search, long start = 0)</code></p>
+        <p><code class="language-dosato">long stringIndexOf (string value, string search, long start = 0)</code></p>
 
         <p>
             Returns the index of the first occurence of the given search string in the given string, starting at the given start index.
         </p>
 
-        <p><code class="language-dosato">long stringlastindexof (string value, string search, long start = 0)</code></p>
+        <p><code class="language-dosato">long stringLastIndexOf (string value, string search, long start = 0)</code></p>
 
         <p>
             Returns the index of the last occurence of the given search string in the given string, starting at the given start index.
         </p>
 
-        <p><code class="language-dosato">bool startswith (string value, string str, long start = 0)</code></p>
+        <p><code class="language-dosato">bool stringStartsWith (string value, string str, long start = 0)</code></p>
 
         <p>
             Returns true if the given string starts with the given substring, starting at the given start index.
         </p>
 
-        <p><code class="language-dosato">bool endswith (string value, string str, long start = 0)</code></p>
+        <p><code class="language-dosato">bool stringEndsWith (string value, string str, long start = 0)</code></p>
 
         <p>
             Returns true if the given string ends with the given substring, starting at the given start index.
         </p>
 
-        <p><code class="language-dosato">string replace (string value, string search, string replace, long start = 0)</code></p>
+        <p><code class="language-dosato">string stringReplace (string value, string search, string replace, long start = 0)</code></p>
 
         <p>
             Returns the given string with all occurences of the given search string replaced with the given replace string, starting at the given start index.
         </p>
 
-        <p><code class="language-dosato">string trim (string value)</code></p>
+        <p><code class="language-dosato">string stringTrim (string value)</code></p>
 
         <p>
             Returns the given string with all leading and trailing whitespace removed.
         </p>
 
-        <p><code class="language-dosato">string stringreverse (string value)</code></p>
+        <p><code class="language-dosato">string stringReverse (string value)</code></p>
 
         <p>
             Returns the given string in reverse.
         </p>
 
-        <p><code class="language-dosato">bool stringcontains (string value, string search, long start = 0)</code></p>
+        <p><code class="language-dosato">bool stringContains (string value, string search, long start = 0)</code></p>
 
         <p>
             Returns true if the given string contains the given search string, starting at the given start index.
         </p>
 
-        <p><code class="language-dosato">string stringremove (string value, long start, long end)</code></p>
+        <p><code class="language-dosato">string stringRemove (string value, long start, long end)</code></p>
 
         <p>
             Returns the given string with the substring starting at the given start index and ending at the given end index removed.
         </p>
 
-        <p><code class="language-dosato">string stringinsert (string value, string insert, long index)</code></p>
+        <p><code class="language-dosato">string stringInsert (string value, string insert, long index)</code></p>
 
         <p>
             Returns the given string with the given insert string inserted at the given index.
         </p>
 
-        <p><code class="language-dosato">long stringtoint (string value)</code></p>
+        <p><code class="language-dosato">long stringToInt (string value)</code></p>
 
         <p>
             Converts the given ascii string to an integer ("123" becomes 123).<br>
@@ -134,25 +134,31 @@
         </p>
 
 
-        <p><code class="language-dosato">double stringtodouble (string value)</code></p>
+        <p><code class="language-dosato">double stringToDouble (string value)</code></p>
 
         <p>
             Converts the given ascii string to a double ("123.45" becomes 123.45).<br>
             If the string cannot be converted to a double, 0 is returned.
         </p>
 
-        <p><code class="language-dosato">long stringcount (string value, string search, long start = 0)</code></p>
+        <p><code class="language-dosato">long stringCount (string value, string search, long start = 0)</code></p>
 
         <p>
             Returns the number of occurences of the given search string in the given string, starting at the given start index.
         </p>
 
-        <p><code class="language-dosato">string join (array character_array, string delimiter)</code></p>
+        <p><code class="language-dosato">string stringJoin (array character_array, string delimiter)</code></p>
 
         <p>
             Joins an array of strings into a single string, using the given delimiter.
         </p>
 
+        <p><code class="language-dosato">string stringFormat (string format, var values ...)</code></p>
+
+        <p>
+            Formats a string using the given format string and arguments.<br>
+            The format string can contain placeholders in the form of {} which will be replaced by the arguments.
+        </p>
 
 
 

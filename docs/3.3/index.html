@@ -29,7 +29,7 @@
 
         <h2>Functions</h2>
 
-        <p><code class="language-dosato">array sort (array arr, function compare_function = ?)</code></p>
+        <p><code class="language-dosato">array sort (array arr, function compare_function = default_sort)</code></p>
 
         <p>
             Optionally, a compare function can be passed to sort the array in a custom way.<br>
@@ -74,14 +74,14 @@
             If no delete count is given, all elements from the start index to the end of the array will be removed.
         </p>
 
-        <p><code class="language-dosato">long indexof (array arr, var value)</code></p>
+        <p><code class="language-dosato">long indexOf (array arr, var value)</code></p>
 
         <p>
             Returns the index of the first occurence of the given value in the given array.<br>
             If the value is not found, -1 is returned.
         </p>
 
-        <p><code class="language-dosato">long lastindexof (array arr, var value)</code></p>
+        <p><code class="language-dosato">long lastIndexOf (array arr, var value)</code></p>
 
         <p>
             Returns the index of the last occurence of the given value in the given array.<br>
@@ -130,10 +130,40 @@
             The counter is a global variable that is incremented by 1 every time it is called.
         </p>
 
-        <p><code class="language-dosato">long setcounter (long value)</code></p>
+        <p><code class="language-dosato">long setCounter (long value)</code></p>
 
         <p>
             Sets the value of the internal counter to the given value, then returns the new value.
+        </p>
+
+        <p><code class="language-dosato">array map (array arr, function (var value, int index))</code></p>
+        
+        <p>
+            Returns a new array with the results of calling the given function on every element in the given array.
+        </p>
+
+        <p><code class="language-dosato">var reduce (array arr, function (var accumulator, var value, int index))</code></p>
+
+        <p>
+            Returns a single value that is the result of calling the given function on every element in the given array.
+        </p>
+
+        <p><code class="language-dosato">bool some (array arr, function (var value, int index))</code></p>
+
+        <p>
+            Returns true if the given function returns true for any element in the given array.
+        </p>
+
+        <p><code class="language-dosato">bool every (array arr, function (var value, int index))</code></p>
+
+        <p>
+            Returns true if the given function returns true for every element in the given array.
+        </p>
+
+        <p><code class="language-dosato">array filter (array arr, function (var value, int index))</code></p>
+
+        <p>
+            Returns a new array with all elements that pass the test (return true) implemented by the given function.
         </p>
 
         <div id="footer-select">

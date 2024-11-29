@@ -43,7 +43,7 @@
             The value is converted to a string before being printed.
         </p>
 
-        <p><code class="language-dosato">string listen (string prompt = ?, char delimiter = ?)</code></p>
+        <p><code class="language-dosato">string listen (string prompt = "", char delimiter = '\n')</code></p>
 
         <p>
             Prints the given prompt (optional) to the console, then waits for the user to input a string. <br>
@@ -57,8 +57,8 @@
 
         <p>
             Reads the contents of the file at the given path and returns it as a string.<br>
-            If the file does not exist, <code>err53:ERROR_FILE_NOT_FOUND</code> is thrown.<br>
-            If the program does not have permission to read the file, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
+            If the file does not exist, <code>ERROR_FILE_NOT_FOUND</code> is thrown.<br>
+            If the program does not have permission to read the file, <code>ERROR_PERMISSION_DENIED</code> is thrown.
         </p>
 
         <p><code class="language-dosato">void write (string path, string content)</code></p>
@@ -66,7 +66,7 @@
         <p>
             Writes the given content to the file at the given path.<br>
             If the file does not exist, it is created.<br>
-            If the program does not have permission to write to the file or create it, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
+            If the program does not have permission to write to the file or create it, <code>ERROR_PERMISSION_DENIED</code> is thrown.
         </p>
 
         <p><code class="language-dosato">void append (string path, string content)</code></p>
@@ -74,15 +74,15 @@
         <p>
             Appends the given content to the file at the given path.<br>
             If the file does not exist, it is created.<br>
-            If the program does not have permission to write to the file or create it, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
+            If the program does not have permission to write to the file or create it, <code>ERROR_PERMISSION_DENIED</code> is thrown.
         </p>
 
         <p><code class="language-dosato">void delete (string path)</code></p>
 
         <p>
             Deletes the file at the given path.<br>
-            If the file does not exist, <code>err53:ERROR_FILE_NOT_FOUND</code> is thrown.<br>
-            If the program does not have permission to delete the file, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
+            If the file does not exist, <code>ERROR_FILE_NOT_FOUND</code> is thrown.<br>
+            If the program does not have permission to delete the file, <code>ERROR_PERMISSION_DENIED</code> is thrown.
         </p>
 
         <p><code class="language-dosato">bool exists (string path)</code></p>
@@ -95,16 +95,16 @@
 
         <p>
             Moves the file at the given path to the trash.<br>
-            If the file does not exist, <code>err53:ERROR_FILE_NOT_FOUND</code> is thrown.<br>
-            If the program does not have permission to move the file to the trash, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
+            If the file does not exist, <code>ERROR_FILE_NOT_FOUND</code> is thrown.<br>
+            If the program does not have permission to move the file to the trash, <code>ERROR_PERMISSION_DENIED</code> is thrown.
         </p>
 
         <p><code class="language-dosato">bool copy (string path)</code></p>
 
         <p>
             Copies the file at the given path to the trash.<br>
-            If the file does not exist, <code>err53:ERROR_FILE_NOT_FOUND</code> is thrown.<br>
-            If the program does not have permission to copy the file to the trash, <code>err55:ERROR_PERMISSION_DENIED</code> is thrown.
+            If the file does not exist, <code>ERROR_FILE_NOT_FOUND</code> is thrown.<br>
+            If the program does not have permission to copy the file to the trash, <code>ERROR_PERMISSION_DENIED</code> is thrown.
         </p>
 
         
