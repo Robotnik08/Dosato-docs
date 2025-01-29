@@ -1,0 +1,163 @@
+import "json"
+import "markdown"
+
+make object config, documentation_config = {}
+make string output_folder = ""
+make array components = []
+make string scripts_import_string = ""
+make string styles_import_string = ""
+make int subchapter = 0
+make int current_chapter = 0
+make string page_list = ""
+
+define void compile_documentation() {
+    // fetch configuration
+    make file = read("docato-config.json")
+    set config = json_parse(file)
+
+    do validate_config("config", ["output", "page_header", "header", "footer", "index_footer", "documentation_config", "components_dir"], config)
+    
+    set output_folder = config->output
+    set documentation_config = config->documentation_config
+
+    do validate_config("documentation_config", ["title", "index_page", "favicon", "styles", "scripts", "pages", "variables", "output_name"], documentation_config)    
+
+
+    // fetch components
+    const components_folder = config->components_dir
+    if directoryExists(components_folder) then {
+        do sayln("Fetching components")
+        const files = getFiles(components_folder)
+        do push(components, stringSplit(c, ".")#0) for c in files
+    }
+
+    // remove output folder
+    do deleteDirectory(output_folder, true) catch sayln("Could not delete old output folder")
+    // recreate empty output folder
+    do createDirectory(output_folder)
+
+    // create output folder
+    set output_folder = `{output_folder}/{documentation_config->output_name}`
+    do sayln(`Creating output folder: {output_folder}`)
+    do createDirectory(output_folder)
+
+    // copy assets
+    do createDirectory(`{output_folder}/assets`)
+    do {
+        do copy(src_loc, `{output_folder}/assets/{stringSplit(src_loc, '/')#(-1)}`) 
+        set styles_import_string += `<link rel="stylesheet" href="assets/{stringSplit(src_loc, '/')#(-1)}">`
+    } for src_loc in documentation_config->styles
+    do sayln("Copying styles")
+    do { 
+        do copy(src_loc, `{output_folder}/assets/{stringSplit(src_loc, '/')#(-1)}`) 
+        set scripts_import_string += `<script src="assets/{stringSplit(src_loc, '/')#(-1)}" defer></script>`
+    } for src_loc in documentation_config->scripts
+    do sayln("Copying scripts")
+    do copy(documentation_config->favicon, `{output_folder}/favicon.ico`)
+    do sayln("Copying favicon")
+
+    set page_list = `<ul><li><a href="index.html">{documentation_config->index_title}</a></li>`
+    do {
+        if subchapter == 0 && current_chapter then {
+            set page_list += "<li><ul>"
+        }
+        set subchapter++
+        if current_chapter != page->chapter then {
+            set page_list += current_chapter ? "</ul></li>" : ""
+            set subchapter = 0
+            set current_chapter = page->chapter
+        }
+        set page_list += `<li><a href="{page->id}.html">{page->chapter}.{subchapter} {page->title}</a></li>`
+    } for page in documentation_config->pages
+    set subchapter = 0
+    set current_chapter = 1
+    set page_list += "</ul>"
+
+    // compile index page
+    do compilePage(documentation_config->index_page, `{output_folder}/index.html`, "index", -1, 0, 0)
+
+    // compile pages
+    do map(documentation_config->pages, void (page, index) => {
+        if current_chapter != page->chapter then {
+            set subchapter = 0
+            set current_chapter = page->chapter
+        }
+        do compilePage(page->source, `{output_folder}/{page->id}.html`, page->title, index, page->chapter, subchapter)
+        set subchapter++
+    })
+
+    do sayln("Documentation compiled successfully")
+}
+
+define void validate_config(string config_name, array fields, object config) {
+    if config->(field) == null then throw(`Field not found on {config_name}: {field}`) for field in fields
+}
+
+define void compilePage(string page_source, string page_output, string name, int page_index, int chapter, int subchapter) {
+    if exists(page_source) then {
+        const contents = convertDocatoVariables(markdown_to_html(read(page_source)), name, page_index, chapter, subchapter)
+        const page_header = convertDocatoVariables(markdown_to_html(read(config->page_header)), name, page_index, chapter, subchapter)
+        const header = convertDocatoVariables(read(config->header), name, page_index, chapter, subchapter)
+        const footer = convertDocatoVariables(markdown_to_html(read(config->footer)), name, page_index, chapter, subchapter)
+        
+        do sayln(`Compiling page: {page_source} -> {page_output}`)
+
+        const output = `<!DOCTYPE html><html><head>{header}</head><body>{page_header}<main>{contents}</main>{footer}</body></html>`
+
+        do write(page_output, output)
+    } else {
+        do throw(`Page source not found: {page_source}`)
+    }
+}
+
+
+define string convertDocatoVariables(string content, string page, int page_index, int chapter, int subchapter) {
+    set content = stringReplace(content, "{$main_title}", documentation_config->title)
+    set content = stringReplace(content, "{$title}", page)
+    set content = stringReplace(content, "{$styles}", styles_import_string)
+    set content = stringReplace(content, "{$scripts}", scripts_import_string)
+    set content = stringReplace(content, "{$favicon}", "favicon.ico")
+
+    set content = stringReplace(content, "{$chapter}", `{chapter}.{subchapter}`)
+    make int smallchapter = 1
+    do {
+        set content = stringReplaceFirst(content, "{$smallchapter}", `{chapter}.{subchapter}.{smallchapter}`)
+        set smallchapter++
+    } for range(stringCount(content, "{$smallchapter}"))
+
+    set page_index++ // 1-based index
+
+    if page_index == 0 then {
+        set content = stringReplace(content, "{$previous_page}", "")
+        set content = stringReplace(content, "{#previous}", "")
+    } else if page_index == 1 then {
+        set content = stringReplace(content, "{$previous_page}", documentation_config->index_title)
+        set content = stringReplace(content, "{#previous}", `<a href="index.html">{documentation_config->index_title}</a>`)
+    } else {
+        set content = stringReplace(content, "{$previous_page}", documentation_config->pages#(page_index - 2)->title)
+        set content = stringReplace(content, "{#previous}", `<a href="{documentation_config->pages#(page_index - 2)->id}.html">{documentation_config->pages#(page_index - 2)->title}</a>`)
+    }
+
+    if page_index == (int)documentation_config->pages then {
+        set content = stringReplace(content, "{$next_page}", "")
+        set content = stringReplace(content, "{#next}", "")
+    } else {
+        set content = stringReplace(content, "{$next_page}", documentation_config->pages#(page_index)->title)
+        set content = stringReplace(content, "{#next}", `<a href="{documentation_config->pages#(page_index)->id}.html">{documentation_config->pages#(page_index)->title}</a>`)
+    }
+
+    set content = stringReplace(content, "{$all_pages}", page_list)
+
+    set content = stringReplace(content, "{#index}", `<a href="index.html">{documentation_config->index_title}</a>`)
+    set content = stringReplace(content, `\{#{p->id}}`, `<a href="{p->id}.html">{p->title}</a>`) for p in documentation_config->pages
+
+    set content = stringReplace(content, `\{${v#0}}`, v#1) for v in entries(documentation_config->variables)
+
+    if stringCount(content, `\{@{c}}`) > 0 then {
+        set content = stringReplace(content, `\{@{c}}`, convertDocatoVariables(markdown_to_html(read(`{config->components_dir}/{c}.md`)), page, page_index - 1, chapter, subchapter)) 
+    } catch {
+        do sayln(`Component not found: {c}.md`)
+    } for c in components 
+
+    return content
+}

@@ -1,0 +1,3 @@
+include "docato.to" // Include the docato library
+
+do compile_documentation()

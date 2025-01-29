@@ -1,0 +1,36 @@
+{
+    "output": "output",
+
+    "components_dir": "source/components",
+    "page_header": "source/components/page_header.md",
+    "header": "source/components/header.md",
+    "footer": "source/components/footer.md",
+    "index_footer": "source/components/index_footer.md",
+
+    "documentation_config": {
+        "output_name": "dosato-docs",
+        "title": "Dosato Documentation",
+        "index_page": "source/index.md",
+        "index_title": "Index",
+        "favicon": "source/assets/img/favicon.ico",
+        "styles": ["source/assets/css/main.css", "source/assets/css/prism-okaidia.css"],
+        "scripts": ["source/assets/js/dark-mode.js", "source/assets/js/prism.js", "source/assets/js/prism-dosato.js"],
+        "pages": [
+            {
+                "title": "Page 1",
+                "source": "source/page1.md",
+                "id": "1",
+                "chapter": 1
+            },
+            {
+                "title": "Page 2",
+                "source": "source/page2.md",
+                "id": "2",
+                "chapter": 1
+            }
+        ],
+        "variables": {
+            "variable_name": "variable_value"
+        }
+    }
+}

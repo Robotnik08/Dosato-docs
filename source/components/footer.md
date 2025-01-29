@@ -1,0 +1,3 @@
+<footer>
+    {#previous} | {#next}
+</footer>

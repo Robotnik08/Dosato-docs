@@ -1,0 +1,78 @@
+<!DOCTYPE html><html><head><head>
+    <title>Dosato Documentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/main.css"><link rel="stylesheet" href="assets/prism-okaidia.css">
+    <script src="assets/dark-mode.js" defer></script><script src="assets/prism.js" defer></script><script src="assets/prism-dosato.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Prism.highlightAll();
+        });
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head></head><body><nav>
+    Dosato Documentation
+</nav>
+<main><p><button id="dark-mode-toggle">🌙</button></p>
+<h1>Dosato</h1>
+<p>This is the homepage of the full Dosato documentation</p>
+<h2>Brief introduction to Dosato</h2>
+<p>Dosato is a high level, general purpose, interpreted programming language designed to be easy to use.<br>
+Dosato is built with user readability in mind, every line must start with one of the master keywords:</p>
+<pre><code class="language-dosato">do
+set
+make
+define
+return
+break
+continue
+import
+include
+switch
+const
+class
+implement
+enum
+</code></pre>
+<p>These keywords represent the core features of the programming language. These make spotting lines and visualising structures way easier. <br>
+This also means that the semicolon is not needed to end a line, allowing for semicolon-less code with full whitespace support.</p>
+<p>Below is an example.</p>
+<pre><code class="language-dosato">do say (&quot;Hello world!&quot;) // do 
+make int number = 5 // make 
+set number = 10 // set
+</code></pre>
+<p><strong>do: Calls a function or block</strong>
+A function must start with the function name, followed by parentheses containing the arguments passed into the function.</p>
+<p><strong>make: creates a new variable (or function).</strong>
+The variable is put on the stack. A type must be given, this is the type of the variable and it won't change.</p>
+<p><strong>set: sets a variable to a new value.</strong>
+Variables retain their type.</p>
+<p><strong>define: defines a new function.</strong>
+Functions must be defined before they are called.</p>
+<p><strong>return: returns a value from a function.</strong>
+Functions must return a value of the same type as the function.</p>
+<p><strong>break: breaks out of a loop or switch case.</strong>
+Breaks out of the current loop.</p>
+<p><strong>continue: continues to the next iteration of a loop.</strong>
+Continues to the next iteration of the current loop.</p>
+<p><strong>import: imports a module.</strong>
+Imports a cdosato module, written in C or other.</p>
+<p><strong>include: includes a file.</strong>
+Includes a dosato source file in the current script.</p>
+<p><strong>switch: starts a switch case.</strong>
+Starts a switch case.</p>
+<p><strong>const: creates a constant.</strong>
+Creates a constant variable.</p>
+<p><strong>class: creates a class.</strong>
+Creates a class.</p>
+<p><strong>implement: implement a method.</strong>
+Implements a method in a class.</p>
+<p><strong>enum: creates an enum.</strong>
+Creates an enum.</p>
+<h2>Want to learn more?</h2>
+<h2>Start here:</h2>
+<p><ul><li><a href="index.html">Index</a></li><li><a href="1.html">1.0 Page 1</a></li><li><ul><li><a href="2.html">1.1 Page 2</a></li></ul></p>
+</main><footer>
+     | <a href="1.html">Page 1</a>
+</footer>
+</body></html>
