@@ -1,85 +1,37 @@
-<button id="dark-mode-toggle">🌙</button>
 # Dosato
 
-This is the homepage of the full Dosato documentation
+## What is Dosato?
 
-## Brief introduction to Dosato
+Dosato is a general-purpose programming language that is designed to be simple and easy to use, while also allowing for powerful and complex code. It is designed to be easy to learn, and easy to use, while also being powerful and flexible. Due to it's interpreted nature, it is a high-level language, support both object-oriented and procedural programming. It also supports both static and dynamic typing, and has a powerful and rich standard library.
 
-Dosato is a high level, general purpose, interpreted programming language designed to be easy to use.<br>
-Dosato is built with user readability in mind, every line must start with one of the master keywords:
+## Why Dosato?
 
-```dosato
-do
-set
-make
-define
-return
-break
-continue
-import
-include
-switch
-const
-class
-implement
-enum
-```
+Dosato as a language can be seen as a powerful high level language, which is easy to learn but hard to master. It has a focus on a new concept; Master Keywords, which are a set of keywords dictating the lines of code and their purpose. Not only does this make the code more readable, it also allows for dosato to get rid of the need for semicolons while still being able to support any whitespace style.
 
-These keywords represent the core features of the programming language. These make spotting lines and visualising structures way easier. <br>
-This also means that the semicolon is not needed to end a line, allowing for semicolon-less code with full whitespace support.
-
-Below is an example.
+Here are a few small examples of what dosato can do:
 
 ```dosato
-do say ("Hello world!") // do 
-make int number = 5 // make 
-set number = 10 // set
+// Hello World
+do sayln("Hello, World!")
 ```
 
-**do: Calls a function or block**
-A function must start with the function name, followed by parentheses containing the arguments passed into the function.
+```dosato
+// 100 times
+do sayln(i) for i in range(100)
+```
 
-**make: creates a new variable (or function).**
-The variable is put on the stack. A type must be given, this is the type of the variable and it won't change.
+```dosato
+// Fibonacci
+define long fib (long n) {
+    make a, b = 0, 1
+    set a, b = b, a + b for range(n)
+    return a
+}
+do sayln(fib(15)) // 610
+```
 
-**set: sets a variable to a new value.**
-Variables retain their type. 
+If you want to learn more, you can find a guide below.
 
-**define: defines a new function.**
-Functions must be defined before they are called. 
-
-**return: returns a value from a function.**
-Functions must return a value of the same type as the function. 
-
-**break: breaks out of a loop or switch case.**
-Breaks out of the current loop. 
-
-**continue: continues to the next iteration of a loop.**
-Continues to the next iteration of the current loop. 
-
-**import: imports a module.**
-Imports a cdosato module, written in C or other. 
-
-**include: includes a file.**
-Includes a dosato source file in the current script. 
-
-**switch: starts a switch case.**
-Starts a switch case. 
-
-**const: creates a constant.**
-Creates a constant variable. 
-
-**class: creates a class.**
-Creates a class. 
-
-**implement: implement a method.**
-Implements a method in a class. 
-
-**enum: creates an enum.**
-Creates an enum. 
-
-## Want to learn more?
-
-## Start here:
+## Chapters
 
 {$all_pages}

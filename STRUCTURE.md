@@ -1,0 +1,76 @@
+# Structure of the documentation (content)
+
+- **Home** (introduction to dosato)
+    - **What is dosato?**
+    - **Why dosato?**
+- **Software** (the dosato installer and it's commands)
+    - **Installation**
+    - **Getting Started**
+    - **Usage**
+- **Basics/tutorial** (a walkthrough of the basics of dosato)
+    - **Hello World**
+    - **Comments**
+    - **Variables**
+    - **Expressions**
+    - **Functions**
+    - **Conditionals**
+    - **Loops**
+    - **Arrays**
+    - **Objects**
+    - **Classes**
+    - **Inheritance**
+    - **Enums**
+    - **Lambda Functions**
+    - **Error Handling**
+    - **Master extensions**
+    - **Libraries**
+- **Standard Library** (all standard library definitions)
+    - **General**
+    - **Array**
+    - **Boolean**
+    - **IO**
+    - **Time**
+    - **Error**
+    - **Object**
+    - **Math**
+    - **Random**
+    - **String**
+    - **Type**
+- **Language Specification** (the full language specification)
+    - **General rules**
+    - **Lexical Structure**
+    - **Numeric Literals**
+    - **String Literals**
+    - **Types**
+    - **Expressions**
+    - **Array expressions**
+    - **Object expressions**
+    - **Operators**
+        - **Binary operators**
+        - **Unary operators**
+        - **Assignment operators**
+        - **Ternary operators**
+    - **Statements**
+    - **Functions**
+    - **Classes**
+    - **Libraries**
+- **Errors** (all errors that can be thrown by the dosato interpreter)
+    - **Error codes 1-10**
+    - **Error codes 11-20**
+    - **Error codes 21-30**
+    - **Error codes 31-40**
+    - **Error codes 41-50**
+    - **Error codes 51-60**
+    - **Error codes 61-70**
+    - **Error codes 71-80**
+    - **Error codes 81-90**
+    - **Error codes 91-100**
+- **Developer API** (the API for creating custom libraries)
+    - **Creating a library**
+        - **Simple example**
+    - **Library structure**
+    - **Library functions**
+    - **Working with Dosato types**
+    - **Error handling**
+    - **Testing**
+    

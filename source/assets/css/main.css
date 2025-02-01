@@ -1,7 +1,28 @@
+body {
+    margin: 0;
+    overflow-y: scroll;
+}
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #007BFF #222;
+}
+
+p {
+    font-size: medium;
+}
+
+body:not(.transition) *, body:not(.transition) {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
 
 :not(code):not(pre):not(span) {
     font-family: sans-serif;
+    transition: background-color ease-in-out 0.2s;
 }
 
 ol {
@@ -26,6 +47,9 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: #007BFF;
+    /* inwards shadow on the edges */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
     padding: 10px;
 }
 
@@ -69,7 +93,7 @@ header h2 {
     font-size: xx-large;
 }
 
-#dark-mode-toggle { /* Dark mode toggle button */
+.dark-mode-toggle { /* Dark mode toggle button */
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -79,6 +103,79 @@ header h2 {
     background-color: #007BFF;
     color: whitesmoke;
     cursor: pointer;
+}
+
+#side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #007BFF;
+    box-shadow: 7px 0 10px 0 rgba(0, 0, 0, 0.2);
+    color: whitesmoke;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#side-buttons {
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+.side-button {
+    position: fixed;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40vh;
+    padding-bottom: 40vh;
+
+    top: 10vh;
+
+    border-radius: 9px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    transition: ease-in-out 0.2s;
+    font-size: 3em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body.dark .side-button {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: ease-in-out 0.2s;
+    color: whitesmoke;
+}
+
+.side-button.prev {
+    left: 280px;
+}
+
+.side-button.next {
+    right: 10px;
+}
+
+
+.side-button:hover, body.dark .side-button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+}
+
+#side-bar a {
+    color: whitesmoke;
+}
+
+/* Push the content to the right */
+header, main, footer {
+    margin-left: 270px;
+    padding: 0 20%;
+}
+
+nav {
+    margin: auto;
+    padding: 20px 0;
 }
 
 /* Dark mode */
@@ -98,4 +195,10 @@ body.dark .warning {
     background-color: #555;
     color: whitesmoke;
     border: 1px solid #777;
+}
+
+/* Header and side bar in dark mode */
+body.dark header, body.dark #side-bar {
+    background-color: #444;
+    color: whitesmoke;
 }

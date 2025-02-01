@@ -1,3 +1,1 @@
-<footer>
-    {#previous} | {#next}
-</footer>
+<!-- Empty -->
