@@ -20,14 +20,23 @@ Unfortunately, there is no installer for Linux yet. You can still install dosato
 
 ### MacOS
 
-Unfortunately, I haven't compiled any binaries for MacOS yet. It has been verified that dosato works on MacOS, but you'll have to compile it yourself following the instructions in the [README]((https://github.com/Robotnik08/cdosato/blob/main/README.md)).
+Unfortunately, I haven't compiled any binaries for MacOS yet. It has been verified that dosato works on MacOS, but you'll have to compile it yourself following the instructions in the [README](https://github.com/Robotnik08/cdosato/blob/main/README.md).
 
 ## {$subchapter} Validation
 
 To check if dosato is installed correctly, you can run the following command:
 
-```dosato
+```bash
 dosato --version
 ```
 
-You should see the version of dosato you've installed, alongside the date it was compiled.
+You should see the version of dosato you've installed, alongside the date it was compiled.<br>
+
+You should see something like this:
+
+```raw
+Dosato version 0.6.9, compiled on 01/02/2025
+Type 'dosato -h' for help
+```
+
+If you see this, dosato is installed correctly.

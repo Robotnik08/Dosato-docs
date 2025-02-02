@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head><head>
+    <title>Dosato Documentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>html{visibility: hidden;opacity:0;}</style>
+    <link rel="stylesheet" href="assets/main.css"><link rel="stylesheet" href="assets/prism-okaidia.css">
+    <script src="assets/dark-mode.js" defer></script><script src="assets/prism.js" defer></script><script src="assets/prism-dosato.js" defer></script><script src="assets/no-transition.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Prism.highlightAll();
+        });
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head></head><body><header>
+    <nav>
+        Dosato Documentation
+    </nav>
+</header>
+<div id="side-bar">
+    <div id="side-bar-title">
+        <h2>Dosato Documentation</h2>
+        <h3>Table of Contents</h3>
+    </div>
+    <div id="side-bar-content">
+        <ul><li><a href="index.html">Introduction</a></li><li><a href="setup.html">0.0 Setup</a></li><li><ul><li><a href="usage.html">0.1 Usage</a></li></ul></li><li><a href="walkthrough.html">1.0 Walkthrough</a></li><li><ul><li><a href="variables.html">1.1 Variables</a></li></ul>
+    </div>
+</div>
+
+<div id="side-buttons">
+    <a href="setup.html" class="side-button prev">&lt;</a>
+    <a href="walkthrough.html" class="side-button next">&gt;</a>
+</div>
+
+<main><h1>0.1 Usage</h1>
+<h2>0.1.1 Running dosato code</h2>
+<p>To start running dosato code, you either directly run the interpreter with the code as an argument, or you can run a file with the code in it.</p>
+<p>For running a file save your code in a file with the extension <code>.to</code> (optional but prefered) and run the following command:</p>
+<pre><code class="language-bash">dosato &lt;filename&gt;
+</code></pre>
+<p>For example, if you have a file called <code>hello.to</code> with the following code:</p>
+<pre><code class="language-dosato">do sayln(&quot;Hello, World!&quot;)
+</code></pre>
+<p>You can run it with the following command:</p>
+<pre><code class="language-bash">dosato hello.to
+</code></pre>
+<p>This will output <code>Hello, World!</code> to the console. <br></p>
+<p>If you want to run code directly, you can run the following command:</p>
+<pre><code class="language-bash">dosato -c
+</code></pre>
+<p>and then type your code. The input ends when you press enter, unless you put a backslash at the end of the line. <br></p>
+<p>For example, if you type the following code:</p>
+<h2>0.1.2 Other commands</h2>
+<ul>
+<li><code>dosato -h</code> or <code>dosato --help</code> Shows the help message, which shows all the available commands.</li>
+<li><code>dosato -v</code> or <code>dosato --version</code> Shows the version of dosato.</li>
+<li><code>dosato -c</code> Starts the interpreter in interactive mode.</li>
+<li><code>dosato &lt;filename&gt; -d</code> Starts the interpreter in debug mode.<ul>
+<li><code>dosato &lt;filename&gt; -d -s</code> Starts the interpreter in debug mode and shows the source code of the root file.</li>
+<li><code>dosato &lt;filename&gt; -d -l</code> Starts the interpreter in debug mode and shows the lexed tokens of the root file.</li>
+<li><code>dosato &lt;filename&gt; -d -p</code> Starts the interpreter in debug mode and shows the parsed AST of the root file.</li>
+<li><code>dosato &lt;filename&gt; -d -c</code> Starts the interpreter in debug mode and shows the compiled bytecode of the root files, and all compiled functions (even in other files).</li>
+<li><code>dosato &lt;filename&gt; -d -a</code> Starts the interpreter in debug mode and shows all of the above.</li>
+<li><code>dosato &lt;filename&gt; -d -n</code> Starts the interpreter in debug mode and doesn't show anything, but still runs the code. (the same as running <code>-d</code> without any flags)</li>
+</ul>
+</li>
+</ul>
+</main><!-- Empty -->
+</body></html>

@@ -21,6 +21,24 @@
                 "source": "source/setup.md",
                 "id": "setup",
                 "chapter": 0
+            },
+            {
+                "title": "Usage",
+                "source": "source/usage.md",
+                "id": "usage",
+                "chapter": 0
+            },
+            {
+                "title": "Walkthrough",
+                "source": "source/walkthrough.md",
+                "id": "walkthrough",
+                "chapter": 1
+            },
+            {
+                "title": "Variables",
+                "source": "source/variables.md",
+                "id": "variables",
+                "chapter": 1
             }
         ],
         "variables": {

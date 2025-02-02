@@ -25,6 +25,13 @@ body:not(.transition) *, body:not(.transition) {
     transition: background-color ease-in-out 0.2s;
 }
 
+code:not([class]), code[class=""] {
+    /* Gray background and border */
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+}
+
 ol {
     list-style-type: disc;
     padding: 0;
@@ -197,8 +204,21 @@ body.dark .warning {
     border: 1px solid #777;
 }
 
+body.dark code:not([class]), code[class=""] {
+    /* Gray background and border */
+    background-color: #444;
+    border: 1px solid #666;
+    border-radius: 3px;
+    color: whitesmoke;
+}
+
 /* Header and side bar in dark mode */
 body.dark header, body.dark #side-bar {
     background-color: #444;
     color: whitesmoke;
+}
+
+html {
+    visibility: visible;
+    opacity: 1;
 }

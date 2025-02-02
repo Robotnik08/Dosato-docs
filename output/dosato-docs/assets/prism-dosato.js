@@ -1,6 +1,6 @@
 Prism.languages['dosato'] = {
-    'comment': /\/\/.*/,
     'string': /(["'`])(?:(?!\1)[^\\]|\\.)*\1/,
+    'comment': /\/\/.*|\/\*[\s\S]*?\*\//,
     'keyword': /\b(?:do|set|make|when|else|while|for|if|catch|then|define|import|include|continue|break|return|switch|const|other|in|class|implement|unless|until|enum|inherit)\b/i,
     'type_identifier': /\b(?:int|short|byte|long|uint|ushort|ubyte|ulong|double|float|string|char|bool|array|void|var|object|function|self)\b/i,
     'boolean': /\b(?:true|false)\b/i,

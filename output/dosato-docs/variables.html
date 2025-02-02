@@ -1,0 +1,57 @@
+<!DOCTYPE html><html><head><head>
+    <title>Dosato Documentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>html{visibility: hidden;opacity:0;}</style>
+    <link rel="stylesheet" href="assets/main.css"><link rel="stylesheet" href="assets/prism-okaidia.css">
+    <script src="assets/dark-mode.js" defer></script><script src="assets/prism.js" defer></script><script src="assets/prism-dosato.js" defer></script><script src="assets/no-transition.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Prism.highlightAll();
+        });
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head></head><body><header>
+    <nav>
+        Dosato Documentation
+    </nav>
+</header>
+<div id="side-bar">
+    <div id="side-bar-title">
+        <h2>Dosato Documentation</h2>
+        <h3>Table of Contents</h3>
+    </div>
+    <div id="side-bar-content">
+        <ul><li><a href="index.html">Introduction</a></li><li><a href="setup.html">0.0 Setup</a></li><li><ul><li><a href="usage.html">0.1 Usage</a></li></ul></li><li><a href="walkthrough.html">1.0 Walkthrough</a></li><li><ul><li><a href="variables.html">1.1 Variables</a></li></ul>
+    </div>
+</div>
+
+<div id="side-buttons">
+    <a href="walkthrough.html" class="side-button prev">&lt;</a>
+    <a href="" class="side-button next">&gt;</a>
+</div>
+
+<main><h1>1.1 Variables</h1>
+<p>Variables are used to store data in a program. They are like containers that hold a value. In Dosato, variables are defined using the <code>make</code> keyword. Here's an example:</p>
+<pre><code class="language-dosato">make a = 5
+</code></pre>
+<p>This creates a variable <code>a</code> and assigns the value <code>5</code> to it.</p>
+<p>First, we use the <code>make</code> keyword to define a variable. Then, we specify the name of the variable, followed by an equal sign <code>=</code>, and then the value we want to assign to the variable.</p>
+<p>This variable is now available to use after it's defined. You can use it in expressions, pass it to functions, and change its value. Here's an example:</p>
+<pre><code class="language-dosato">make a = 5
+make b = 10
+do sayln(a + b) // 15
+</code></pre>
+<p>In this example, we define two variables <code>a</code> and <code>b</code>, and then print their sum to the console.</p>
+<p>Variables can also be reassigned to a new value. Here's an example:</p>
+<pre><code class="language-dosato">make a = 5
+do sayln(a) // 5
+set a = 10
+do sayln(a) // 10
+</code></pre>
+<p>Variables cannot be defined with the same name twice in the same scope. If you try to define a variable with the same name as an existing variable, you'll get an error. Here's an example:</p>
+<pre><code class="language-dosato">make a = 5
+make a = 10 // Error: Variable 'a' already defined
+</code></pre>
+</main><!-- Empty -->
+</body></html>

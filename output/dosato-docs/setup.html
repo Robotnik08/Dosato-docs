@@ -2,6 +2,7 @@
     <title>Dosato Documentation</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>html{visibility: hidden;opacity:0;}</style>
     <link rel="stylesheet" href="assets/main.css"><link rel="stylesheet" href="assets/prism-okaidia.css">
     <script src="assets/dark-mode.js" defer></script><script src="assets/prism.js" defer></script><script src="assets/prism-dosato.js" defer></script><script src="assets/no-transition.js" defer></script>
     <script>
@@ -21,13 +22,13 @@
         <h3>Table of Contents</h3>
     </div>
     <div id="side-bar-content">
-        <ul><li><a href="index.html">Introduction</a></li><li><a href="setup.html">0.0 Setup</a></li></ul>
+        <ul><li><a href="index.html">Introduction</a></li><li><a href="setup.html">0.0 Setup</a></li><li><ul><li><a href="usage.html">0.1 Usage</a></li></ul></li><li><a href="walkthrough.html">1.0 Walkthrough</a></li><li><ul><li><a href="variables.html">1.1 Variables</a></li></ul>
     </div>
 </div>
 
 <div id="side-buttons">
     <a href="index.html" class="side-button prev">&lt;</a>
-    <a href="" class="side-button next">&gt;</a>
+    <a href="usage.html" class="side-button next">&gt;</a>
 </div>
 
 <main><h1>0.0 Setup</h1>
@@ -47,11 +48,16 @@
 <li>Add the folder to your path variable.</li>
 </ol>
 <h3>MacOS</h3>
-<p>Unfortunately, I haven't compiled any binaries for MacOS yet. It has been verified that dosato works on MacOS, but you'll have to compile it yourself following the instructions in the <a href="(https://github.com/Robotnik08/cdosato/blob/main/README.md)">README</a>.</p>
+<p>Unfortunately, I haven't compiled any binaries for MacOS yet. It has been verified that dosato works on MacOS, but you'll have to compile it yourself following the instructions in the <a href="https://github.com/Robotnik08/cdosato/blob/main/README.md">README</a>.</p>
 <h2>0.0.2 Validation</h2>
 <p>To check if dosato is installed correctly, you can run the following command:</p>
-<pre><code class="language-dosato">dosato --version
+<pre><code class="language-bash">dosato --version
 </code></pre>
-<p>You should see the version of dosato you've installed, alongside the date it was compiled.</p>
+<p>You should see the version of dosato you've installed, alongside the date it was compiled.<br></p>
+<p>You should see something like this:</p>
+<pre><code class="language-raw">Dosato version 0.6.9, compiled on 01/02/2025
+Type 'dosato -h' for help
+</code></pre>
+<p>If you see this, dosato is installed correctly.</p>
 </main><!-- Empty -->
 </body></html>
