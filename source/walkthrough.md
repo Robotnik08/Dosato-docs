@@ -17,7 +17,7 @@ Let's break this down:
 - `do` is a master keyword that tells the interpreter to do call a function.
 - `sayln` is a function that prints a line to the console. (including a newline character)
 - `(` and `)` are used to enclose the arguments of the function.
-- `"Hello, World!"` is a string literal that contains the text we want to print.
+- <c>"Hello, World!"</c> is a string literal that contains the text we want to print.
 
 ## {$subchapter} Master Keywords
 
@@ -52,13 +52,9 @@ This is a block comment
 It can span multiple lines
 */
 do sayln("Hello, World!") /* This is also a block comment */
-do /* This is a block comment */ sayln("Hello, World!")
+do /* This is also a block comment */ sayln("Hello, World!")
 ```
 
 Unclosed block comments will comment out everything until the end of the file.
 
-Comments are ignored in strings, so you can write comments in strings without any issues:
-
-```dosato
-do sayln("This is a string with a // and /* */ in it, these aren't comments")
-```
+Comments are ignored in strings, so you can write comments in strings without any issues.

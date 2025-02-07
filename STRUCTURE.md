@@ -7,6 +7,7 @@
     - **Usage**
 - **Basics/tutorial** (a walkthrough of the basics of dosato)
     - **Variables**
+    - **Variable types**
     - **Expressions**
     - **Functions**
     - **Conditionals**

@@ -85,7 +85,7 @@ define void compile_documentation() {
         }
         do compilePage(page->source, `{output_folder}/{page->id}.html`, page->title, index, page->chapter, subchapter)
         set subchapter++
-    } for index in range(documentation_config->pages)
+    } for index in range(documentation_config->pages) for range(1)
 
     do sayln("Documentation compiled successfully")
 }

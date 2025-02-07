@@ -20,16 +20,17 @@ body:not(.transition) *, body:not(.transition) {
     transition: none !important;
 }
 
-:not(code):not(pre):not(span) {
+:not(code):not(pre):not(span):not(c) {
     font-family: sans-serif;
     transition: background-color ease-in-out 0.2s;
 }
 
-code:not([class]), code[class=""] {
+c, code:not([class]), code[class=""] {
     /* Gray background and border */
     background-color: #f8f9fa;
     border: 1px solid #ced4da;
     border-radius: 3px;
+    font-family: monospace;
 }
 
 ol {
@@ -204,7 +205,7 @@ body.dark .warning {
     border: 1px solid #777;
 }
 
-body.dark code:not([class]), code[class=""] {
+body.dark c, code:not([class]), code[class=""] {
     /* Gray background and border */
     background-color: #444;
     border: 1px solid #666;

@@ -39,6 +39,12 @@
                 "source": "source/variables.md",
                 "id": "variables",
                 "chapter": 1
+            },
+            {
+                "title": "Variable types",
+                "source": "source/variable_types.md",
+                "id": "variable_types",
+                "chapter": 1
             }
         ],
         "variables": {

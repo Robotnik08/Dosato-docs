@@ -22,7 +22,7 @@
         <h3>Table of Contents</h3>
     </div>
     <div id="side-bar-content">
-        <ul><li><a href="index.html">Introduction</a></li><li><a href="setup.html">0.0 Setup</a></li><li><ul><li><a href="usage.html">0.1 Usage</a></li></ul></li><li><a href="walkthrough.html">1.0 Walkthrough</a></li><li><ul><li><a href="variables.html">1.1 Variables</a></li></ul>
+        <ul><li><a href="index.html">Introduction</a></li><li><a href="setup.html">0.0 Setup</a></li><li><ul><li><a href="usage.html">0.1 Usage</a></li></ul></li><li><a href="walkthrough.html">1.0 Walkthrough</a></li><li><ul><li><a href="variables.html">1.1 Variables</a></li><li><a href="variable_types.html">1.2 Variable types</a></li></ul>
     </div>
 </div>
 
@@ -43,7 +43,7 @@
 <li><code>do</code> is a master keyword that tells the interpreter to do call a function.</li>
 <li><code>sayln</code> is a function that prints a line to the console. (including a newline character)</li>
 <li><code>(</code> and <code>)</code> are used to enclose the arguments of the function.</li>
-<li><code>&quot;Hello, World!&quot;</code> is a string literal that contains the text we want to print.</li>
+<li><c>&quot;Hello, World!&quot;</c> is a string literal that contains the text we want to print.</li>
 </ul>
 <h2>1.0.2 Master Keywords</h2>
 <p>Each line of code in Dosato is a statement. Each statement is made up of a master keyword, followed by a set of keywords that dictate the purpose of the line. The master keyword is the first keyword in the line always, and it tells the interpreter what to do with the line. Here are some examples of master keywords:</p>
@@ -68,11 +68,9 @@ This is a block comment
 It can span multiple lines
 */
 do sayln(&quot;Hello, World!&quot;) /* This is also a block comment */
-do /* This is a block comment */ sayln(&quot;Hello, World!&quot;)
+do /* This is also a block comment */ sayln(&quot;Hello, World!&quot;)
 </code></pre>
 <p>Unclosed block comments will comment out everything until the end of the file.</p>
-<p>Comments are ignored in strings, so you can write comments in strings without any issues:</p>
-<pre><code class="language-dosato">do sayln(&quot;This is a string with a // and /* */ in it, these aren't comments&quot;)
-</code></pre>
+<p>Comments are ignored in strings, so you can write comments in strings without any issues.</p>
 </main><!-- Empty -->
 </body></html>
