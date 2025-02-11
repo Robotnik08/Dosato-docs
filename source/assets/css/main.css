@@ -124,6 +124,11 @@ header h2 {
     color: whitesmoke;
     padding: 10px;
     overflow-y: auto;
+    direction: rtl;
+}
+
+#side-bar * {
+    direction: ltr;
 }
 
 #side-buttons {
@@ -205,7 +210,7 @@ body.dark .warning {
     border: 1px solid #777;
 }
 
-body.dark c, code:not([class]), code[class=""] {
+body.dark c, body.dark code:not([class]), body.dark code[class=""] {
     /* Gray background and border */
     background-color: #444;
     border: 1px solid #666;

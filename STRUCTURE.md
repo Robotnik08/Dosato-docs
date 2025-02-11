@@ -20,6 +20,7 @@
     - **Lambda Functions**
     - **Error Handling**
     - **Master extensions**
+    - **Including files**
     - **Libraries**
 - **Standard Library** (all standard library definitions)
     - **General**

@@ -105,7 +105,8 @@ define void compilePage(string page_source, string page_output, string name, int
         const output = `<!DOCTYPE html><html><head>{header}</head><body>{page_header}<main>{contents}</main>{footer}</body></html>`
         do write(page_output, output)
     } else {
-        do throw(`Page source not found: {page_source}`)
+        do write(page_source, "")
+        // do throw(`Page source not found: {page_source}`)
     }
 }
 

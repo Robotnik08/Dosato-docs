@@ -45,7 +45,254 @@
                 "source": "source/variable_types.md",
                 "id": "variable_types",
                 "chapter": 1
+            },
+            {
+                "title": "Expressions",
+                "source": "source/expressions.md",
+                "id": "expressions",
+                "chapter": 1
+            },
+            {
+                "title": "Functions",
+                "source": "source/functions.md",
+                "id": "functions",
+                "chapter": 1
+            },
+            {
+                "title": "Conditionals",
+                "source": "source/conditionals.md",
+                "id": "conditionals",
+                "chapter": 1
+            },
+            {
+                "title": "Loops",
+                "source": "source/loops.md",
+                "id": "loops",
+                "chapter": 1
+            },
+            {
+                "title": "Arrays",
+                "source": "source/arrays.md",
+                "id": "arrays",
+                "chapter": 1
+            },
+            {
+                "title": "Objects",
+                "source": "source/objects.md",
+                "id": "objects",
+                "chapter": 1
+            },
+            {
+                "title": "Classes",
+                "source": "source/classes.md",
+                "id": "classes",
+                "chapter": 1
+            },
+            {
+                "title": "Inheritance",
+                "source": "source/inheritance.md",
+                "id": "inheritance",
+                "chapter": 1
+            },
+            {
+                "title": "Enums",
+                "source": "source/enums.md",
+                "id": "enums",
+                "chapter": 1
+            },
+            {
+                "title": "Lambda Functions",
+                "source": "source/lambda_functions.md",
+                "id": "lambda_functions",
+                "chapter": 1
+            },
+            {
+                "title": "Error Handling",
+                "source": "source/error_handling.md",
+                "id": "error_handling",
+                "chapter": 1
+            },
+            {
+                "title": "Master extensions",
+                "source": "source/master_extensions.md",
+                "id": "master_extensions",
+                "chapter": 1
+            },
+            {
+                "title": "Including files",
+                "source": "source/including_files.md",
+                "id": "including_files",
+                "chapter": 1
+            },
+            {
+                "title": "Libraries",
+                "source": "source/libraries.md",
+                "id": "libraries",
+                "chapter": 1
+            },
+            {
+                "title": "Standard library",
+                "source": "source/standard_library.md",
+                "id": "standard_library",
+                "chapter": 2
+            },
+            {
+                "title": "General",
+                "source": "source/standard_library_general.md",
+                "id": "standard_library_general",
+                "chapter": 2
+            },
+            {
+                "title": "Array",
+                "source": "source/standard_library_array.md",
+                "id": "standard_library_array",
+                "chapter": 2
+            },
+            {
+                "title": "Boolean",
+                "source": "source/standard_library_boolean.md",
+                "id": "standard_library_boolean",
+                "chapter": 2
+            },
+            {
+                "title": "IO",
+                "source": "source/standard_library_io.md",
+                "id": "standard_library_io",
+                "chapter": 2
+            },
+            {
+                "title": "Time",
+                "source": "source/standard_library_time.md",
+                "id": "standard_library_time",
+                "chapter": 2
+            },
+            {
+                "title": "Error",
+                "source": "source/standard_library_error.md",
+                "id": "standard_library_error",
+                "chapter": 2
+            },
+            {
+                "title": "Object",
+                "source": "source/standard_library_object.md",
+                "id": "standard_library_object",
+                "chapter": 2
+            },
+            {
+                "title": "Math",
+                "source": "source/standard_library_math.md",
+                "id": "standard_library_math",
+                "chapter": 2
+            },
+            {
+                "title": "Random",
+                "source": "source/standard_library_random.md",
+                "id": "standard_library_random",
+                "chapter": 2
+            },
+            {
+                "title": "String",
+                "source": "source/standard_library_string.md",
+                "id": "standard_library_string",
+                "chapter": 2
+            },
+            {
+                "title": "Type",
+                "source": "source/standard_library_type.md",
+                "id": "standard_library_type",
+                "chapter": 2
+            },
+            {
+                "title": "Specifications",
+                "source": "source/specifications.md",
+                "id": "specifications",
+                "chapter": 3
+            },
+            {
+                "title": "General rules",
+                "source": "source/specifications_general_rules.md",
+                "id": "specifications_general_rules",
+                "chapter": 3
+            },
+            {
+                "title": "Lexical Structure",
+                "source": "source/specifications_lexical_structure.md",
+                "id": "specifications_lexical_structure",
+                "chapter": 3
+            },
+            {
+                "title": "Numeric Literals",
+                "source": "source/specifications_numeric_literals.md",
+                "id": "specifications_numeric_literals",
+                "chapter": 3
+            },
+            {
+                "title": "String Literals",
+                "source": "source/specifications_string_literals.md",
+                "id": "specifications_string_literals",
+                "chapter": 3
+            },
+            {
+                "title": "Types",
+                "source": "source/specifications_types.md",
+                "id": "specifications_types",
+                "chapter": 3
+            },
+            {
+                "title": "Expressions",
+                "source": "source/specifications_expressions.md",
+                "id": "specifications_expressions",
+                "chapter": 3
+            },
+            {
+                "title": "Array expressions",
+                "source": "source/specifications_array_expressions.md",
+                "id": "specifications_array_expressions",
+                "chapter": 3
+            },
+            {
+                "title": "Object expressions",
+                "source": "source/specifications_object_expressions.md",
+                "id": "specifications_object_expressions",
+                "chapter": 3
+            },
+            {
+                "title": "Operators",
+                "source": "source/specifications_operators.md",
+                "id": "specifications_operators",
+                "chapter": 3
+            },
+            {
+                "title": "Statements",
+                "source": "source/specifications_statements.md",
+                "id": "specifications_statements",
+                "chapter": 3
+            },
+            {
+                "title": "Functions",
+                "source": "source/specifications_functions.md",
+                "id": "specifications_functions",
+                "chapter": 3
+            },
+            {
+                "title": "Classes",
+                "source": "source/specifications_classes.md",
+                "id": "specifications_classes",
+                "chapter": 3
+            },
+            {
+                "title": "Libraries",
+                "source": "source/specifications_libraries.md",
+                "id": "specifications_libraries",
+                "chapter": 3
+            },
+            {
+                "title": "Errors",
+                "source": "source/errors.md",
+                "id": "errors",
+                "chapter": 4
             }
+
         ],
         "variables": {
             "variable_name": "variable_value"

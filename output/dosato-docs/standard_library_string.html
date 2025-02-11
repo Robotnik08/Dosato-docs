@@ -27,58 +27,10 @@
 </div>
 
 <div id="side-buttons">
-    <a href="walkthrough.html" class="side-button prev">&lt;</a>
-    <a href="variable_types.html" class="side-button next">&gt;</a>
+    <a href="standard_library_random.html" class="side-button prev">&lt;</a>
+    <a href="standard_library_type.html" class="side-button next">&gt;</a>
 </div>
 
-<main><h1>1.1 Variables</h1>
-<p>Variables are used to store data in a program. They are like containers that hold a value. In Dosato, variables are defined using the <code>make</code> keyword. Here's an example:</p>
-<pre><code class="language-dosato">make a = 5
-</code></pre>
-<p>This creates a variable <code>a</code> and assigns the value <code>5</code> to it.</p>
-<p>First, we use the <code>make</code> keyword to define a variable. Then, we specify the name of the variable, followed by an equal sign <code>=</code> and then the value we want to assign to the variable.</p>
-<p>This variable is now available to use after it's defined. You can use it in expressions, pass it to functions, and change its value. Here's an example:</p>
-<pre><code class="language-dosato">make a = 5
-make b = 10
-do sayln(a + b) // 15
-</code></pre>
-<p>In this example, we define two variables <code>a</code> and <code>b</code>, and then print their sum to the console.</p>
-<h2>1.1.1 Reassigning Variables</h2>
-<p>Variables can also be reassigned to a new value. <br>
-For that we use the <code>set</code> keyword. Here's an example:</p>
-<pre><code class="language-dosato">make a = 5
-do sayln(a) // 5
-set a = 10
-do sayln(a) // 10
-</code></pre>
-<h2>1.1.2 Duplicate Variable Names</h2>
-<p>Variables cannot be defined with the same name twice in the same scope. If you try to define a variable with the same name as an existing variable, you'll get an error. Here's an example:</p>
-<pre><code class="language-dosato">make a = 5
-make a = 10 // Error: Variable 'a' already defined
-</code></pre>
-<h2>1.1.3 Constants</h2>
-<p>In Dosato, you can define constants using the <code>const</code> keyword. The syntax is similar to defining variables with the <code>make</code> keyword, but you use <code>const</code> instead. Here's an example:</p>
-<pre><code class="language-dosato">const myConstant = 5
-</code></pre>
-<p>Constants are similar to variables, but their value cannot be changed once it's set. If you try to reassign a constant, you'll get an error. Here's an example:</p>
-<pre><code class="language-dosato">const myConstant = 5
-set myConstant = 10 // Error: Cannot assign to constant
-</code></pre>
-<p>Since constants cannot be changed, they are useful for defining values that should not be modified during the execution of the program.</p>
-<h2>1.1.4 Variable Names</h2>
-<p>Variables can have a variety of names, but they must follow these rules:</p>
-<ul>
-<li>They must start with a letter or an underscore <code>_</code>.</li>
-<li>They only contain letters (upper and lower case), numbers, and underscores.</li>
-<li>They cannot be the same as language keywords.</li>
-</ul>
-<p>Here are some examples of valid variable names:</p>
-<pre><code class="language-dosato">make a = 5
-make _a = 10
-make my_variable = 15
-make myVariable = 20
-make myVariable2 = 25
-const MAX_VALUE = 100
-</code></pre>
+<main><h1>2.10 String</h1>
 </main><!-- Empty -->
 </body></html>
