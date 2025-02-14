@@ -1,1 +1,3 @@
 # {$chapter} {$title}
+
+- Inheritance

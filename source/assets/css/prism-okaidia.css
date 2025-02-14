@@ -77,7 +77,7 @@ pre[class*="language-"] {
 	color: #f92672;
 }
 
-.token.number {
+.token.number, .token.octal, .token.hex, .token.binary {
 	color: #B5CEA8;
 }
 

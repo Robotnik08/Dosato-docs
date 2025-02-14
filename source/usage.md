@@ -38,7 +38,7 @@ For example, if you type the following code:
 
 - `dosato -h` or `dosato --help` Shows the help message, which shows all the available commands.
 - `dosato -v` or `dosato --version` Shows the version of dosato.
-- `dosato -c` Starts the interpreter in interactive mode.
+- `dosato -c` Starts the interpreter in console mode.
 - `dosato <filename> -d` Starts the interpreter in debug mode.
     - `dosato <filename> -d -s` Starts the interpreter in debug mode and shows the source code of the root file.
     - `dosato <filename> -d -l` Starts the interpreter in debug mode and shows the lexed tokens of the root file.

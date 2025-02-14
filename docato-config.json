@@ -35,6 +35,12 @@
                 "chapter": 1
             },
             {
+                "title": "Do",
+                "source": "source/do.md",
+                "id": "do",
+                "chapter": 1
+            },
+            {
                 "title": "Variables",
                 "source": "source/variables.md",
                 "id": "variables",

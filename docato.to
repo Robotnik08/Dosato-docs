@@ -85,7 +85,7 @@ define void compile_documentation() {
         }
         do compilePage(page->source, `{output_folder}/{page->id}.html`, page->title, index, page->chapter, subchapter)
         set subchapter++
-    } for index in range(documentation_config->pages) for range(1)
+    } for index in range(documentation_config->pages)
 
     do sayln("Documentation compiled successfully")
 }
@@ -105,8 +105,7 @@ define void compilePage(string page_source, string page_output, string name, int
         const output = `<!DOCTYPE html><html><head>{header}</head><body>{page_header}<main>{contents}</main>{footer}</body></html>`
         do write(page_output, output)
     } else {
-        do write(page_source, "")
-        // do throw(`Page source not found: {page_source}`)
+        do throw(`Page source not found: {page_source}`)
     }
 }
 
