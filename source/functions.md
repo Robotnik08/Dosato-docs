@@ -22,6 +22,8 @@ The syntax for defining a function is:
 - The function body enclosed in curly braces `{}`.
 - The code goes inside the curly braces.
 
+Defining functions with the `define` keyword can only be done on global scope, and not inside other functions or other blocks.
+
 ## {$subchapter} Function invocation
 
 To call a function, use the `do` master keyword followed by the function name and any arguments. Here's how you call the `greet` function:

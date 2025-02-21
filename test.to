@@ -1,0 +1,1 @@
+do sayln(i) then sleep(0.1) then clear() for i in range(100)

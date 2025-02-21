@@ -119,12 +119,6 @@
                 "chapter": 1
             },
             {
-                "title": "Master extensions",
-                "source": "source/master_extensions.md",
-                "id": "master_extensions",
-                "chapter": 1
-            },
-            {
                 "title": "Including files",
                 "source": "source/including_files.md",
                 "id": "including_files",

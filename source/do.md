@@ -9,7 +9,12 @@ do {
 }
 ```
 
-This will output `15` to the console.
+This will output the following to the console:
+
+```raw
+Hello, world!
+This is a new line.
+```
 
 The `do` keyword can also be used to call a function, for example the `sayln` function:
 
