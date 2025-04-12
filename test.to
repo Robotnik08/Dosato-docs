@@ -1,1 +1,4 @@
-do sayln(i) then sleep(0.1) then clear() for i in range(100)
+make a = [1, 2, 3, 4, 5]
+make b = [3, 4, 5, 6, 7]
+set a = intersection(a, b)
+do sayln(a) // [3, 4, 5]
